@@ -18,5 +18,15 @@
       <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://your_domain.com/docs/shell/featured.png" />
     </item>
     
+    <item>
+      <title></title>
+      <link>https://your_domain.com/docs/test/picgo/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://your_domain.com/docs/test/picgo/</guid>
+      <description># 文章标题，请和目录名保持一致title: &amp;#34;test&amp;#34;# 发布日期date: 2024-07-01T08:00:00+08:00# 权重weight: 1# 是否为草稿，如果是草稿，在系统时间未到发布日期前不显示draft: falsedescription: &amp;#34;介绍 Blowfish 中所有可用的的配置变量。&amp;#34;# 目录名slug: &amp;#34;test&amp;#34;# 标签tags: [&amp;#34;Shell&amp;#34;, &amp;#34;运维&amp;#34;]# 系列# 是否是一个连续系列中的文档，页面会出现：部署教程 - 这篇文章属于一个选集#series: [&amp;#34;部署教程&amp;#34;]# 该文章在系列中的顺序#series_order: 1 hhhh 使用PicGo图床了</description>
+      
+    </item>
+    
   </channel>
 </rss>
