@@ -10,12 +10,12 @@
     <lastBuildDate>Mon, 01 Jul 2024 08:00:00 +0800</lastBuildDate><atom:link href="https://your_domain.com/tags/%E5%9B%BE%E5%BA%8A/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>test</title>
-      <link>https://your_domain.com/docs/test/test/</link>
+      <link>https://your_domain.com/docs/test/</link>
       <pubDate>Mon, 01 Jul 2024 08:00:00 +0800</pubDate>
       
-      <guid>https://your_domain.com/docs/test/test/</guid>
+      <guid>https://your_domain.com/docs/test/</guid>
       <description>hhhh 使用PicGo图床了</description>
-      
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://your_domain.com/docs/test/featured.png" />
     </item>
     
   </channel>
