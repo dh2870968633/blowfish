@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>PicGo on 河爷</title>
+    <link>https://your_domain.com/tags/picgo/</link>
+    <description>Recent content in PicGo on 河爷</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>© 2024 河爷</copyright>
+    <lastBuildDate>Mon, 01 Jul 2024 08:00:00 +0800</lastBuildDate><atom:link href="https://your_domain.com/tags/picgo/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>test</title>
+      <link>https://your_domain.com/docs/test/test/</link>
+      <pubDate>Mon, 01 Jul 2024 08:00:00 +0800</pubDate>
+      
+      <guid>https://your_domain.com/docs/test/test/</guid>
+      <description>hhhh 使用PicGo图床了</description>
+      
+    </item>
+    
+  </channel>
+</rss>
