@@ -9,6 +9,16 @@
     <copyright>© 2024 河爷</copyright>
     <lastBuildDate>Mon, 01 Jul 2024 08:00:00 +0800</lastBuildDate><atom:link href="https://your_domain.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>HBase</title>
+      <link>https://your_domain.com/docs/hbase/</link>
+      <pubDate>Mon, 01 Jul 2024 08:00:00 +0800</pubDate>
+      
+      <guid>https://your_domain.com/docs/hbase/</guid>
+      <description>HBase # HBase是什么？ # 简介 # ​	是一个开源的、高可靠性、高性能、面向列（这里指列族，非列式存储）、可伸缩、实时读写的分布式数据库，其设计思想来源于 Google 的 BigTable 论文。利用 Hadoop HDFS 作为其文件存储系统，利用 ZooKeeper 作为其分布式协同服务。主要用来存储非结构化和半结构化的松散数据（列式存储 NoSQL 数据库）。总而言之：HBase是一种基于HDFS的分布式、面向列的非关系型数据库。</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://your_domain.com/docs/hbase/featured.png" />
+    </item>
+    
+    <item>
       <title>Shell</title>
       <link>https://your_domain.com/docs/shell/</link>
       <pubDate>Mon, 01 Jul 2024 08:00:00 +0800</pubDate>
