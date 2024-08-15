@@ -1,0 +1,4000 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr" class="scroll-smooth" data-default-appearance="light"
+  data-auto-appearance="true"><head>
+  <meta charset="utf-8" />
+  
+  <meta http-equiv="content-language" content="zh-cn" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  
+  <title>BigData interview1 &middot; 河爷</title>
+  <meta name="title" content="BigData interview1 &middot; 河爷" />
+  
+  <meta name="description" content="介绍 Blowfish 中所有可用的的配置变量。" />
+  <meta name="keywords" content="大数据, 面试题, " />
+  
+  
+  <link rel="canonical" href="https://your_domain.com/docs/interview1/shell/" />
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <link type="text/css" rel="stylesheet" href="/css/main.bundle.min.8ea60310059bae0843ca33ef1de0ed63f1367330a68d9b13d82d6c3bc474a4c1a7c705dba2592e367518d4eb2c0a82076592aeab874ff2e02034ddc7147c752f.css"
+    integrity="sha512-jqYDEAWbrghDyjPvHeDtY/E2czCmjZsT2C1sO8R0pMGnxwXbolkuNnUY1OssCoIHZZKuq4dP8uAgNN3HFHx1Lw==" />
+  
+  
+  <script type="text/javascript" src="/js/appearance.min.516a16745bea5a9bd011138d254cc0fd3973cd55ce6e15f3dec763e7c7c2c7448f8fe7b54cca811cb821b0c7e12cd161caace1dd794ac3d34d40937cbcc9ee12.js"
+    integrity="sha512-UWoWdFvqWpvQERONJUzA/TlzzVXObhXz3sdj58fCx0SPj&#43;e1TMqBHLghsMfhLNFhyqzh3XlKw9NNQJN8vMnuEg=="></script>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <script defer type="text/javascript" id="script-bundle" src="/js/main.bundle.min.b3e22525a7c62c7b8e4c7c002546ab6498031635fa2d07802d593d476d7ab1262ec61b0cec0fe9f5653e1c9e6c256cbd0b66e5a8421b4f82a7bd2c1d5c901638.js"
+    integrity="sha512-s&#43;IlJafGLHuOTHwAJUarZJgDFjX6LQeALVk9R216sSYuxhsM7A/p9WU&#43;HJ5sJWy9C2blqEIbT4KnvSwdXJAWOA==" data-copy="" data-copied=""></script>
+  
+  
+  <script src="/js/zoom.min.js"></script>
+  
+  
+  
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  
+  
+  
+  
+  
+  
+  
+  <meta property="og:url" content="https://your_domain.com/docs/interview1/shell/">
+  <meta property="og:site_name" content="河爷">
+  <meta property="og:title" content="BigData interview1">
+  <meta property="og:description" content="介绍 Blowfish 中所有可用的的配置变量。">
+  <meta property="og:locale" content="zh_cn">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="docs">
+    <meta property="article:published_time" content="2024-07-01T08:00:00+08:00">
+    <meta property="article:modified_time" content="2024-07-01T08:00:00+08:00">
+    <meta property="article:tag" content="大数据">
+    <meta property="article:tag" content="面试题">
+
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="BigData interview1">
+  <meta name="twitter:description" content="介绍 Blowfish 中所有可用的的配置变量。">
+
+  
+  <script type="application/ld+json">
+  [{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "Docs",
+    "name": "BigData interview1",
+    "headline": "BigData interview1",
+    "description": "介绍 Blowfish 中所有可用的的配置变量。",
+    "abstract": "第一阶段面试题 # Linux # 说 10 个常用的 Linux 命令 # 重启网络：systemctl restart network",
+    "inLanguage": "zh-cn",
+    "url" : "https:\/\/your_domain.com\/docs\/interview1\/shell\/",
+    "author" : {
+      "@type": "Person",
+      "name": "河爷"
+    },
+    "copyrightYear": "2024",
+    "dateCreated": "2024-07-01T08:00:00\u002b08:00",
+    "datePublished": "2024-07-01T08:00:00\u002b08:00",
+    
+    "dateModified": "2024-07-01T08:00:00\u002b08:00",
+    
+    "keywords": ["大数据","面试题"],
+    
+    "mainEntityOfPage": "true",
+    "wordCount": "2915"
+  }]
+  </script>
+
+
+  
+  
+  <meta name="author" content="河爷" />
+  
+  
+  
+  <link href="mailto:2870968633@qq.com" rel="me" />
+  
+  
+  <link href="https://github.com/dh2870968633" rel="me" />
+  
+  
+  
+  
+
+<script src="/lib/jquery/jquery.slim.min.js" integrity=""></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+  
+  
+  <meta name="theme-color"/>
+  
+  
+</head>
+<body
+  class="flex flex-col h-screen px-6 m-auto text-lg leading-7 max-w-7xl bg-neutral text-neutral-900 dark:bg-neutral-800 dark:text-neutral sm:px-14 md:px-24 lg:px-32 scrollbar-thin scrollbar-track-neutral-200 scrollbar-thumb-neutral-400 dark:scrollbar-track-neutral-800 dark:scrollbar-thumb-neutral-600">
+  <div id="the-top" class="absolute flex self-center">
+    <a class="px-3 py-1 text-sm -translate-y-8 rounded-b-lg bg-primary-200 focus:translate-y-0 dark:bg-neutral-600"
+      href="#main-content"><span
+        class="font-bold text-primary-600 ltr:pr-2 rtl:pl-2 dark:text-primary-400">&darr;</span>跳过正文</a>
+  </div>
+  
+  
+  <div class="min-h-[148px]"></div>
+<div class="fixed inset-x-0 pl-[24px] pr-[24px]" style="z-index:100">
+  <div id="menu-blur" class="absolute opacity-0 inset-x-0 top-0 h-full single_hero_background nozoom backdrop-blur-2xl shadow-2xl"></div>
+  <div class="relative max-w-[64rem] ml-auto mr-auto">
+    <div style="padding-left:0;padding-right:0;padding-top:2px;padding-bottom:3px"
+    class="main-menu flex items-center justify-between px-4 py-6 sm:px-6 md:justify-start space-x-3">
+    
+    <div class="flex flex-1 items-center justify-between">
+        <nav class="flex space-x-3">
+
+            
+            <a href="/" class="text-base font-medium text-gray-500 hover:text-gray-900">
+	            <span style="font-weight:600;font-size:18px;">河爷</span>
+	        </a>
+            
+
+        </nav>
+        <nav class="hidden md:flex items-center space-x-5 md:ml-12 h-12">
+
+            
+            
+            
+  <a href="/docs/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+    
+    <p class="text-base font-medium" title="">
+        文档
+    </p>
+</a>
+
+
+
+            
+            
+  <a href="/tags/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+    
+    <p class="text-base font-medium" title="">
+        标签
+    </p>
+</a>
+
+
+
+            
+            
+  <a href="https://github.com/dh2870968633"  target="_blank"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+    
+    <span >
+        
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+
+  </span>
+
+
+    </span>
+    
+    <p class="text-base font-medium" title="">
+        
+    </p>
+</a>
+
+
+
+            
+            
+
+            
+
+
+            
+            <button id="search-button" aria-label="Search" class="text-base hover:text-primary-600 dark:hover:text-primary-400"
+                title="">
+                
+
+  <span class="relative block icon">
+    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+
+  </span>
+
+
+            </button>
+            
+
+
+            
+            
+            <div
+                class="ltr:mr-14 rtl:ml-14 flex items-center">
+                <button id="appearance-switcher" aria-label="Dark mode switcher" type="button" class="text-base hover:text-primary-600 dark:hover:text-primary-400">
+                    <div class="flex items-center justify-center dark:hidden">
+                        
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+
+  </span>
+
+
+                    </div>
+                    <div class="items-center justify-center hidden dark:flex">
+                        
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+
+  </span>
+
+
+                    </div>
+                </button>
+            </div>
+            
+
+        </nav>
+        <div class="flex md:hidden items-center space-x-5 md:ml-12 h-12">
+
+            <span></span>
+
+            
+
+
+            
+            <button id="search-button-mobile" aria-label="Search" class="text-base hover:text-primary-600 dark:hover:text-primary-400"
+                title="">
+                
+
+  <span class="relative block icon">
+    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+
+  </span>
+
+
+            </button>
+            
+
+            
+            
+            <button id="appearance-switcher-mobile" aria-label="Dark mode switcher" type="button" class="text-base hover:text-primary-600 dark:hover:text-primary-400" style="margin-right:5px">
+                <div class="flex items-center justify-center dark:hidden">
+                    
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+
+  </span>
+
+
+                </div>
+                <div class="items-center justify-center hidden dark:flex">
+                    
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+
+  </span>
+
+
+                </div>
+            </button>
+            
+
+        </div>
+    </div>
+    <div class="-my-2 -mr-2 md:hidden">
+
+        <label id="menu-button" for="menu-controller" class="block">
+            <input type="checkbox" id="menu-controller" class="hidden" />
+            
+            <div class="cursor-pointer hover:text-primary-600 dark:hover:text-primary-400">
+                
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"/></svg>
+
+  </span>
+
+
+            </div>
+            <div id="menu-wrapper" style="padding-top:5px;"
+                class="fixed inset-0 z-30 invisible w-screen h-screen m-0 overflow-auto transition-opacity opacity-0 cursor-default bg-neutral-100/50 backdrop-blur-sm dark:bg-neutral-900/50">
+                <ul
+                    class="flex space-y-2 mt-3 flex-col items-end w-full px-6 py-6 mx-auto overflow-visible list-none ltr:text-right rtl:text-left max-w-7xl">
+
+                    <li>
+                        <span
+                            class="cursor-pointer inline-block align-text-bottom hover:text-primary-600 dark:hover:text-primary-400">
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+
+  </span>
+
+</span>
+                    </li>
+
+                    
+
+                    
+  <li class="mt-1">
+    <a href="/docs/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+        
+        <p class="text-bg font-bg" title="">
+            文档
+        </p>
+    </a>
+</li>
+
+
+
+
+                    
+
+                    
+  <li class="mt-1">
+    <a href="/tags/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+        
+        <p class="text-bg font-bg" title="">
+            标签
+        </p>
+    </a>
+</li>
+
+
+
+
+                    
+
+                    
+  <li class="mt-1">
+    <a href="https://github.com/dh2870968633"  target="_blank"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+        
+        <div >
+            
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+
+  </span>
+
+
+        </div>
+        
+        <p class="text-bg font-bg" title="">
+            
+        </p>
+    </a>
+</li>
+
+
+
+
+                    
+
+                </ul>
+                
+                
+
+            </div>
+        </label>
+    </div>
+</div>
+
+
+
+
+
+  </div>
+</div>
+<script>
+  window.addEventListener('scroll', function (e) {
+    var scroll = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+    var background_blur = document.getElementById('menu-blur');
+    background_blur.style.opacity = (scroll / 300);
+  });
+</script>
+
+  
+  <div class="relative flex flex-col grow">
+    <main id="main-content" class="grow">
+      
+
+
+<article>
+  
+
+  <header id="single_header" class="mt-5 max-w-prose">
+    
+    <ol class="text-sm text-neutral-500 dark:text-neutral-400 print:hidden">
+  
+  
+    
+  
+    
+  
+  
+  <li class="inline hidden">
+    <a
+      class="hover:underline decoration-neutral-300 dark:underline-neutral-600"
+      href="/"
+      >文章</a
+    ><span class="px-1 text-primary-500">/</span>
+  </li>
+
+  
+  
+  <li class="inline ">
+    <a
+      class="hover:underline decoration-neutral-300 dark:underline-neutral-600"
+      href="/docs/"
+      >文章</a
+    ><span class="px-1 text-primary-500">/</span>
+  </li>
+
+  
+  
+  <li class="inline hidden">
+    <a
+      class="hover:underline decoration-neutral-300 dark:underline-neutral-600"
+      href="/docs/interview1/shell/"
+      >文章</a
+    ><span class="px-1 text-primary-500">/</span>
+  </li>
+
+</ol>
+
+
+    
+    <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+      BigData interview1
+    </h1>
+    <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+      
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="flex flex-row flex-wrap items-center">
+  
+  
+  <time datetime="2024-07-01 08:00:00 &#43;0800 CST">2024-07-01</time><span class="px-2 text-primary-500">&middot;</span><span>2915 字</span><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">14 分钟</span>
+  
+
+  
+  
+</div>
+
+
+
+
+
+<div class="flex flex-row flex-wrap items-center">
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/%E5%A4%A7%E6%95%B0%E6%8D%AE/&#34;,'_self');">
+    <span class="flex" style="cursor: pointer;">
+  <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    大数据
+  </span>
+</span>
+  </span>
+  
+  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/%E9%9D%A2%E8%AF%95%E9%A2%98/&#34;,'_self');">
+    <span class="flex" style="cursor: pointer;">
+  <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    面试题
+  </span>
+</span>
+  </span>
+  
+  
+  
+  
+</div>
+
+
+
+    </div>
+
+    
+    
+    
+    
+    
+
+    
+
+    
+      
+      
+        
+        
+<div class="flex author">
+  
+    
+    
+      
+    
+    
+      
+        
+      
+      <img class="!mt-0 !mb-0 h-24 w-24 rounded-full ltr:mr-4 rtl:ml-4" width="96" height="96"
+      alt="河爷" src="/img/dog_hud5bcbdc7733e5843973dc86f7b924d35_115051_192x192_fill_q75_box_center.jpg" />
+    
+  
+  <div class="place-self-center">
+    
+    <div class="text-[0.6rem] uppercase leading-3 text-neutral-500 dark:text-neutral-400">
+      作者
+    </div>
+    <div class="font-semibold leading-6 text-neutral-800 dark:text-neutral-300">
+      河爷
+    </div>
+    
+    
+    <div class="text-sm text-neutral-700 dark:text-neutral-400">hy</div>
+    
+    <div class="text-2xl sm:text-lg">
+  <div class="flex flex-wrap text-neutral-400 dark:text-neutral-500">
+    
+      
+        <a
+          class="px-1 hover:text-primary-700 dark:hover:text-primary-400"
+          href="mailto:2870968633@qq.com"
+          target="_blank"
+          aria-label="Email"
+          rel="me noopener noreferrer"
+          ><span class="inline-block align-text-bottom">
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M207.8 20.73c-93.45 18.32-168.7 93.66-187 187.1c-27.64 140.9 68.65 266.2 199.1 285.1c19.01 2.888 36.17-12.26 36.17-31.49l.0001-.6631c0-15.74-11.44-28.88-26.84-31.24c-84.35-12.98-149.2-86.13-149.2-174.2c0-102.9 88.61-185.5 193.4-175.4c91.54 8.869 158.6 91.25 158.6 183.2l0 16.16c0 22.09-17.94 40.05-40 40.05s-40.01-17.96-40.01-40.05v-120.1c0-8.847-7.161-16.02-16.01-16.02l-31.98 .0036c-7.299 0-13.2 4.992-15.12 11.68c-24.85-12.15-54.24-16.38-86.06-5.106c-38.75 13.73-68.12 48.91-73.72 89.64c-9.483 69.01 43.81 128 110.9 128c26.44 0 50.43-9.544 69.59-24.88c24 31.3 65.23 48.69 109.4 37.49C465.2 369.3 496 324.1 495.1 277.2V256.3C495.1 107.1 361.2-9.332 207.8 20.73zM239.1 304.3c-26.47 0-48-21.56-48-48.05s21.53-48.05 48-48.05s48 21.56 48 48.05S266.5 304.3 239.1 304.3z"/></svg>
+
+  </span>
+
+</span></a
+        >
+      
+    
+      
+        <a
+          class="px-1 hover:text-primary-700 dark:hover:text-primary-400"
+          href="https://github.com/dh2870968633"
+          target="_blank"
+          aria-label="Github"
+          rel="me noopener noreferrer"
+          ><span class="inline-block align-text-bottom">
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+
+  </span>
+
+</span></a
+        >
+      
+    
+  </div>
+
+</div>
+  </div>
+</div>
+
+      
+
+      
+
+      
+      <div class="mb-5"></div>
+      
+
+    
+
+  </header>
+  
+  <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row">
+    
+     <div
+      class="order-first lg:ml-auto px-0 lg:order-last ltr:lg:pl-8 rtl:lg:pr-8">
+      <div class="toc ltr:pl-5 rtl:pr-5 print:hidden lg:sticky lg:top-[140px]">
+
+         <details open id="TOCView"
+  class="toc-right mt-0 overflow-y-scroll overscroll-contain scrollbar-thin scrollbar-track-neutral-200 scrollbar-thumb-neutral-400 dark:scrollbar-track-neutral-800 dark:scrollbar-thumb-neutral-600 rounded-lg ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 hidden lg:block">
+  <summary
+    class="block py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
+    目录
+  </summary>
+  <div
+    class="min-w-[220px] py-2 border-dotted ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#linux">Linux</a>
+      <ul>
+        <li><a href="#说-10-个常用的-linux-命令">说 10 个常用的 Linux 命令</a></li>
+        <li><a href="#linux-系统中创建用户用户组的命令">Linux 系统中创建用户，用户组的命令</a></li>
+        <li><a href="#linux-修改文件所属的命令修改文件权限的命令">Linux 修改文件所属的命令，修改文件权限的命令</a></li>
+        <li><a href="#用户目录在哪环境变量有几种配置方式">用户目录在哪，环境变量有几种配置方式</a></li>
+        <li><a href="#linux-安装软件的方式有几种分别什么区别">Linux 安装软件的方式有几种，分别什么区别</a></li>
+        <li><a href="#如何选择-linux-操作系统版本">如何选择 Linux 操作系统版本</a></li>
+        <li><a href="#linux-服务器之间免密是如何实现的">Linux 服务器之间免密是如何实现的</a></li>
+        <li><a href="#shell-脚本第一行是什么运行-shell-脚本的方式有哪些有什么区别">Shell 脚本第一行是什么，运行 Shell 脚本的方式有哪些，有什么区别</a></li>
+        <li><a href="#shell-脚本必须以-sh-后缀结尾吗">Shell 脚本必须以 .sh 后缀结尾吗</a></li>
+        <li><a href="#linux-查看进程的命令以及杀死进程的命令">Linux 查看进程的命令以及杀死进程的命令</a></li>
+      </ul>
+    </li>
+    <li><a href="#zookeeper">ZooKeeper</a>
+      <ul>
+        <li><a href="#zookeeper-集群中有哪些角色分别有什么作用">ZooKeeper 集群中有哪些角色，分别有什么作用</a></li>
+        <li><a href="#说说-zookeeper-znode-的特点">说说 ZooKeeper Znode 的特点</a></li>
+        <li><a href="#说说-zookeeper-的监听通知机制">说说 ZooKeeper 的监听通知机制</a></li>
+        <li><a href="#说一下-cap-原则以及如何选择">说一下 CAP 原则以及如何选择</a>
+          <ul>
+            <li><a href="#cap原则">CAP原则</a></li>
+            <li><a href="#如何选择">如何选择</a></li>
+          </ul>
+        </li>
+        <li><a href="#zookeeper-的选主过程">ZooKeeper 的选主过程</a></li>
+        <li><a href="#一集群初始化时的选主过程">一、集群初始化时的选主过程</a></li>
+        <li><a href="#二leader不可用时的选主过程">二、Leader不可用时的选主过程</a></li>
+        <li><a href="#三选主过程中的关键要素">三、选主过程中的关键要素</a></li>
+        <li><a href="#zookeeper-如何帮助其他组件选主">ZooKeeper 如何帮助其他组件选主</a></li>
+        <li><a href="#1-提供注册与监听机制">1. 提供注册与监听机制</a></li>
+        <li><a href="#2-实现选主流程">2. 实现选主流程</a></li>
+        <li><a href="#3-保证数据一致性和稳定性">3. 保证数据一致性和稳定性</a></li>
+        <li><a href="#4-选举算法">4. 选举算法</a></li>
+        <li><a href="#5-示例场景">5. 示例场景</a></li>
+      </ul>
+    </li>
+    <li><a href="#hadoop">Hadoop</a>
+      <ul>
+        <li><a href="#hdfs-的读取流程">HDFS 的读取流程</a></li>
+        <li><a href="#hdfs-的写入流程">HDFS 的写入流程</a></li>
+        <li><a href="#阐述-mapreduce-的计算流程">阐述 MapReduce 的计算流程</a></li>
+        <li><a href="#阐述-yarn-集群的工作流程">阐述 YARN 集群的工作流程</a></li>
+        <li><a href="#为什么会产生-yarn-它解决了什么问题">为什么会产生 YARN 它解决了什么问题</a></li>
+        <li><a href="#hadoop-mr-模型中数据倾斜一般是在-mapper-端发生的还是在-reducer-端发生的为什么">Hadoop MR 模型中数据倾斜一般是在 Mapper 端发生的还是在 Reducer 端发生的，为什么</a></li>
+        <li><a href="#hadoop-常用的压缩算法有哪些有什么区别">Hadoop 常用的压缩算法有哪些，有什么区别</a></li>
+        <li><a href="#hadoop-mr-模型中哪些地方可以进行优化">Hadoop MR 模型中哪些地方可以进行优化</a></li>
+      </ul>
+    </li>
+    <li><a href="#hive">Hive</a>
+      <ul>
+        <li><a href="#hive-sql-的执行流程">Hive SQL 的执行流程</a></li>
+        <li><a href="#hive-自定义函数的流程有什么作用">Hive 自定义函数的流程，有什么作用</a></li>
+        <li><a href="#说一说-hive-的分区分桶">说一说 Hive 的分区分桶</a></li>
+        <li><a href="#hive-和传统数据库的区别">Hive 和传统数据库的区别</a></li>
+        <li><a href="#hive-的物化视图和视图有什么区别">Hive 的物化视图和视图有什么区别</a></li>
+        <li><a href="#hive-内部表和外部表的区别">Hive 内部表和外部表的区别</a></li>
+        <li><a href="#hive-导出数据有几种方式">Hive 导出数据有几种方式</a></li>
+        <li><a href="#hive-动态分区和静态分区有什么区别">Hive 动态分区和静态分区有什么区别</a></li>
+        <li><a href="#hive-的-sort-byorder-bydistrbute-bycluster-by-的区别">Hive 的 sort by、order by、distrbute by、cluster by 的区别</a></li>
+        <li><a href="#行式文件和列式文件的区别">行式文件和列式文件的区别</a></li>
+        <li><a href="#说一说常见的-sql-优化">说一说常见的 SQL 优化</a></li>
+        <li><a href="#根据现阶段所学知识总结一下产生数据倾斜的原因">根据现阶段所学知识总结一下产生数据倾斜的原因</a></li>
+        <li><a href="#说一说-hive-你知道的优化问的几率不大时间充足可以看看">说一说 Hive 你知道的优化（问的几率不大，时间充足可以看看）</a></li>
+      </ul>
+    </li>
+    <li><a href="#hbase">HBase</a>
+      <ul>
+        <li><a href="#rowkey-如何设计设计不好会产生什么后果">RowKey 如何设计，设计不好会产生什么后果</a></li>
+        <li><a href="#列族如何设计为什么不建议-hbase-设计过多列族">列族如何设计，为什么不建议 HBase 设计过多列族</a></li>
+        <li><a href="#hbase-读取数据的流程">HBase 读取数据的流程</a></li>
+        <li><a href="#hbase-写入数据的流程">HBase 写入数据的流程</a></li>
+        <li><a href="#hive-和-hbase-的区别">Hive 和 HBase 的区别？？？？？</a></li>
+        <li><a href="#为什么要使用-phoenix">为什么要使用 Phoenix</a></li>
+        <li><a href="#hbase-的热点区域会产生什么问题">HBase 的热点区域会产生什么问题</a></li>
+        <li><a href="#说一说-hbase-的数据刷写与合并">说一说 HBase 的数据刷写与合并</a></li>
+      </ul>
+    </li>
+    <li><a href="#scala">Scala</a>
+      <ul>
+        <li><a href="#scala-中函数是一等公民具体体现在哪里">Scala 中，函数是一等公民具体体现在哪里</a></li>
+        <li><a href="#说说-scala-函数的至简原则">说说 Scala 函数的至简原则</a></li>
+      </ul>
+    </li>
+    <li><a href="#spark">Spark</a>
+      <ul>
+        <li><a href="#说-10-个常用的-spark-转换算子">说 10 个常用的 Spark 转换算子</a></li>
+        <li><a href="#说几个高效算子并说明为什么高效">说几个高效算子，并说明为什么高效</a></li>
+        <li><a href="#如果让你编码如何实现-distinct-算子的功能">如果让你编码，如何实现 distinct 算子的功能</a></li>
+        <li><a href="#说几个-spark-submit-提交应用的参数并说明其作用">说几个 spark-submit 提交应用的参数，并说明其作用</a></li>
+        <li><a href="#hadoop-mr-的-shuffle-和-spark-shuffle-的区别">Hadoop MR 的 Shuffle 和 Spark Shuffle 的区别？？？？</a></li>
+        <li><a href="#spark-sql-的执行流程">Spark SQL 的执行流程</a></li>
+        <li><a href="#讲讲-spark-的通用运行流程">讲讲 Spark 的通用运行流程</a></li>
+        <li><a href="#讲讲-spark-yarn-cluster-模式的运行流程">讲讲 Spark YARN Cluster 模式的运行流程</a></li>
+        <li><a href="#rdddataframedataset-的区别">RDD，DataFrame，DataSet 的区别？？？？？</a></li>
+        <li><a href="#spark-的控制算子有哪些有什么区别">Spark 的控制算子有哪些，有什么区别</a></li>
+        <li><a href="#yarn-的-client-提交和-cluster-提交的区别">YARN 的 Client 提交和 Cluster 提交的区别</a></li>
+        <li><a href="#spark-为什么比-mapreduce-快">Spark 为什么比 MapReduce 快</a></li>
+        <li><a href="#rdd-中-reducebykey-与-groupbykey-的区别">RDD 中 reduceBykey 与 groupByKey 的区别</a></li>
+        <li><a href="#spark-数据本地化级别与区别">Spark 数据本地化级别与区别</a></li>
+        <li><a href="#spark-单表-sql-分组聚合查询数据倾斜如何解决--">Spark 单表 SQL 分组聚合查询数据倾斜如何解决  ？？？</a></li>
+        <li><a href="#spark-join-sql-查询数据倾斜如何解决-">Spark JOIN SQL 查询数据倾斜如何解决 ？？？</a></li>
+        <li><a href="#查看-sql-执行计划的关键字是什么有什么用">查看 SQL 执行计划的关键字是什么，有什么用</a></li>
+        <li><a href="#说一说-spark-你知道的优化问的几率不大时间充足可以看看">说一说 Spark 你知道的优化（问的几率不大，时间充足可以看看）</a></li>
+      </ul>
+    </li>
+    <li><a href="#sql">SQL</a>
+      <ul>
+        <li><a href="#abctxt-按空格分割-wordcount-sql-实现思路">abc.txt 按空格分割 WordCount SQL 实现思路</a></li>
+        <li><a href="#求部门前三薪资-sql-实现思路">求部门前三薪资 SQL 实现思路</a></li>
+        <li><a href="#连续-7-天登录-sql-实现过程">连续 7 天登录 SQL 实现过程</a></li>
+        <li><a href="#统计每个员工前三个月的薪水每月统计一次">统计每个员工前三个月的薪水，每月统计一次</a></li>
+        <li><a href="#好友推荐-sql-实现思路">好友推荐 SQL 实现思路</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</details>
+<details class="toc-inside mt-0 overflow-hidden rounded-lg ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 lg:hidden">
+  <summary
+    class="py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
+    目录
+  </summary>
+  <div
+    class="py-2 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#linux">Linux</a>
+      <ul>
+        <li><a href="#说-10-个常用的-linux-命令">说 10 个常用的 Linux 命令</a></li>
+        <li><a href="#linux-系统中创建用户用户组的命令">Linux 系统中创建用户，用户组的命令</a></li>
+        <li><a href="#linux-修改文件所属的命令修改文件权限的命令">Linux 修改文件所属的命令，修改文件权限的命令</a></li>
+        <li><a href="#用户目录在哪环境变量有几种配置方式">用户目录在哪，环境变量有几种配置方式</a></li>
+        <li><a href="#linux-安装软件的方式有几种分别什么区别">Linux 安装软件的方式有几种，分别什么区别</a></li>
+        <li><a href="#如何选择-linux-操作系统版本">如何选择 Linux 操作系统版本</a></li>
+        <li><a href="#linux-服务器之间免密是如何实现的">Linux 服务器之间免密是如何实现的</a></li>
+        <li><a href="#shell-脚本第一行是什么运行-shell-脚本的方式有哪些有什么区别">Shell 脚本第一行是什么，运行 Shell 脚本的方式有哪些，有什么区别</a></li>
+        <li><a href="#shell-脚本必须以-sh-后缀结尾吗">Shell 脚本必须以 .sh 后缀结尾吗</a></li>
+        <li><a href="#linux-查看进程的命令以及杀死进程的命令">Linux 查看进程的命令以及杀死进程的命令</a></li>
+      </ul>
+    </li>
+    <li><a href="#zookeeper">ZooKeeper</a>
+      <ul>
+        <li><a href="#zookeeper-集群中有哪些角色分别有什么作用">ZooKeeper 集群中有哪些角色，分别有什么作用</a></li>
+        <li><a href="#说说-zookeeper-znode-的特点">说说 ZooKeeper Znode 的特点</a></li>
+        <li><a href="#说说-zookeeper-的监听通知机制">说说 ZooKeeper 的监听通知机制</a></li>
+        <li><a href="#说一下-cap-原则以及如何选择">说一下 CAP 原则以及如何选择</a>
+          <ul>
+            <li><a href="#cap原则">CAP原则</a></li>
+            <li><a href="#如何选择">如何选择</a></li>
+          </ul>
+        </li>
+        <li><a href="#zookeeper-的选主过程">ZooKeeper 的选主过程</a></li>
+        <li><a href="#一集群初始化时的选主过程">一、集群初始化时的选主过程</a></li>
+        <li><a href="#二leader不可用时的选主过程">二、Leader不可用时的选主过程</a></li>
+        <li><a href="#三选主过程中的关键要素">三、选主过程中的关键要素</a></li>
+        <li><a href="#zookeeper-如何帮助其他组件选主">ZooKeeper 如何帮助其他组件选主</a></li>
+        <li><a href="#1-提供注册与监听机制">1. 提供注册与监听机制</a></li>
+        <li><a href="#2-实现选主流程">2. 实现选主流程</a></li>
+        <li><a href="#3-保证数据一致性和稳定性">3. 保证数据一致性和稳定性</a></li>
+        <li><a href="#4-选举算法">4. 选举算法</a></li>
+        <li><a href="#5-示例场景">5. 示例场景</a></li>
+      </ul>
+    </li>
+    <li><a href="#hadoop">Hadoop</a>
+      <ul>
+        <li><a href="#hdfs-的读取流程">HDFS 的读取流程</a></li>
+        <li><a href="#hdfs-的写入流程">HDFS 的写入流程</a></li>
+        <li><a href="#阐述-mapreduce-的计算流程">阐述 MapReduce 的计算流程</a></li>
+        <li><a href="#阐述-yarn-集群的工作流程">阐述 YARN 集群的工作流程</a></li>
+        <li><a href="#为什么会产生-yarn-它解决了什么问题">为什么会产生 YARN 它解决了什么问题</a></li>
+        <li><a href="#hadoop-mr-模型中数据倾斜一般是在-mapper-端发生的还是在-reducer-端发生的为什么">Hadoop MR 模型中数据倾斜一般是在 Mapper 端发生的还是在 Reducer 端发生的，为什么</a></li>
+        <li><a href="#hadoop-常用的压缩算法有哪些有什么区别">Hadoop 常用的压缩算法有哪些，有什么区别</a></li>
+        <li><a href="#hadoop-mr-模型中哪些地方可以进行优化">Hadoop MR 模型中哪些地方可以进行优化</a></li>
+      </ul>
+    </li>
+    <li><a href="#hive">Hive</a>
+      <ul>
+        <li><a href="#hive-sql-的执行流程">Hive SQL 的执行流程</a></li>
+        <li><a href="#hive-自定义函数的流程有什么作用">Hive 自定义函数的流程，有什么作用</a></li>
+        <li><a href="#说一说-hive-的分区分桶">说一说 Hive 的分区分桶</a></li>
+        <li><a href="#hive-和传统数据库的区别">Hive 和传统数据库的区别</a></li>
+        <li><a href="#hive-的物化视图和视图有什么区别">Hive 的物化视图和视图有什么区别</a></li>
+        <li><a href="#hive-内部表和外部表的区别">Hive 内部表和外部表的区别</a></li>
+        <li><a href="#hive-导出数据有几种方式">Hive 导出数据有几种方式</a></li>
+        <li><a href="#hive-动态分区和静态分区有什么区别">Hive 动态分区和静态分区有什么区别</a></li>
+        <li><a href="#hive-的-sort-byorder-bydistrbute-bycluster-by-的区别">Hive 的 sort by、order by、distrbute by、cluster by 的区别</a></li>
+        <li><a href="#行式文件和列式文件的区别">行式文件和列式文件的区别</a></li>
+        <li><a href="#说一说常见的-sql-优化">说一说常见的 SQL 优化</a></li>
+        <li><a href="#根据现阶段所学知识总结一下产生数据倾斜的原因">根据现阶段所学知识总结一下产生数据倾斜的原因</a></li>
+        <li><a href="#说一说-hive-你知道的优化问的几率不大时间充足可以看看">说一说 Hive 你知道的优化（问的几率不大，时间充足可以看看）</a></li>
+      </ul>
+    </li>
+    <li><a href="#hbase">HBase</a>
+      <ul>
+        <li><a href="#rowkey-如何设计设计不好会产生什么后果">RowKey 如何设计，设计不好会产生什么后果</a></li>
+        <li><a href="#列族如何设计为什么不建议-hbase-设计过多列族">列族如何设计，为什么不建议 HBase 设计过多列族</a></li>
+        <li><a href="#hbase-读取数据的流程">HBase 读取数据的流程</a></li>
+        <li><a href="#hbase-写入数据的流程">HBase 写入数据的流程</a></li>
+        <li><a href="#hive-和-hbase-的区别">Hive 和 HBase 的区别？？？？？</a></li>
+        <li><a href="#为什么要使用-phoenix">为什么要使用 Phoenix</a></li>
+        <li><a href="#hbase-的热点区域会产生什么问题">HBase 的热点区域会产生什么问题</a></li>
+        <li><a href="#说一说-hbase-的数据刷写与合并">说一说 HBase 的数据刷写与合并</a></li>
+      </ul>
+    </li>
+    <li><a href="#scala">Scala</a>
+      <ul>
+        <li><a href="#scala-中函数是一等公民具体体现在哪里">Scala 中，函数是一等公民具体体现在哪里</a></li>
+        <li><a href="#说说-scala-函数的至简原则">说说 Scala 函数的至简原则</a></li>
+      </ul>
+    </li>
+    <li><a href="#spark">Spark</a>
+      <ul>
+        <li><a href="#说-10-个常用的-spark-转换算子">说 10 个常用的 Spark 转换算子</a></li>
+        <li><a href="#说几个高效算子并说明为什么高效">说几个高效算子，并说明为什么高效</a></li>
+        <li><a href="#如果让你编码如何实现-distinct-算子的功能">如果让你编码，如何实现 distinct 算子的功能</a></li>
+        <li><a href="#说几个-spark-submit-提交应用的参数并说明其作用">说几个 spark-submit 提交应用的参数，并说明其作用</a></li>
+        <li><a href="#hadoop-mr-的-shuffle-和-spark-shuffle-的区别">Hadoop MR 的 Shuffle 和 Spark Shuffle 的区别？？？？</a></li>
+        <li><a href="#spark-sql-的执行流程">Spark SQL 的执行流程</a></li>
+        <li><a href="#讲讲-spark-的通用运行流程">讲讲 Spark 的通用运行流程</a></li>
+        <li><a href="#讲讲-spark-yarn-cluster-模式的运行流程">讲讲 Spark YARN Cluster 模式的运行流程</a></li>
+        <li><a href="#rdddataframedataset-的区别">RDD，DataFrame，DataSet 的区别？？？？？</a></li>
+        <li><a href="#spark-的控制算子有哪些有什么区别">Spark 的控制算子有哪些，有什么区别</a></li>
+        <li><a href="#yarn-的-client-提交和-cluster-提交的区别">YARN 的 Client 提交和 Cluster 提交的区别</a></li>
+        <li><a href="#spark-为什么比-mapreduce-快">Spark 为什么比 MapReduce 快</a></li>
+        <li><a href="#rdd-中-reducebykey-与-groupbykey-的区别">RDD 中 reduceBykey 与 groupByKey 的区别</a></li>
+        <li><a href="#spark-数据本地化级别与区别">Spark 数据本地化级别与区别</a></li>
+        <li><a href="#spark-单表-sql-分组聚合查询数据倾斜如何解决--">Spark 单表 SQL 分组聚合查询数据倾斜如何解决  ？？？</a></li>
+        <li><a href="#spark-join-sql-查询数据倾斜如何解决-">Spark JOIN SQL 查询数据倾斜如何解决 ？？？</a></li>
+        <li><a href="#查看-sql-执行计划的关键字是什么有什么用">查看 SQL 执行计划的关键字是什么，有什么用</a></li>
+        <li><a href="#说一说-spark-你知道的优化问的几率不大时间充足可以看看">说一说 Spark 你知道的优化（问的几率不大，时间充足可以看看）</a></li>
+      </ul>
+    </li>
+    <li><a href="#sql">SQL</a>
+      <ul>
+        <li><a href="#abctxt-按空格分割-wordcount-sql-实现思路">abc.txt 按空格分割 WordCount SQL 实现思路</a></li>
+        <li><a href="#求部门前三薪资-sql-实现思路">求部门前三薪资 SQL 实现思路</a></li>
+        <li><a href="#连续-7-天登录-sql-实现过程">连续 7 天登录 SQL 实现过程</a></li>
+        <li><a href="#统计每个员工前三个月的薪水每月统计一次">统计每个员工前三个月的薪水，每月统计一次</a></li>
+        <li><a href="#好友推荐-sql-实现思路">好友推荐 SQL 实现思路</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</details>
+
+<script>
+
+  var margin = 200;
+  var marginError = 50;
+
+  (function () {
+    var $window = $(window);
+    var $toc = $('#TOCView');
+    var tocHeight = $toc.height();
+
+    function onResize() {
+      var windowAndMarginHeight = $window.height() - margin;
+      if(tocHeight >= windowAndMarginHeight) {
+        $toc.css("overflow-y", "scroll")
+        $toc.css("max-height", (windowAndMarginHeight + marginError) + "px")
+      } else {
+        $toc.css("overflow-y", "hidden")
+        $toc.css("max-height", "9999999px")
+      }
+    }
+
+    $window.on('resize', onResize);
+    $(document).ready(onResize);
+  })();
+
+
+
+</script>
+   </div>
+      </div>
+      
+
+      <div class="min-w-0 min-h-0 max-w-fit">
+        
+        
+
+
+        <div class="article-content max-w-prose mb-20">
+          
+
+<h1 class="relative group">第一阶段面试题 
+    <div id="%E7%AC%AC%E4%B8%80%E9%98%B6%E6%AE%B5%E9%9D%A2%E8%AF%95%E9%A2%98" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%E7%AC%AC%E4%B8%80%E9%98%B6%E6%AE%B5%E9%9D%A2%E8%AF%95%E9%A2%98" aria-label="锚点">#</a>
+    </span>        
+    
+</h1>
+
+
+<h2 class="relative group">Linux 
+    <div id="linux" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#linux" aria-label="锚点">#</a>
+    </span>        
+    
+</h2>
+
+
+<h3 class="relative group">说 10 个常用的 Linux 命令 
+    <div id="%E8%AF%B4-10-%E4%B8%AA%E5%B8%B8%E7%94%A8%E7%9A%84-linux-%E5%91%BD%E4%BB%A4" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%E8%AF%B4-10-%E4%B8%AA%E5%B8%B8%E7%94%A8%E7%9A%84-linux-%E5%91%BD%E4%BB%A4" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<ol>
+<li>
+<p>重启网络：systemctl restart network</p>
+</li>
+<li>
+<p>防火墙相关命令：</p>
+<ul>
+<li>查看防火墙状态：systemctl status firewalld</li>
+<li>本次服务内关闭防火墙（重启虚拟机后会自动开启）：systemctl stop firewalld</li>
+<li>启动防火墙：systemctl start firewalld</li>
+<li>重启防火墙：systemctl restart firewalld</li>
+<li>禁用防火墙服务：systemctl disable firewalld</li>
+</ul>
+</li>
+<li>
+<p>打开编辑器：</p>
+<ul>
+<li>vi  文件path</li>
+<li>vim  文件path</li>
+<li>:wq  保存退出   :q 直接退出   :q!强制退出</li>
+<li>:set nu 显示行号   O切换到上一行    o切换到下一行</li>
+</ul>
+</li>
+<li>
+<p>关闭虚拟机命令：</p>
+<ul>
+<li>halt ：相当于直接拔掉电源，不推荐。</li>
+<li>poweroff ：直接关闭机器，但是有可能当前虚拟机有其他用户正在使用，不推荐。</li>
+<li>shutdown -h now ：马上关闭计算机 ，但是会给其他用户发送消息，推荐。</li>
+<li>reboot ：重启虚拟机。</li>
+</ul>
+</li>
+<li>
+<p>cd  改变当前工作目录</p>
+<ul>
+<li>cd - 返回到上一次所在目录</li>
+<li>cd -P 如果切换的目标目录是一个符号链接，则直接切换到符号链接指向的目标目录（不走软链接，走真实地址）</li>
+<li>cd -L 如果切换的目标目录是一个符号链接，则直接切换到符号链接名所在的目录（走软链接，cd /xxx 默认就是 -L）</li>
+</ul>
+</li>
+<li>
+<p>列出指定目录下的所有文件</p>
+<ul>
+<li>ls  只显示文件名</li>
+<li>ll  显示详细的文件信息（文件名、权限、用户、组、创建时间……）
+<ul>
+<li>文件类型分类
+<ul>
+<li>普通文件</li>
+<li>d 文件夹</li>
+<li>l 软连接</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>创建文件目录  mkdir</p>
+<ul>
+<li>mkdir -p a/b/c/d/e/f 创建多级目录</li>
+</ul>
+</li>
+<li>
+<p>拷贝文件或者文件目录  cp</p>
+<ul>
+<li>cp  源文件  目标目录</li>
+<li>拷贝文件夹：cp -r  lucky  /opt</li>
+</ul>
+</li>
+<li>
+<p>mv</p>
+</li>
+</ol>
+<ul>
+<li>移动文件或者文件夹：mv abc /opt</li>
+<li>修改文件名称：mv a abcd</li>
+</ul>
+<ol start="10">
+<li>
+<p>rm</p>
+<ul>
+<li>删除文件：rm  文件       rm  -f  文件    -f 表示不询问 yes 或or</li>
+<li>删除文件夹：rm  -f  文件夹   rm -rf  文件夹    -r递归删除包括子目录</li>
+</ul>
+</li>
+<li>
+<p>创建文件  touch</p>
+<ul>
+<li>如果没有就创建一个文件</li>
+<li>如果该文件已经存在，修改文件的三个时间，将三个时间改为当前时间</li>
+</ul>
+</li>
+<li>
+<p>查看文件状态   stat</p>
+</li>
+<li>
+<p>读取文件信息</p>
+<ul>
+<li>cat  监听文件内容  默认屏幕输出显示</li>
+<li>tac  按行逆序显示文件内容</li>
+<li>tail   从文件末尾读取n行   tail  profile  -n</li>
+<li>tail -f  监听文件更新的内容   文件删除再创建就监听不了了</li>
+<li>tail -F  监听文件更新的内容   文件删除再创建会重新监听</li>
+<li>grep  &ldquo;字符&rdquo;   字符匹配</li>
+<li>find  查找指定文件</li>
+</ul>
+</li>
+<li>
+<p>计算机之间的数据传输</p>
+<ul>
+<li>Window - Linux</li>
+<li>需要手动安装：yum -y install lrzsz</li>
+<li>rz：将文件从window上传到Linux</li>
+<li>sz 文件：将文件从Linux传输到Window</li>
+<li>Linux - Linux
+<ul>
+<li>scp 源数据地址(source) 目标数据地址(target)
+<ul>
+<li>scp <a href="mailto:root@192.168.88.100">root@192.168.88.100</a>:/etc/profile  /</li>
+<li>scp /etc/profile  <a href="mailto:root@192.168.88.100">root@192.168.88.100</a>: /</li>
+</ul>
+</li>
+<li>rsync  源数据地址(source) 目标数据地址(target)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>文件压缩</p>
+<ul>
+<li>
+<p>tar</p>
+<ul>
+<li>
+<p>解压缩   tar -zx(解压)v(过程)f(文件) lucky.tar.gz</p>
+</li>
+<li>
+<p>压缩</p>
+<ul>
+<li>
+<p>tar -zc(压缩)f(文件) tomcat.tar.gz(压缩后的名字) apache-tomcat-7.0.61(源文件)</p>
+</li>
+<li>
+<p>tar -zxf tomcat.tar.gz -C /opt/    -C 指定解压缩的文件目录</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>zip和unzip</p>
+<ul>
+<li>yum install zip unzip -y</li>
+<li>压缩  zip -r tomcat.zip apache-tomcat-7.0.61</li>
+<li>解压缩  unzip tomcat.zip</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>网络相关命令</p>
+<ul>
+<li>查看当前网卡的配置信息   ifconfig       如果没有ifconfig ，可以使用ip addr 临时代替</li>
+<li>查看当前网络的状态信息  netstat</li>
+<li>查看与目标IP地址是否能够连通  ping</li>
+</ul>
+</li>
+<li>
+<p>时间命令</p>
+<ul>
+<li>查看当前系统时间  date</li>
+<li>查看日历  cal</li>
+<li>修改时间   date -s 格式</li>
+</ul>
+</li>
+<li>
+<p>用户-组-权限</p>
+<ul>
+<li>用户
+<ul>
+<li>useradd [选项] [用户名]  添加用户</li>
+<li>passwd  用户名   设置用户密码</li>
+<li>id  用户名   查看用户</li>
+<li>删除用户（默认会删除组和家目录） userdel -r 用户名</li>
+<li>切换用户  su  -  用户名</li>
+</ul>
+</li>
+<li>修改权限
+<ul>
+<li>修改文件所属用户和组信息命令为： chown 用户:组 文件名</li>
+<li>chmod 644 file2.txt  修改文件的权限</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>管道，重定向，|  &raquo;  &gt;   &lt;</p>
+</li>
+</ol>
+
+
+<h3 class="relative group">Linux 系统中创建用户，用户组的命令 
+    <div id="linux-%E7%B3%BB%E7%BB%9F%E4%B8%AD%E5%88%9B%E5%BB%BA%E7%94%A8%E6%88%B7%E7%94%A8%E6%88%B7%E7%BB%84%E7%9A%84%E5%91%BD%E4%BB%A4" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#linux-%E7%B3%BB%E7%BB%9F%E4%B8%AD%E5%88%9B%E5%BB%BA%E7%94%A8%E6%88%B7%E7%94%A8%E6%88%B7%E7%BB%84%E7%9A%84%E5%91%BD%E4%BB%A4" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<ol>
+<li><strong>创建用户：</strong>
+<ul>
+<li>创建用户：<strong>useradd [选项] [用户名]</strong></li>
+<li>创建用户并指定组、附属组：<strong>useradd -g [用户名] [组名]</strong>   -G [组名],[组名]      <strong>-g  指定用户对应的用户组</strong>  <strong>-G 指定用户对应的附属组</strong></li>
+<li>设置密码：<strong>passwd [用户名]</strong></li>
+<li>查看用户：<strong>id [用户名]</strong></li>
+<li>删除用户： <strong>userdel -r [用户名]</strong></li>
+</ul>
+</li>
+<li><strong>创建用户组：</strong>
+<ul>
+<li>创建组：<strong>groupadd [组名]</strong></li>
+<li>修改组：<strong>groupmod -n newgroup oldgroup</strong></li>
+<li>删除组：<strong>groupdel [组名]</strong></li>
+<li>查看用户对应的组：<strong>groups [组名]</strong></li>
+</ul>
+</li>
+<li><strong>修改用户的组：</strong>
+<ul>
+<li><strong>usermod [用户名]   -g    [组名]     -g 修改主组（只能一个）</strong></li>
+<li><strong>usermod [用户名]   -G   [组名1] ,[组名2]     -G 修改附属组（可以多个）</strong></li>
+</ul>
+</li>
+</ol>
+
+
+<h3 class="relative group">Linux 修改文件所属的命令，修改文件权限的命令 
+    <div id="linux-%E4%BF%AE%E6%94%B9%E6%96%87%E4%BB%B6%E6%89%80%E5%B1%9E%E7%9A%84%E5%91%BD%E4%BB%A4%E4%BF%AE%E6%94%B9%E6%96%87%E4%BB%B6%E6%9D%83%E9%99%90%E7%9A%84%E5%91%BD%E4%BB%A4" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#linux-%E4%BF%AE%E6%94%B9%E6%96%87%E4%BB%B6%E6%89%80%E5%B1%9E%E7%9A%84%E5%91%BD%E4%BB%A4%E4%BF%AE%E6%94%B9%E6%96%87%E4%BB%B6%E6%9D%83%E9%99%90%E7%9A%84%E5%91%BD%E4%BB%A4" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<ul>
+<li>修改文件所属：
+<ul>
+<li><strong>chown 用户:组 文件名      chown zhangsan:bigdata file1.txt</strong></li>
+<li><strong>chown -R zhangsan:bigdata t1/    修改文件夹时，-R 让子目录迭代修改</strong></li>
+</ul>
+</li>
+<li>修改文件权限：
+<ul>
+<li>UGO 模型
+<ul>
+<li><strong>ugo 分别表示User 用户、Group 组用户、Other 其他用户</strong></li>
+<li><strong>chmod u+x file2.txt</strong></li>
+<li><strong>chmod go+wx file2.txt      chmod ugo-wx file2.txt</strong></li>
+</ul>
+</li>
+<li>777模型：
+<ul>
+<li><strong>chmod 644 file2.txt</strong>        <strong>644=rw-r&ndash;r&ndash;</strong></li>
+<li><strong>将 rwx 看做二进制数，有权限表示 1，没有表示 0。那么 rwx 就可以表示为：111，二进制 111 就是十进制 7。</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+
+<h3 class="relative group">用户目录在哪，环境变量有几种配置方式 
+    <div id="%E7%94%A8%E6%88%B7%E7%9B%AE%E5%BD%95%E5%9C%A8%E5%93%AA%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E6%9C%89%E5%87%A0%E7%A7%8D%E9%85%8D%E7%BD%AE%E6%96%B9%E5%BC%8F" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%E7%94%A8%E6%88%B7%E7%9B%AE%E5%BD%95%E5%9C%A8%E5%93%AA%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E6%9C%89%E5%87%A0%E7%A7%8D%E9%85%8D%E7%BD%AE%E6%96%B9%E5%BC%8F" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<ol>
+<li><strong>用户的目录在哪？</strong>
+<ul>
+<li><strong>用户的主目录（也称为家目录）通常位于<code>/home</code>目录下，每个用户的主目录都是以该用户的用户名命名的子目录。例如，如果系统中有一个用户名为<code>john</code>的用户，他的主目录将位于<code>/home/john</code>。</strong></li>
+</ul>
+</li>
+<li><strong>配置环境变量的几种方式？</strong>
+<ul>
+<li><strong>export  命令设置     export PATH=${PATH}:${TOMCAT_HOME}/bin    只对当前会话有效&ndash;退出当前终端失效&ndash;临时的</strong></li>
+<li><strong>.bashrc 或 .bash_profile文件设置</strong>
+<ul>
+<li><strong>系统级的位于 /etc/bashrc ,对所有用户生效</strong></li>
+<li><strong>用户级的 ~/.bashrc ，对当前用户生效。</strong></li>
+<li><strong>设置后 source命令让文件立即生效</strong></li>
+</ul>
+</li>
+<li><strong>/etc/profile文件设置</strong>
+<ul>
+<li><strong>系统级的环境变量 对所有用户生效 但要有权限</strong></li>
+<li><strong>设置后 source命令让文件立即生效</strong></li>
+</ul>
+</li>
+<li><strong>在 /etc/profile.d 目录下新增 .sh 格式的自定义环境变量文件</strong>
+<ul>
+<li><strong>/etc/profile文件会对自定义的环境变量文件进行遍历把环境变量加载进来，并执行生效</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+
+
+<h3 class="relative group">Linux 安装软件的方式有几种，分别什么区别 
+    <div id="linux-%E5%AE%89%E8%A3%85%E8%BD%AF%E4%BB%B6%E7%9A%84%E6%96%B9%E5%BC%8F%E6%9C%89%E5%87%A0%E7%A7%8D%E5%88%86%E5%88%AB%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#linux-%E5%AE%89%E8%A3%85%E8%BD%AF%E4%BB%B6%E7%9A%84%E6%96%B9%E5%BC%8F%E6%9C%89%E5%87%A0%E7%A7%8D%E5%88%86%E5%88%AB%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<ul>
+<li>使用包管理器对安装包进行安装
+<ul>
+<li><strong>rpm [选项] 软件包</strong>
+<ul>
+<li>自己去官网下载好所需软件的rpm包上传至服务器。</li>
+<li>或直接使用wget 命令下载至服务器。</li>
+</ul>
+</li>
+<li><strong>tar [选项] 压缩包</strong>
+<ul>
+<li>以 Tomcat 为例，准备好压缩包 apache-tomcat-9.0.72.tar.gz ，可以去官网自己下载然后上传至服务器，或直接使用 wget 命令下载至服务器。</li>
+<li>tar -zxf apache-tomcat-9.0.72.tar.gz -C /opt/yjx/</li>
+</ul>
+</li>
+<li><strong>yum安装</strong>
+<ul>
+<li>yum 命令是基于 RPM 的软件包管理器，它可以使系统管理人员交互和自动化地更新与管理 RPM 软件包，能够从指定的服务器自动下载 RPM 包并且安装，<strong>可以自动处理依赖性关系，并且一次安装所有依赖的软体包，无须繁琐地一次次下载、安装。</strong></li>
+</ul>
+</li>
+<li><strong>源码安装</strong>
+<ul>
+<li>去官网下载所需软件的源码包上传至服务器，或者直接使用 wget 下载至服务器。</li>
+<li><strong>安装之前要先安装它所依赖的环境。</strong></li>
+<li>创建安装目录mkdir -p /opt/yjx/nginx    配置安装目录./configure &ndash;prefix=/opt/yjx/nginx/</li>
+<li>解压源码包后   编译并安装   make &amp;&amp; make install</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+
+<h3 class="relative group">如何选择 Linux 操作系统版本 
+    <div id="%E5%A6%82%E4%BD%95%E9%80%89%E6%8B%A9-linux-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%89%88%E6%9C%AC" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%E5%A6%82%E4%BD%95%E9%80%89%E6%8B%A9-linux-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%89%88%E6%9C%AC" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<p>选择 Linux 操作系统版本时，需要考虑多个因素，以确保所选版本满足你的具体需求和环境。以下是一些关键点，可以帮助你做出更明智的选择：</p>
+<ol>
+<li>
+<p><strong>用途</strong>：</p>
+<ul>
+<li><strong>桌面环境</strong>：如果你打算在 Linux 上工作或娱乐，可能会倾向于选择一个用户界面友好、软件丰富、驱动支持良好的发行版，如 Ubuntu、Mint 或 Fedora。</li>
+<li><strong>服务器环境</strong>：服务器通常需要稳定、安全、长期支持的发行版，如 CentOS、RHEL（Red Hat Enterprise Linux）、Debian 或 Ubuntu Server。</li>
+<li><strong>开发环境</strong>：开发人员可能更关心最新的编程工具和库，以及快速的更新周期，Fedora 或 Arch Linux 可能满足这类需求。</li>
+</ul>
+</li>
+<li>
+<p><strong>技术支持和社区</strong>：</p>
+<ul>
+<li>选择有活跃社区和良好文档支持的发行版，可以获得更好的问题解答和学习资源。</li>
+<li>商业支持也是一个重要因素，尤其是对于企业用户，RHEL 和 SUSE Linux Enterprise 提供专业的技术支持。</li>
+</ul>
+</li>
+<li>
+<p><strong>稳定性与更新周期</strong>：</p>
+<ul>
+<li><strong>稳定性</strong>：一些发行版，如 Debian Stable 和 RHEL，注重长期稳定性和安全性，更新周期较长，适合企业级服务器。</li>
+<li><strong>更新周期</strong>：其他发行版，如 Fedora 和 Arch Linux，更新频繁，可以及时获得最新的软件和安全补丁，但可能不够稳定。</li>
+</ul>
+</li>
+<li>
+<p><strong>安全性</strong>：</p>
+<ul>
+<li>考虑发行版的安全特性，如 SELinux（安全增强型 Linux）和 AppArmor，它们可以提供额外的安全防护。</li>
+</ul>
+</li>
+<li>
+<p><strong>硬件兼容性</strong>：</p>
+<ul>
+<li>确保所选发行版与你的硬件兼容，包括处理器架构、图形卡驱动等。例如，ARM 架构的设备可能需要特定的 ARM 构建版本。</li>
+</ul>
+</li>
+<li>
+<p><strong>定制和灵活性</strong>：</p>
+<ul>
+<li>一些发行版，如 Arch Linux 和 Gentoo，提供了高度的定制性，适合高级用户和系统管理员。</li>
+</ul>
+</li>
+<li>
+<p><strong>资源消耗</strong>：</p>
+<ul>
+<li>考虑你的设备的资源（如 CPU、内存和存储），轻量级发行版，如 Puppy Linux 或 Lubuntu，适合老旧或资源有限的硬件。</li>
+</ul>
+</li>
+<li>
+<p><strong>软件生态</strong>：</p>
+<ul>
+<li>检查发行版的软件仓库，确保你能找到所需的软件包。流行的发行版通常拥有丰富的软件库。</li>
+</ul>
+</li>
+<li>
+<p><strong>桌面环境</strong>：</p>
+<ul>
+<li>如果是桌面用户，考虑你喜欢的桌面环境（如 GNOME、KDE、XFCE 或 MATE），并选择支持该环境的发行版。</li>
+</ul>
+</li>
+<li>
+<p><strong>个人偏好和经验</strong>：</p>
+<ul>
+<li>最终选择可能还会受到个人喜好和以往使用经验的影响。</li>
+</ul>
+</li>
+</ol>
+<p>总之，选择 Linux 发行版是一个综合考量的过程，没有绝对的好坏之分，只有更适合你的那个版本。建议尝试几个不同的发行版，看看哪一个最符合你的需求和偏好。对于初学者，通常推荐从用户友好且文档丰富的发行版开始，如 Ubuntu 或 Mint。对于有经验的用户或特定目的，可以根据上述指导原则进行更深入的比较和选择。</p>
+
+
+<h3 class="relative group">Linux 服务器之间免密是如何实现的 
+    <div id="linux-%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B9%8B%E9%97%B4%E5%85%8D%E5%AF%86%E6%98%AF%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E7%9A%84" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#linux-%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B9%8B%E9%97%B4%E5%85%8D%E5%AF%86%E6%98%AF%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E7%9A%84" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<ol>
+<li>
+<p><strong>生成密钥对</strong>：</p>
+<ul>
+<li><strong>在源服务器上执行ssh-keygen -t rsa -P &rsquo;&rsquo; -f ~/.ssh/id_rsa命令，生成一个 RSA 密钥对，公钥将被保存在 <code>~/.ssh/id_rsa.pub</code> 文件中，而私钥则保存在 <code>~/.ssh/id_rsa</code> 文件中。</strong></li>
+</ul>
+</li>
+<li>
+<p><strong>拷贝公钥</strong></p>
+<ul>
+<li><strong>想免秘钥登录谁，只需要把自己的公钥传递给对方主机即可</strong>，这个公钥文件必须放在对方主机的
+~/.ssh/authorized_keys 文件中。可以使用命令将公钥文件自动传递过去，ssh-copy-id -i ~/.ssh/id_rsa.pub <a href="mailto:root@192.168.88.102">root@192.168.88.102</a></li>
+</ul>
+</li>
+<li>
+<p><strong>原理：采用的非对称算法</strong></p>
+<ul>
+<li><strong>公钥加密  私钥解密</strong></li>
+<li><strong>node01把公钥给了node02，node01登录node02时，先检查ak文件中是否有node01的公钥，如果有，就随机生成一个字符串，用该公钥加密，将加密后的密文发给node01，node01接收该密文，用私钥进行解密，将解密后的明文再发给node02，node02拿该明文与最初生成的字符串比较，比对成功就免密！</strong></li>
+</ul>
+</li>
+</ol>
+
+
+<h3 class="relative group">Shell 脚本第一行是什么，运行 Shell 脚本的方式有哪些，有什么区别 
+    <div id="shell-%E8%84%9A%E6%9C%AC%E7%AC%AC%E4%B8%80%E8%A1%8C%E6%98%AF%E4%BB%80%E4%B9%88%E8%BF%90%E8%A1%8C-shell-%E8%84%9A%E6%9C%AC%E7%9A%84%E6%96%B9%E5%BC%8F%E6%9C%89%E5%93%AA%E4%BA%9B%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#shell-%E8%84%9A%E6%9C%AC%E7%AC%AC%E4%B8%80%E8%A1%8C%E6%98%AF%E4%BB%80%E4%B9%88%E8%BF%90%E8%A1%8C-shell-%E8%84%9A%E6%9C%AC%E7%9A%84%E6%96%B9%E5%BC%8F%E6%9C%89%E5%93%AA%E4%BA%9B%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<ul>
+<li>**Shell脚本的第一行通常被称为shebang（井号感叹号）行，这是因为这一行以 <code>#!</code> 开头。这一行指定了解释器的路径，告诉系统应该使用哪个Shell或者其他解释器来执行脚本。      #!/bin/bash  **</li>
+<li><strong>运行脚本的方式？</strong>
+<ul>
+<li><strong>bash  dh.sh       sh   dh.sh</strong></li>
+<li><strong>source  dh.sh    .   dh.sh</strong></li>
+<li><strong>路径</strong>
+<ul>
+<li><strong>绝对路径   dh.sh</strong></li>
+<li><strong>相对路径  dh.sh</strong></li>
+<li><strong>路径执行的话，该脚本文件必须有可执行的权限 X</strong></li>
+<li><strong>路径其实底层就是调的bash来运行脚本的</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>区别：</strong>
+<ul>
+<li><strong>bash 或 sh 执行脚本时会新开一个 bash（进程），不同 bash 中的变量无法共享。</strong></li>
+<li><strong>而 source 或  . 是在同一个 bash 里面执行的，所以变量可以共享。</strong></li>
+</ul>
+</li>
+</ul>
+
+
+<h3 class="relative group">Shell 脚本必须以 .sh 后缀结尾吗 
+    <div id="shell-%E8%84%9A%E6%9C%AC%E5%BF%85%E9%A1%BB%E4%BB%A5-sh-%E5%90%8E%E7%BC%80%E7%BB%93%E5%B0%BE%E5%90%97" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#shell-%E8%84%9A%E6%9C%AC%E5%BF%85%E9%A1%BB%E4%BB%A5-sh-%E5%90%8E%E7%BC%80%E7%BB%93%E5%B0%BE%E5%90%97" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<p>​		<strong>不必须以.sh后缀结尾，只要里面的内容是shell语言就行。</strong></p>
+
+
+<h3 class="relative group">Linux 查看进程的命令以及杀死进程的命令 
+    <div id="linux-%E6%9F%A5%E7%9C%8B%E8%BF%9B%E7%A8%8B%E7%9A%84%E5%91%BD%E4%BB%A4%E4%BB%A5%E5%8F%8A%E6%9D%80%E6%AD%BB%E8%BF%9B%E7%A8%8B%E7%9A%84%E5%91%BD%E4%BB%A4" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#linux-%E6%9F%A5%E7%9C%8B%E8%BF%9B%E7%A8%8B%E7%9A%84%E5%91%BD%E4%BB%A4%E4%BB%A5%E5%8F%8A%E6%9D%80%E6%AD%BB%E8%BF%9B%E7%A8%8B%E7%9A%84%E5%91%BD%E4%BB%A4" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<ul>
+<li><strong>查看进程命令：</strong>
+<ul>
+<li><strong>ps -ef   查看所有进程列表</strong></li>
+<li><strong>ps aux    ps -aux  显示所有用户的所有进程的详细信息。</strong></li>
+<li><strong>top</strong>  <strong>进程监控工具，可以实时显示系统中最消耗资源的进程。按 <code>q</code> 键退出 top。</strong></li>
+</ul>
+</li>
+<li><strong>杀死进程的命令：</strong>
+<ul>
+<li><strong>kill -9  进程id     强制终止进程</strong></li>
+<li><strong>kill -15 进程id    优雅的终止</strong></li>
+</ul>
+</li>
+</ul>
+
+
+<h2 class="relative group">ZooKeeper 
+    <div id="zookeeper" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#zookeeper" aria-label="锚点">#</a>
+    </span>        
+    
+</h2>
+
+
+<h3 class="relative group">ZooKeeper 集群中有哪些角色，分别有什么作用 
+    <div id="zookeeper-%E9%9B%86%E7%BE%A4%E4%B8%AD%E6%9C%89%E5%93%AA%E4%BA%9B%E8%A7%92%E8%89%B2%E5%88%86%E5%88%AB%E6%9C%89%E4%BB%80%E4%B9%88%E4%BD%9C%E7%94%A8" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#zookeeper-%E9%9B%86%E7%BE%A4%E4%B8%AD%E6%9C%89%E5%93%AA%E4%BA%9B%E8%A7%92%E8%89%B2%E5%88%86%E5%88%AB%E6%9C%89%E4%BB%80%E4%B9%88%E4%BD%9C%E7%94%A8" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<ol>
+<li>
+<p><strong>Leader（领导者）</strong></p>
+<ul>
+<li>Leader 是集群中处于活动状态的角色，<strong>负责处理来自客户端的写请求</strong>。</li>
+<li>Leader 负责在集群中广播客户端的更新，确保所有Follower节点的数据一致性。</li>
+<li>它还负责定期向Follower和Observer节点发送心跳消息，以维持集群的正常运作。</li>
+<li>Leader <strong>也处理来自客户端的读请求，但为了提高效率，读请求也可以由Follower处理</strong>。</li>
+</ul>
+</li>
+<li>
+<p><strong>Follower（跟随者）</strong></p>
+<ul>
+<li><strong>Follower 节点主要处理客户端的读请求</strong></li>
+<li><strong>参与事务请求Proposal 的投票参与 Leader 选举投票。</strong></li>
+<li><strong>转发事务请求给 Leader 服务器</strong></li>
+</ul>
+</li>
+<li>
+<p><strong>Observer（观察者）</strong></p>
+<ul>
+<li>
+<p>Observer 类似于Follower，但<strong>它不参与事务请求 Proposal 的投票，也不参与 Leader 选举投票</strong>。</p>
+</li>
+<li>
+<p>Observer <strong>只提供非事务的服务（查询）&ndash;处理读请求，不参与写操作</strong></p>
+</li>
+</ul>
+</li>
+</ol>
+
+
+<h3 class="relative group">说说 ZooKeeper Znode 的特点 
+    <div id="%E8%AF%B4%E8%AF%B4-zookeeper-znode-%E7%9A%84%E7%89%B9%E7%82%B9" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%E8%AF%B4%E8%AF%B4-zookeeper-znode-%E7%9A%84%E7%89%B9%E7%82%B9" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<p>ZooKeeper 中的 znode（ZooKeeper node）是 ZooKeeper 数据模型的基本构建单元，它类似于文件系统中的文件和目录。znode 具有以下特点：</p>
+<ol>
+<li>
+<p><strong>树形结构</strong>：</p>
+<ul>
+<li>znode 形成一个类似文件系统的层次结构，每个 znode 可以拥有子 znode，最顶层的根节点为 <code>/</code>。</li>
+<li>znode 的路径是唯一的，路径格式为 <code>/path/to/znode</code>。</li>
+</ul>
+</li>
+<li>
+<p><strong>持久化（Persistent）与临时（Ephemeral）</strong>：</p>
+<ul>
+<li><strong>持久化 znode</strong>：一旦创建，就会一直存在，除非显式删除。</li>
+<li><strong>临时 znode</strong>：这类 znode 的生命周期与创建它的会话绑定。当会话结束时，所有由该会话创建的临时 znode 将被自动删除。</li>
+</ul>
+</li>
+<li>
+<p><strong>顺序性（Sequential）</strong>：</p>
+<ul>
+<li>创建 znode 时可以选择添加顺序属性，这样创建的 znode 名称后面会附加一个递增的数字，确保了创建顺序的唯一性。例如，如果创建了一个名为 <code>/test</code> 的顺序 znode，可能生成的节点名为 <code>/test0000000001</code>。</li>
+</ul>
+</li>
+<li>
+<p><strong>版本控制</strong>：</p>
+<ul>
+<li>每个 znode 都有版本号，包括数据版本（dataVersion）和 ACL 版本（aclVersion），用于跟踪数据和权限的变化。</li>
+</ul>
+</li>
+<li>
+<p><strong>原子性</strong>：</p>
+<ul>
+<li>对于 znode 的读写操作是原子的，要么完全完成，要么完全不发生。</li>
+</ul>
+</li>
+<li>
+<p><strong>数据大小限制</strong>：</p>
+<ul>
+<li>单个 znode 存储的数据大小有限制，通常不超过 1MB。</li>
+</ul>
+</li>
+<li>
+<p><strong>事件通知</strong>：</p>
+<ul>
+<li>客户端可以注册监听器来接收 znode 的状态变化通知，如创建、删除、数据修改等。</li>
+</ul>
+</li>
+<li>
+<p><strong>ACLs (Access Control Lists)</strong>：</p>
+<ul>
+<li>每个 znode 都有自己的访问控制列表，用于定义哪些客户端可以对该 znode 执行何种操作。</li>
+</ul>
+</li>
+<li>
+<p><strong>快照和日志</strong>：</p>
+<ul>
+<li>ZooKeeper 为每个 znode 维护快照和事务日志，以确保数据的一致性和恢复能力。</li>
+</ul>
+</li>
+<li>
+<p><strong>唯一性</strong>：</p>
+<ul>
+<li>由于 ZooKeeper 提供了顺序 znode 和临时 znode，它常被用于实现分布式锁、队列、选主等场景。</li>
+</ul>
+</li>
+</ol>
+<p>这些特性使 ZooKeeper 成为一种强大的协调服务，广泛应用于分布式系统中解决一致性问题，如配置管理、服务发现、命名服务、集群管理等。</p>
+
+
+<h3 class="relative group">说说 ZooKeeper 的监听通知机制 
+    <div id="%E8%AF%B4%E8%AF%B4-zookeeper-%E7%9A%84%E7%9B%91%E5%90%AC%E9%80%9A%E7%9F%A5%E6%9C%BA%E5%88%B6" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%E8%AF%B4%E8%AF%B4-zookeeper-%E7%9A%84%E7%9B%91%E5%90%AC%E9%80%9A%E7%9F%A5%E6%9C%BA%E5%88%B6" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<p>ZooKeeper 的监听通知机制是其关键特性之一，它允许客户端对特定类型的事件进行注册监听，从而在这些事件发生时得到通知。这种机制对于构建高可用和响应式的分布式系统至关重要。下面是 ZooKeeper 监听器的工作原理和主要概念：</p>
+<ol>
+<li>
+<p><strong>监听器注册</strong>：
+当客户端连接到 ZooKeeper 服务器后，它可以注册监听器来监听特定的事件。监听器可以注册在单个 znode 上，也可以在客户端的整个会话上注册。</p>
+</li>
+<li>
+<p><strong>事件类型</strong>：
+ZooKeeper 支持以下几种事件类型，客户端可以通过监听器接收到这些事件的通知：</p>
+<ul>
+<li><code>NodeCreated</code>：当一个新的 znode 被创建时。</li>
+<li><code>NodeDeleted</code>：当一个 znode 被删除时。</li>
+<li><code>NodeDataChanged</code>：当一个 znode 的数据发生变化时。</li>
+<li><code>NodeChildrenChanged</code>：当一个 znode 的子节点列表发生变化时。</li>
+<li><code>SessionEvent</code>：会话级别的事件，包括会话建立、断开、过期等。</li>
+</ul>
+</li>
+<li>
+<p><strong>事件通知</strong>：
+当上述事件发生时，ZooKeeper 会发送一个异步的事件通知给注册了监听器的客户端。这个通知包含事件的类型以及触发事件的 znode 的路径。</p>
+</li>
+<li>
+<p><strong>监听器一次性</strong>：
+重要的是要注意，ZooKeeper 的监听器是一次性的。这意味着每当一个事件发生并通知了客户端之后，对应的监听器就会被清除。如果客户端想要继续接收事件通知，它需要重新注册监听器。</p>
+</li>
+<li>
+<p><strong>事件处理</strong>：
+客户端在接收到事件通知后，可以采取相应的行动，比如更新本地缓存，重新获取数据，或者调整应用程序的行为。</p>
+</li>
+<li>
+<p><strong>事件顺序</strong>：
+ZooKeeper 保证事件通知的顺序与事件发生的顺序一致，这有助于保持数据的一致性。</p>
+</li>
+</ol>
+<p>监听通知机制使得 ZooKeeper 成为了构建分布式应用的理想选择，因为它允许应用程序在数据变化时快速做出反应，而无需频繁轮询数据。这对于实现如服务发现、分布式锁、配置管理等功能非常重要。</p>
+
+
+<h3 class="relative group">说一下 CAP 原则以及如何选择 
+    <div id="%E8%AF%B4%E4%B8%80%E4%B8%8B-cap-%E5%8E%9F%E5%88%99%E4%BB%A5%E5%8F%8A%E5%A6%82%E4%BD%95%E9%80%89%E6%8B%A9" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%E8%AF%B4%E4%B8%80%E4%B8%8B-cap-%E5%8E%9F%E5%88%99%E4%BB%A5%E5%8F%8A%E5%A6%82%E4%BD%95%E9%80%89%E6%8B%A9" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+
+
+<h4 class="relative group">CAP原则 
+    <div id="cap%E5%8E%9F%E5%88%99" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#cap%E5%8E%9F%E5%88%99" aria-label="锚点">#</a>
+    </span>        
+    
+</h4>
+<p>CAP 原则是分布式系统设计中的一个核心概念，由加州大学伯克利分校的 Eric Brewer 教授提出，并由 Seth Gilbert 和 Nancy Lynch 从理论上证明。CAP 原则指出，在分布式计算中，任何一个网络分区容忍的系统只能同时满足一致性（Consistency）、可用性（Availability）和分区容错性（Partition tolerance）这三个需求中的两个，不可能同时达到三个目标。</p>
+<p>具体来说：</p>
+<ul>
+<li><strong>一致性（Consistency）</strong>：在数据写入成功后，所有的读操作都会返回最新的数据，即所有节点在同一时刻看到相同的数据视图。</li>
+<li><strong>可用性（Availability）</strong>：每个请求无论数据一致性如何，都应该在合理的时间内获得响应。这意味着系统必须保证非故障节点的持续服务，即使在部分节点故障的情况下。</li>
+<li><strong>分区容错性（Partition tolerance）</strong>：系统应该能够在网络分区的情况下继续工作，即即使一部分网络不可用，系统仍能正确地处理请求。</li>
+</ul>
+
+
+<h4 class="relative group">如何选择 
+    <div id="%E5%A6%82%E4%BD%95%E9%80%89%E6%8B%A9" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%E5%A6%82%E4%BD%95%E9%80%89%E6%8B%A9" aria-label="锚点">#</a>
+    </span>        
+    
+</h4>
+<p>在设计分布式系统时，根据具体的应用场景和需求，通常需要在 CAP 三者之间做出权衡。以下是一些选择策略：</p>
+<ul>
+<li>
+<p><strong>CA 系统</strong>：选择一致性和可用性，放弃分区容错性。这种系统假设网络是稳定的，没有分区情况出现。传统的关系型数据库和事务处理系统倾向于采用 CA 设计，它们在本地网络环境下提供强一致性和高可用性。</p>
+</li>
+<li>
+<p><strong>CP 系统</strong>：选择一致性和分区容错性，牺牲可用性。在检测到网络分区时，系统会选择暂停服务或拒绝写入请求，直到分区恢复，以保持数据的一致性。例如，Google Spanner 和 Apache Cassandra 在某些配置下可以看作是 CP 系统。</p>
+</li>
+<li>
+<p><strong>AP 系统</strong>：选择可用性和分区容错性，牺牲一致性。在检测到网络分区时，系统会继续提供服务，但允许不同节点间的临时不一致性，直到网络分区恢复。NoSQL 数据库如 Amazon DynamoDB 和一些分布式缓存系统倾向于 AP 设计。</p>
+</li>
+</ul>
+<p>实际应用中，很多系统会采用混合策略，例如最终一致性（eventual consistency），在牺牲短暂一致性的前提下提供高可用性和分区容错性。设计时需要仔细考虑业务需求，比如实时性、数据完整性、用户体验等因素，来决定如何平衡 CAP 之间的关系。</p>
+
+
+<h3 class="relative group">ZooKeeper 的选主过程 
+    <div id="zookeeper-%E7%9A%84%E9%80%89%E4%B8%BB%E8%BF%87%E7%A8%8B" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#zookeeper-%E7%9A%84%E9%80%89%E4%B8%BB%E8%BF%87%E7%A8%8B" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<blockquote>
+<p>ZooKeeper的选主过程是其确保分布式数据一致性和集群稳定性的关键机制。选主过程通常发生在两种场景下：集群初始化时和Leader不可用（如崩溃或失去连接）时。以下是ZooKeeper选主过程的详细步骤：</p>
+
+
+<h3 class="relative group">一、集群初始化时的选主过程 
+    <div id="%E4%B8%80%E9%9B%86%E7%BE%A4%E5%88%9D%E5%A7%8B%E5%8C%96%E6%97%B6%E7%9A%84%E9%80%89%E4%B8%BB%E8%BF%87%E7%A8%8B" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%E4%B8%80%E9%9B%86%E7%BE%A4%E5%88%9D%E5%A7%8B%E5%8C%96%E6%97%B6%E7%9A%84%E9%80%89%E4%B8%BB%E8%BF%87%E7%A8%8B" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<ol>
+<li>节点注册：
+<ul>
+<li>集群中的每个节点（Server）都会向ZooKeeper注册，并声明自己的身份（如myid）和状态。</li>
+</ul>
+</li>
+<li>初始化选主阶段：
+<ul>
+<li>当集群启动时，ZooKeeper会进入一个初始化的选主阶段。所有节点都会尝试与ZooKeeper建立连接，并发送选主请求。这些请求使用心跳信号来确认节点的存活性和连通性。</li>
+</ul>
+</li>
+<li>发送投票：
+<ul>
+<li>在初始化阶段结束后，每个节点会根据其意愿选择一个领导者节点，并向集群中的其他节点发送投票。投票信息通常包含节点的SID（Server ID）和ZXID（ZooKeeper事务ID）。</li>
+</ul>
+</li>
+<li>处理投票：
+<ul>
+<li>每个节点收到其他节点的投票后，会进行投票的PK。PK的规则主要是：
+<ul>
+<li>优先检查ZXID，ZXID较大的节点优先作为Leader。</li>
+<li>如果ZXID相同，则比较SID，SID较大的节点作为Leader。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>统计投票：
+<ul>
+<li>节点会统计收到的投票信息，判断是否已经有过半的节点投出了相同的票。</li>
+</ul>
+</li>
+<li>选举结果通知：
+<ul>
+<li>当某个节点的票数超过半数时，该节点被选为Leader。ZooKeeper会将选举结果通知给所有节点。</li>
+</ul>
+</li>
+<li>切换为主模式：
+<ul>
+<li>一旦Leader节点被选举出来，集群将进入主模式。Leader节点负责处理关键决策和协调集群的操作，其他节点则作为Follower与Leader保持同步。</li>
+</ul>
+</li>
+</ol>
+
+
+<h3 class="relative group">二、Leader不可用时的选主过程 
+    <div id="%E4%BA%8Cleader%E4%B8%8D%E5%8F%AF%E7%94%A8%E6%97%B6%E7%9A%84%E9%80%89%E4%B8%BB%E8%BF%87%E7%A8%8B" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%E4%BA%8Cleader%E4%B8%8D%E5%8F%AF%E7%94%A8%E6%97%B6%E7%9A%84%E9%80%89%E4%B8%BB%E8%BF%87%E7%A8%8B" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<ol>
+<li>变更状态：
+<ul>
+<li>当Leader节点发生故障或失去连通性时，剩余的Follower节点会将自己的状态变更为LOOKING，并开始进入新一轮的Leader选举过程。</li>
+</ul>
+</li>
+<li>发送投票：
+<ul>
+<li>与集群初始化时类似，每个Follower节点都会发送自己的投票，并接收来自其他节点的投票。</li>
+</ul>
+</li>
+<li>处理投票：
+<ul>
+<li>节点根据PK规则处理收到的投票，并更新自己的投票（如果需要）。</li>
+</ul>
+</li>
+<li>统计投票：
+<ul>
+<li>统计投票信息，判断是否有节点获得了过半的票数。</li>
+</ul>
+</li>
+<li>选举结果通知：
+<ul>
+<li>当新的Leader节点被选举出来时，ZooKeeper会通知所有节点。</li>
+</ul>
+</li>
+<li>同步与恢复：
+<ul>
+<li>新选举出的Leader节点会与Follower节点进行状态同步，确保集群的一致性。</li>
+</ul>
+</li>
+</ol>
+
+
+<h3 class="relative group">三、选主过程中的关键要素 
+    <div id="%E4%B8%89%E9%80%89%E4%B8%BB%E8%BF%87%E7%A8%8B%E4%B8%AD%E7%9A%84%E5%85%B3%E9%94%AE%E8%A6%81%E7%B4%A0" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%E4%B8%89%E9%80%89%E4%B8%BB%E8%BF%87%E7%A8%8B%E4%B8%AD%E7%9A%84%E5%85%B3%E9%94%AE%E8%A6%81%E7%B4%A0" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<ul>
+<li><strong>SID（Server ID）</strong>：节点的唯一标识符，用于区分集群中的不同节点。</li>
+<li><strong>ZXID（ZooKeeper事务ID）</strong>：ZooKeeper状态的每一次改变都会对应一个递增的事务ID，用于判断节点的数据新旧程度。</li>
+<li><strong>LOOKING状态</strong>：节点在寻找Leader时的状态，表示当前集群中没有Leader或Leader不可用。</li>
+<li><strong>LEADING状态</strong>：节点作为Leader时的状态，负责处理集群的关键决策和协调操作。</li>
+<li><strong>FOLLOWING状态</strong>：节点作为Follower时的状态，与Leader保持同步并遵循其指示。</li>
+</ul>
+<p>通过这一系列的步骤和规则，ZooKeeper能够确保在集群初始化或Leader不可用时，快速、稳定地选举出新的Leader节点，从而维持集群的正常运行和数据的一致性。</p>
+<p>第一次选主：</p>
+<p>1 无脑选议员编号最大的为主
+2 票数过半才能成为主
+3 投票默认投票给议员编号（myid）最大的节点
+4 每次选主都会有一个朝代的标记
+5 每次选主成功后，其他节点需要和主进行数据同步</p>
+<p>主宕机后重新选主：</p>
+<p>1 先过滤出公共pid相同的节点
+2 执行第一次选主的步骤</p>
+<p>Paxos算法最终模型：奇数台服务器+有主模式+角色</p>
+</blockquote>
+
+
+<h3 class="relative group">ZooKeeper 如何帮助其他组件选主 
+    <div id="zookeeper-%E5%A6%82%E4%BD%95%E5%B8%AE%E5%8A%A9%E5%85%B6%E4%BB%96%E7%BB%84%E4%BB%B6%E9%80%89%E4%B8%BB" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#zookeeper-%E5%A6%82%E4%BD%95%E5%B8%AE%E5%8A%A9%E5%85%B6%E4%BB%96%E7%BB%84%E4%BB%B6%E9%80%89%E4%B8%BB" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<blockquote>
+<p>ZooKeeper作为一个分布式的、开放源码的分布式应用程序协调服务，它通过其独特的机制和特性来帮助其他组件完成选主过程。以下是ZooKeeper如何帮助其他组件选主的详细解析：</p>
+
+
+<h3 class="relative group">1. 提供注册与监听机制 
+    <div id="1-%E6%8F%90%E4%BE%9B%E6%B3%A8%E5%86%8C%E4%B8%8E%E7%9B%91%E5%90%AC%E6%9C%BA%E5%88%B6" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#1-%E6%8F%90%E4%BE%9B%E6%B3%A8%E5%86%8C%E4%B8%8E%E7%9B%91%E5%90%AC%E6%9C%BA%E5%88%B6" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<ul>
+<li><strong>节点注册</strong>：ZooKeeper允许其他组件中的每个节点（或称为服务实例）在ZooKeeper中注册一个唯一的临时节点（Ephemeral Node）。这个节点会随着服务实例的启动而创建，随着服务实例的停止而删除。</li>
+<li><strong>监听机制</strong>：ZooKeeper通过监听机制，允许组件中的其他节点监听特定节点的状态变化。这种监听可以是节点创建、节点删除或节点数据更新等事件。</li>
+</ul>
+
+
+<h3 class="relative group">2. 实现选主流程 
+    <div id="2-%E5%AE%9E%E7%8E%B0%E9%80%89%E4%B8%BB%E6%B5%81%E7%A8%8B" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#2-%E5%AE%9E%E7%8E%B0%E9%80%89%E4%B8%BB%E6%B5%81%E7%A8%8B" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<ul>
+<li><strong>初始化选主</strong>：当集群启动时或Leader节点失效时，ZooKeeper会触发选主流程。每个节点（或称为参与者）都会向ZooKeeper发送自己的选主请求，这些请求中包含了节点的身份信息和状态信息。</li>
+<li><strong>投票与统计</strong>：ZooKeeper负责接收并统计这些选主请求。每个节点都会根据一定的规则（如节点的ZXID和SID）进行投票，并将投票结果发送给ZooKeeper。ZooKeeper会统计每个候选节点的票数，当某个节点的票数超过半数时，该节点就被选为Leader。</li>
+<li><strong>结果通知</strong>：一旦选举出Leader，ZooKeeper会将选举结果通知给集群中的所有节点。其他节点会根据选举结果调整自己的状态，并与新的Leader节点建立连接。</li>
+</ul>
+
+
+<h3 class="relative group">3. 保证数据一致性和稳定性 
+    <div id="3-%E4%BF%9D%E8%AF%81%E6%95%B0%E6%8D%AE%E4%B8%80%E8%87%B4%E6%80%A7%E5%92%8C%E7%A8%B3%E5%AE%9A%E6%80%A7" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#3-%E4%BF%9D%E8%AF%81%E6%95%B0%E6%8D%AE%E4%B8%80%E8%87%B4%E6%80%A7%E5%92%8C%E7%A8%B3%E5%AE%9A%E6%80%A7" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<ul>
+<li><strong>数据同步</strong>：在选举出Leader后，Leader会负责协调集群中的数据同步。它会确保集群中每个节点上的数据都是最新的，并且保持一致。</li>
+<li><strong>故障转移</strong>：如果Leader节点发生故障或失去连接，ZooKeeper会自动触发故障转移过程。其他节点会重新开始选举流程，并选举出新的Leader节点。这个过程是自动的，并且能够快速完成，从而保证了集群的稳定性和可用性。</li>
+</ul>
+
+
+<h3 class="relative group">4. 选举算法 
+    <div id="4-%E9%80%89%E4%B8%BE%E7%AE%97%E6%B3%95" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#4-%E9%80%89%E4%B8%BE%E7%AE%97%E6%B3%95" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<p>ZooKeeper的选主过程通常基于Paxos算法或其变种（如FastLeaderElection算法）。这些算法能够保证在分布式环境中选举出唯一的Leader节点，并且能够保证选举过程的一致性和可靠性。</p>
+
+
+<h3 class="relative group">5. 示例场景 
+    <div id="5-%E7%A4%BA%E4%BE%8B%E5%9C%BA%E6%99%AF" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#5-%E7%A4%BA%E4%BE%8B%E5%9C%BA%E6%99%AF" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<p>假设有一个分布式服务集群，该集群中的每个服务实例都需要一个Master节点来处理关键决策。这些服务实例可以使用ZooKeeper来帮助完成Master选举过程。它们会在ZooKeeper中注册自己的节点，并监听特定节点的状态变化。当需要选举Master时，它们会向ZooKeeper发送选主请求，并根据ZooKeeper的统计结果来确定哪个服务实例被选为Master。</p>
+<p>总之，ZooKeeper通过其注册与监听机制、选主流程、数据同步和故障转移等特性来帮助其他组件完成选主过程。这些特性使得ZooKeeper成为分布式应用程序协调服务中的佼佼者。</p>
+</blockquote>
+
+
+<h2 class="relative group">Hadoop 
+    <div id="hadoop" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#hadoop" aria-label="锚点">#</a>
+    </span>        
+    
+</h2>
+
+
+<h3 class="relative group">HDFS 的读取流程 
+    <div id="hdfs-%E7%9A%84%E8%AF%BB%E5%8F%96%E6%B5%81%E7%A8%8B" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#hdfs-%E7%9A%84%E8%AF%BB%E5%8F%96%E6%B5%81%E7%A8%8B" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<blockquote>
+<p>客户端向NameNode发起文件读取请求-&gt;NN检查相关权限响应检查结果给客户端-&gt;客户端询问NN Block从哪里读取-&gt;NN通过集群拓扑结构告知客户端要读取的Block数据在哪些DataNode上-&gt;客户端向这些DN请求建立连接传输通道-&gt;客户端开始读取数据</p>
+</blockquote>
+
+
+<h3 class="relative group">HDFS 的写入流程 
+    <div id="hdfs-%E7%9A%84%E5%86%99%E5%85%A5%E6%B5%81%E7%A8%8B" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#hdfs-%E7%9A%84%E5%86%99%E5%85%A5%E6%B5%81%E7%A8%8B" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<blockquote>
+<p>客户端向NameNode发起文件写入请求-&gt;NN检查相关权限响应检查结果给客户端-&gt;客户端询问NN Block上传到哪-&gt;NN通过机架感知策略告知客户端写入哪些DataNode上-&gt;客户端向这些DN请求建立连接传输通道-&gt;客户端开始写数据</p>
+</blockquote>
+
+
+<h3 class="relative group">阐述 MapReduce 的计算流程 
+    <div id="%E9%98%90%E8%BF%B0-mapreduce-%E7%9A%84%E8%AE%A1%E7%AE%97%E6%B5%81%E7%A8%8B" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%E9%98%90%E8%BF%B0-mapreduce-%E7%9A%84%E8%AE%A1%E7%AE%97%E6%B5%81%E7%A8%8B" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<blockquote>
+<p>Block块切片  MapTask：读取切片数据   读入环形缓存区  分区排序（Hash分区快排）溢写到磁盘   （可选预聚合）合并</p>
+<p>ReduceTask：从MapTask拉取数据到内存缓存区   溢写    （可选预聚合）合并    分组     计算完后把数据存到HDFS、DB、NoSql</p>
+</blockquote>
+
+
+<h3 class="relative group">阐述 YARN 集群的工作流程 
+    <div id="%E9%98%90%E8%BF%B0-yarn-%E9%9B%86%E7%BE%A4%E7%9A%84%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%A8%8B" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%E9%98%90%E8%BF%B0-yarn-%E9%9B%86%E7%BE%A4%E7%9A%84%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%A8%8B" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<blockquote>
+<p>
+  <figure>
+    <img class="my-0 rounded-md" loading="lazy" src="https://cdn.jsdelivr.net/gh/dh2870968633/PicGo/img/202408150910697.png" alt="image-20240815091013614" />
+    
+  </figure>
+</p>
+</blockquote>
+
+
+<h3 class="relative group">为什么会产生 YARN 它解决了什么问题 
+    <div id="%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BC%9A%E4%BA%A7%E7%94%9F-yarn-%E5%AE%83%E8%A7%A3%E5%86%B3%E4%BA%86%E4%BB%80%E4%B9%88%E9%97%AE%E9%A2%98" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BC%9A%E4%BA%A7%E7%94%9F-yarn-%E5%AE%83%E8%A7%A3%E5%86%B3%E4%BA%86%E4%BB%80%E4%B9%88%E9%97%AE%E9%A2%98" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<blockquote>
+<p>总的来说就是为了更好的资源管理和作业调度。</p>
+<ul>
+<li>在早期的Hadoop版本中，MapReduce框架同时充当了资源管理和作业调度的角色，导致资源管理和作业调度的逻辑紧密耦合在一起。</li>
+<li>MapReduce框架以作业为单位进行资源调度，可能出现某个作业占用大量资源但处理速度较慢，而其他作业需等待较长时间才能开始执行，导致资源利用率下降。</li>
+</ul>
+<p>解决问题</p>
+<ul>
+<li><strong>多调度器支持</strong>：YARN将资源管理和作业调度等功能从MapReduce中拆分出来，形成了一个独立的资源管理平台。YARN支持多种调度器，如容量调度器（Capacity Scheduler）、公平调度器（Fair Scheduler）等，可以根据需求选择合适的调度算法和策略，实现对集群资源的更精细管理和调度。</li>
+<li><strong>分离计算框架</strong>：YARN将资源管理和作业调度与具体的计算框架解耦，不再限定于MapReduce。这使得Hadoop生态系统可以支持多个计算框架，如Spark、Hive、Flink等。用户可以选择最适合自己需求的计算框架，提高了灵活性和可用性。</li>
+<li><strong>高效的资源利用</strong>：YARN引入了容器（Container）的概念，将物理机的资源划分为多个容器，每个容器可以执行一个任务。这种隔离的机制使得资源可以更加细粒度地分配和利用，避免作业间的资源竞争，提高了资源利用率。</li>
+</ul>
+<p>​</p>
+</blockquote>
+
+
+<h3 class="relative group">Hadoop MR 模型中数据倾斜一般是在 Mapper 端发生的还是在 Reducer 端发生的，为什么 
+    <div id="hadoop-mr-%E6%A8%A1%E5%9E%8B%E4%B8%AD%E6%95%B0%E6%8D%AE%E5%80%BE%E6%96%9C%E4%B8%80%E8%88%AC%E6%98%AF%E5%9C%A8-mapper-%E7%AB%AF%E5%8F%91%E7%94%9F%E7%9A%84%E8%BF%98%E6%98%AF%E5%9C%A8-reducer-%E7%AB%AF%E5%8F%91%E7%94%9F%E7%9A%84%E4%B8%BA%E4%BB%80%E4%B9%88" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#hadoop-mr-%E6%A8%A1%E5%9E%8B%E4%B8%AD%E6%95%B0%E6%8D%AE%E5%80%BE%E6%96%9C%E4%B8%80%E8%88%AC%E6%98%AF%E5%9C%A8-mapper-%E7%AB%AF%E5%8F%91%E7%94%9F%E7%9A%84%E8%BF%98%E6%98%AF%E5%9C%A8-reducer-%E7%AB%AF%E5%8F%91%E7%94%9F%E7%9A%84%E4%B8%BA%E4%BB%80%E4%B9%88" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<blockquote>
+<p>一般是在Reduce端</p>
+<ul>
+<li><strong>数据分组与排序</strong>：Mapper输出的数据会根据Key进行分组，并发送到相应的Reducer进行处理。如果某些Key的数据量显著大于其他Key，那么处理这些Key的Reducer就会收到更多的数据，导致处理时间延长，形成数据倾斜。</li>
+<li><strong>Shuffle阶段</strong>：在Shuffle阶段，Mapper输出的数据会被排序和传输到Reducer。由于数据是按照Key进行排序和分组的，因此具有相同Key的数据会被发送到同一个Reducer，这进一步加剧了数据倾斜的可能性。</li>
+<li><strong>Reduce数量固定</strong>：在MapReduce作业中，Reducer的数量是事先设定的，且在整个作业执行过程中保持不变。这意味着即使某些Key的数据量很大，它们也只能被发送到有限的几个Reducer上进行处理，从而加剧了数据倾斜问题。</li>
+<li><strong>自定义Partitioner</strong>：如果使用了自定义的Partitioner来分配数据到Reducer，不恰当的Partitioner设计也可能导致数据倾斜。例如，如果Partitioner不能将数据均匀地分配到各个Reducer上，就可能导致某些Reducer处理的数据量远大于其他Reducer。</li>
+</ul>
+<p>为了缓解Reducer端的数据倾斜问题，可以采取以下策略：</p>
+<ul>
+<li><strong>增加Reducer数量</strong>：通过增加Reducer的数量，可以将数据更细粒度地分布在更多的Reducer上，从而减轻单个Reducer的负载。</li>
+<li><strong>优化Partitioner</strong>：使用更合理的Partitioner来分配数据到Reducer，确保数据能够尽可能均匀地分布。</li>
+<li><strong>使用Combiner</strong>：在Mapper端使用Combiner进行局部聚合，减少输出到Reducer端的数据量，从而降低数据倾斜的可能性。</li>
+<li><strong>数据预处理</strong>：在数据处理前对数据进行预处理，如过滤掉异常值、对数据进行重新排序或分组等，以减少数据倾斜的发生。</li>
+</ul>
+</blockquote>
+
+
+<h3 class="relative group">Hadoop 常用的压缩算法有哪些，有什么区别 
+    <div id="hadoop-%E5%B8%B8%E7%94%A8%E7%9A%84%E5%8E%8B%E7%BC%A9%E7%AE%97%E6%B3%95%E6%9C%89%E5%93%AA%E4%BA%9B%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#hadoop-%E5%B8%B8%E7%94%A8%E7%9A%84%E5%8E%8B%E7%BC%A9%E7%AE%97%E6%B3%95%E6%9C%89%E5%93%AA%E4%BA%9B%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<p>
+  <figure>
+    <img class="my-0 rounded-md" loading="lazy" src="https://cdn.jsdelivr.net/gh/dh2870968633/PicGo/img/202408142050394.png" alt="image-20240814205009319" />
+    
+  </figure>
+</p>
+
+
+<h3 class="relative group">Hadoop MR 模型中哪些地方可以进行优化 
+    <div id="hadoop-mr-%E6%A8%A1%E5%9E%8B%E4%B8%AD%E5%93%AA%E4%BA%9B%E5%9C%B0%E6%96%B9%E5%8F%AF%E4%BB%A5%E8%BF%9B%E8%A1%8C%E4%BC%98%E5%8C%96" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#hadoop-mr-%E6%A8%A1%E5%9E%8B%E4%B8%AD%E5%93%AA%E4%BA%9B%E5%9C%B0%E6%96%B9%E5%8F%AF%E4%BB%A5%E8%BF%9B%E8%A1%8C%E4%BC%98%E5%8C%96" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<blockquote>
+<p>数据输入阶段</p>
+<ul>
+<li><strong>合并小文件</strong>：在执行MR任务前将小文件进行合并，大量的小文件会产生大量的Map任务，增大Map任务装载次数，而任务的装载比较耗时，从而导致MR运行较慢。可以采用<code>CombineTextInputFormat</code>来作为输入，解决输入端大量小文件场景。</li>
+</ul>
+<p>Map阶段</p>
+<ul>
+<li><strong>避免使用正则表达式</strong>：Map阶段如果大量使用正则表达式处理数据，可能会增加CPU负担，降低处理速度。</li>
+<li><strong>优化字符串处理</strong>：在处理字符串时，使用性能更高的工具类，如<code>StringUtils</code>，避免使用<code>String</code>、<code>Scanner</code>、<code>StringTokenizer</code>等效率较低的工具。</li>
+<li><strong>使用Combiner</strong>：在Map之后、Reduce之前引入Combiner进行局部聚合，可以减少传输到Reduce端的数据量，提高处理效率。</li>
+<li><strong>合理设置Map数量</strong>：Map数量过多或过少都会影响作业性能，应根据输入数据量和集群资源情况合理设置。</li>
+</ul>
+<p>Shuffle和Sort阶段</p>
+<ul>
+<li><strong>数据压缩</strong>：对Map输出的数据进行压缩，可以减少网络传输的数据量，但会增加CPU成本，应权衡利弊。</li>
+<li><strong>调整Shuffle参数</strong>：如调整<code>io.sort.mb</code>和<code>sort.spill.percent</code>等参数，可以增大触发Spill的内存上限，减少Spill次数，从而减少磁盘IO。</li>
+</ul>
+<p>Reduce阶段</p>
+<ul>
+<li><strong>合理设置Reduce数量</strong>：Reduce数量过多或过少都会导致性能问题，应根据数据量和集群资源情况合理设置。</li>
+<li><strong>使用自定义Partitioner</strong>：如果默认Partitioner不能将数据均匀分配到各个Reducer上，可以编写自定义Partitioner来改善数据分布。</li>
+<li><strong>减少合并次数</strong>：通过调整<code>io.sort.factor</code>参数，增大Merge的文件数目，减少Merge的次数，从而缩短MR处理时间。</li>
+</ul>
+<p>IO和存储优化</p>
+<ul>
+<li><strong>HDFS优化</strong>：包括卷选择策略、元信息存储路径设置等，确保HDFS的高效运行。</li>
+<li><strong>使用紧凑二进制文件格式</strong>：如Avro、SequenceFile等，而不是文本文件，可以减少IO和网络开销。</li>
+</ul>
+<p>参数调优</p>
+<ul>
+<li><strong>HDFS参数调优</strong>：如调整<code>dfs.namenode.handler.count</code>、<code>dfs.namenode.edits.dir</code>等参数，优化NameNode的性能。</li>
+<li><strong>YARN参数调优</strong>：如调整<code>yarn.nodemanager.resource.memory-mb</code>、<code>yarn.scheduler.maximum-allocation-mb</code>等参数，合理分配集群资源。</li>
+<li><strong>MapReduce参数调优</strong>：如调整<code>mapreduce.reduce.input.buffer.percent</code>等参数，优化Reduce端的性能。</li>
+</ul>
+<p>其他优化</p>
+<ul>
+<li><strong>避免不必要的Reducer</strong>：如果Map输出数据可以直接使用，无需进行Reduce操作，则可以避免使用Reducer，减少处理时间和资源消耗。</li>
+<li><strong>使用Snappy或LZO等高效压缩算法</strong>：对数据进行压缩，减少网络传输和存储的开销。</li>
+</ul>
+</blockquote>
+
+
+<h2 class="relative group">Hive 
+    <div id="hive" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#hive" aria-label="锚点">#</a>
+    </span>        
+    
+</h2>
+<p>
+  <figure>
+    <img class="my-0 rounded-md" loading="lazy" src="https://cdn.jsdelivr.net/gh/dh2870968633/PicGo/img/202408141457632.png" alt="image-20240814145727547" />
+    
+  </figure>
+</p>
+
+
+<h3 class="relative group">Hive SQL 的执行流程 
+    <div id="hive-sql-%E7%9A%84%E6%89%A7%E8%A1%8C%E6%B5%81%E7%A8%8B" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#hive-sql-%E7%9A%84%E6%89%A7%E8%A1%8C%E6%B5%81%E7%A8%8B" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<blockquote>
+<ul>
+<li>解析器（SQL Parser）：将 SQL 字符串转换成抽象语法树 AST，对AST 进行语法分析，比如表是否存在、字段是否存在、SQL 语义是否有误。</li>
+<li>编译器（Compiler）：将 AST 编译生成逻辑执行计划。</li>
+<li>优化器（Query Optimizer）：对逻辑执行计划进行优化。</li>
+<li>执行器（Execution）：把逻辑执行计划转换成可以运行的物理计划。最后执行。对于 Hive 来说，就是 MR/Spark。</li>
+</ul>
+</blockquote>
+
+
+<h3 class="relative group">Hive 自定义函数的流程，有什么作用 
+    <div id="hive-%E8%87%AA%E5%AE%9A%E4%B9%89%E5%87%BD%E6%95%B0%E7%9A%84%E6%B5%81%E7%A8%8B%E6%9C%89%E4%BB%80%E4%B9%88%E4%BD%9C%E7%94%A8" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#hive-%E8%87%AA%E5%AE%9A%E4%B9%89%E5%87%BD%E6%95%B0%E7%9A%84%E6%B5%81%E7%A8%8B%E6%9C%89%E4%BB%80%E4%B9%88%E4%BD%9C%E7%94%A8" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<blockquote>
+<p>首先自定义函数分为三种：</p>
+<ul>
+<li>UDF（User Defined Function）：普通函数，一进一出，比如 UPPER, LOWER</li>
+<li>UDAF（User Defined Aggregation Function）：聚合函数，多进一出，比如 COUNT/MAX/MIN</li>
+<li>UDTF（User Defined Table Generating Function）：表生成函数，一进多出，比如 LATERAL VIEW EXPLODE()侧视图行转列</li>
+</ul>
+<p>流程：</p>
+<ul>
+<li>编写Java代码继承相应的类或实现相应的接口，重写父类的方法</li>
+<li>将自定义函数程序打成 jar 包并上传至 HDFS</li>
+<li>在 Hive 中根据上传的jar包注册自定义函数，并指定函数名。</li>
+<li>重新加载函数。</li>
+<li>就能在Hive SQL中像使用内置函数一样使用它啦</li>
+</ul>
+<p>作用：</p>
+<ul>
+<li><strong>扩展 Hive 的计算能力</strong>：Hive 自身已经提供了非常丰富的内置函数，但是数量与功能有限，在某些特定场景下，如果无法满足需求，可以通过自定义函数来进行功能的扩展。</li>
+<li><strong>提高数据处理效率</strong>：对于需要重复执行的复杂数据处理逻辑，将其封装为自定义函数可以提高查询的执行效率。</li>
+<li><strong>便于复用和维护</strong>：将常用的数据处理逻辑封装为自定义函数后，可以在多个查询中复用，减少了代码的冗余。同时，当数据处理逻辑需要更新时，只需修改自定义函数的实现，而无需修改所有使用该逻辑的查询。</li>
+</ul>
+</blockquote>
+
+
+<h3 class="relative group">说一说 Hive 的分区分桶 
+    <div id="%E8%AF%B4%E4%B8%80%E8%AF%B4-hive-%E7%9A%84%E5%88%86%E5%8C%BA%E5%88%86%E6%A1%B6" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%E8%AF%B4%E4%B8%80%E8%AF%B4-hive-%E7%9A%84%E5%88%86%E5%8C%BA%E5%88%86%E6%A1%B6" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<blockquote>
+<p>讲Hive分区分桶之前，我先说一下Hive的数据模型，主要有以下四种：</p>
+<ul>
+<li>单独的一个表；</li>
+<li>对表进行分区；</li>
+<li>对表进行分区，再分桶；</li>
+<li>对表直接分桶。</li>
+</ul>
+<p>在大数据中，最常见的思想就是分而治之，把大文件分割成一个个的小文件，对小文件操作时会容易很多，同样，在Hive中也是支持的，我们可以把大的数据，按照每天或者每小时切分成一个个的小文件，这样去操作小文件就会容易许多，这就是分区、分桶的意思。</p>
+<p>分区：</p>
+<ul>
+<li>分区就相当于在HDFS上创建了一个文件夹，把数据放到文件夹中。</li>
+<li>根据分区深度可以分为：单分区和多分区。</li>
+<li>根据分区类型可以分为：静态分区和动态分区。区别在于：静态分区是手动指定，而动态分区是通过数据来判断分区的。动态分区下可以设置是否开启严格模式，默认非严格模式，严格模式主要禁止三种类型的查询，当进行这三种类型的查询时就会报错。</li>
+<li>使用分区，可以避免 Hive 全表扫描，能够指定分区查询数据，提升查询效率；</li>
+<li>使用分区表时，尽量利用分区字段进行查询，如果不使用分区字段查询，就会全部扫描，这样就失去了分区的意义。</li>
+</ul>
+<p>分桶：</p>
+<ul>
+<li>并不是所有的数据都可以形成合理的分区的，不合理的分区方式可能会导致有的分区数据过多，而有的分区没什么数据的情况。所以就有了分桶，分桶是更加细粒度的数据范围划分，把数据按照字段划分到多个文件中去。</li>
+<li>分桶原理：对分桶字段Hash，然后除以桶的个数求余，来确定放哪个桶。</li>
+<li>分桶优势：方便抽样、提高JOIN查询效率。</li>
+<li>使用分桶表时，尽量利用分桶字段进行查询，如果不使用分桶字段查询，就会全部扫描，这样就失去了分桶的意义。</li>
+</ul>
+<p>分区针对的是数据的存储路径，分桶针对的是数据文件。</p>
+</blockquote>
+
+
+<h3 class="relative group">Hive 和传统数据库的区别 
+    <div id="hive-%E5%92%8C%E4%BC%A0%E7%BB%9F%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E5%8C%BA%E5%88%AB" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#hive-%E5%92%8C%E4%BC%A0%E7%BB%9F%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E5%8C%BA%E5%88%AB" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<blockquote>
+<ul>
+<li>查询语言
+<ul>
+<li>Hive使用类似于SQL的查询语言，叫做HiveQL</li>
+<li>传统的数据库通常使用标准的SQL进行查询</li>
+</ul>
+</li>
+<li>数据存储位置
+<ul>
+<li>Hive依赖于Hadoop，其数据存储在Hadoop的分布式文件系统HDFS中。</li>
+<li>传统数据库存储在块设备或本地文件系统中。</li>
+</ul>
+</li>
+<li>数据格式
+<ul>
+<li>Hive中没有定义专门的数据格式，由用户指定，需要指定三个属性：列分隔符，行分隔符，以及读取文件数据的方法。</li>
+<li>传统数据库中，存储引擎定义了自己的数据格式。</li>
+</ul>
+</li>
+<li>数据更新
+<ul>
+<li>Hive不支持数据的修改操作</li>
+<li>数据库支持对数据的频繁修改，包括添加、删除和更新等操作。</li>
+</ul>
+</li>
+<li>索引
+<ul>
+<li>Hive废弃了索引</li>
+<li>传统数据库会建立索引</li>
+</ul>
+</li>
+<li>执行方式
+<ul>
+<li>Hive底层用的是MapReduce</li>
+<li>数据库是执行引擎（Execution Engine）</li>
+</ul>
+</li>
+<li>可扩展性
+<ul>
+<li>Hive扩展性高</li>
+<li>传统数据库扩展性低</li>
+</ul>
+</li>
+<li>数据规模
+<ul>
+<li>Hive为了处理大规模数据集设计的，能够处理PB级别的数据。</li>
+<li>传统数据库虽然也支持，但随着数据量的增加，性能会下降。</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+
+
+<h3 class="relative group">Hive 的物化视图和视图有什么区别 
+    <div id="hive-%E7%9A%84%E7%89%A9%E5%8C%96%E8%A7%86%E5%9B%BE%E5%92%8C%E8%A7%86%E5%9B%BE%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#hive-%E7%9A%84%E7%89%A9%E5%8C%96%E8%A7%86%E5%9B%BE%E5%92%8C%E8%A7%86%E5%9B%BE%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<blockquote>
+<p>Hive的视图是一种虚拟表，只保存定义，不会存储数据。用来简化SQL操作的，不能提高查询速度。</p>
+<p>物化视图是把复杂的操作先查出来，然后存到物化视图里面，能够提高查询的速度。物化视图只可以在事务表上创建。</p>
+</blockquote>
+
+
+<h3 class="relative group">Hive 内部表和外部表的区别 
+    <div id="hive-%E5%86%85%E9%83%A8%E8%A1%A8%E5%92%8C%E5%A4%96%E9%83%A8%E8%A1%A8%E7%9A%84%E5%8C%BA%E5%88%AB" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#hive-%E5%86%85%E9%83%A8%E8%A1%A8%E5%92%8C%E5%A4%96%E9%83%A8%E8%A1%A8%E7%9A%84%E5%8C%BA%E5%88%AB" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<blockquote>
+<p>建表时默认创建的就是内部表，外部表通过EXTERNAL关键字创建。</p>
+<p>创建内部表时会在HDFS中创建对应的目录，载入数据时，对应的数据文件会移动到表所在的目录下。</p>
+<p>外部表创建时指定数据位置【推荐，数据不会随意移动】，不会在HDFS中创建对应的表目录。</p>
+<p>外部表先建表再载入数据，会在HDFS中创建对应的表目录，载入数据时，对应的数据文件会移动到表所在的目录下。</p>
+<p>删除内部表时， 真实数据和表对应的目录也一并删除。删除外部表时，只会删除元数据，真实数据和表对应的目录不会被删除。</p>
+</blockquote>
+
+
+<h3 class="relative group">Hive 导出数据有几种方式 
+    <div id="hive-%E5%AF%BC%E5%87%BA%E6%95%B0%E6%8D%AE%E6%9C%89%E5%87%A0%E7%A7%8D%E6%96%B9%E5%BC%8F" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#hive-%E5%AF%BC%E5%87%BA%E6%95%B0%E6%8D%AE%E6%9C%89%E5%87%A0%E7%A7%8D%E6%96%B9%E5%BC%8F" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<blockquote>
+<ul>
+<li>通过 SQL 操作
+<ul>
+<li>将查询结果导出到本地     INSERT OVERWRITE LOCAL DIRECTORY &lsquo;/root/user&rsquo; SELECT * FROM t_user;</li>
+<li>将查询结果导出到 HDFS    INSERT OVERWRITE DIRECTORY &lsquo;/yjx/export/user&rsquo;。。。。。</li>
+</ul>
+</li>
+<li>通过 HDFS 命令操作
+<ul>
+<li>就是把HDFS中的数据复制一份      hdfs dfs -cp /hive/warehouse/t_person/* /yjx/export/person</li>
+</ul>
+</li>
+<li>将元数据和数据同时导出     EXPORT TABLE t_person TO &lsquo;/yjx/export/person&rsquo;;    将表结构（元数据）和数据同时导出</li>
+</ul>
+</blockquote>
+
+
+<h3 class="relative group">Hive 动态分区和静态分区有什么区别 
+    <div id="hive-%E5%8A%A8%E6%80%81%E5%88%86%E5%8C%BA%E5%92%8C%E9%9D%99%E6%80%81%E5%88%86%E5%8C%BA%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#hive-%E5%8A%A8%E6%80%81%E5%88%86%E5%8C%BA%E5%92%8C%E9%9D%99%E6%80%81%E5%88%86%E5%8C%BA%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<blockquote>
+<ul>
+<li>创建方式
+<ul>
+<li>静态分区是用户在创建表时手动指定分区的列。</li>
+<li>动态分区则是在加载数据时根据数据的值自动生成分区，分区的值是根据数据内容动态确定的。</li>
+</ul>
+</li>
+<li>使用场景
+<ul>
+<li>静态分区适用于数据量小且变化不频繁的场景</li>
+<li>动态分区适用于数据量大且频繁变化的场景</li>
+</ul>
+</li>
+<li>配置
+<ul>
+<li>静态分区没有什么配置要求，建表时指定分区字段就行</li>
+<li>动态分区需要在Hive中进行相关参数的配置</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+
+
+<h3 class="relative group">Hive 的 sort by、order by、distrbute by、cluster by 的区别 
+    <div id="hive-%E7%9A%84-sort-byorder-bydistrbute-bycluster-by-%E7%9A%84%E5%8C%BA%E5%88%AB" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#hive-%E7%9A%84-sort-byorder-bydistrbute-bycluster-by-%E7%9A%84%E5%8C%BA%E5%88%AB" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<blockquote>
+<p>这是Hive 中的四种排序：</p>
+<ul>
+<li>全局排序：ORDER BY
+<ul>
+<li>全局排序是在一个 Reduce 中进行全局数据的排序。</li>
+</ul>
+</li>
+<li>内部排序：SORT BY
+<ul>
+<li>只在每个 Reducer 内部进行排序。</li>
+</ul>
+</li>
+<li>分区排序：DISTRIBUTE BY
+<ul>
+<li>DISTRIBUTE BY 会根据指定的字段将数据分到不同的 Reducer，且分发算法是 Hash 散列。一般结合 SORT BY 使用（注意：DISTRIBUTE BY要在 SORT BY 之前）。</li>
+</ul>
+</li>
+<li>组合排序：CLUSTER BY
+<ul>
+<li>CLUSTER BY 既有 DISTRIBUTE BY 的功能外还有 SORTS BY 的功能，当 DISTRIBUTE BY 和 SORTS BY 字段相同时，可以使用 CLUSTER BY =DISTRIBUTE BY+SORTS BY。但是排序只能是升序排序，不能指定排序规则为 ASC 或者 DESC，否则会报错：</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+
+
+<h3 class="relative group">行式文件和列式文件的区别 
+    <div id="%E8%A1%8C%E5%BC%8F%E6%96%87%E4%BB%B6%E5%92%8C%E5%88%97%E5%BC%8F%E6%96%87%E4%BB%B6%E7%9A%84%E5%8C%BA%E5%88%AB" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%E8%A1%8C%E5%BC%8F%E6%96%87%E4%BB%B6%E5%92%8C%E5%88%97%E5%BC%8F%E6%96%87%E4%BB%B6%E7%9A%84%E5%8C%BA%E5%88%AB" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<blockquote>
+<ul>
+<li>数据的存储方式
+<ul>
+<li>行式：将数据按行存储在磁盘上</li>
+<li>列式：将数据按列存储在磁盘上</li>
+</ul>
+</li>
+<li>查询效率
+<ul>
+<li>行式：查询时需要读取整行数据，即使只需要查询很少部分列，导致不必要的I/O开销</li>
+<li>列式：查询时只需读取所需的列，减少了I/O开销，查询效率高</li>
+</ul>
+</li>
+<li>压缩效率
+<ul>
+<li>行式：同一行数据中，列的数据类型不一致，压缩比低，压缩效率低。</li>
+<li>列式：同一列中数据类型一样，压缩比高，压缩效率高。</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+
+
+<h3 class="relative group">说一说常见的 SQL 优化 
+    <div id="%E8%AF%B4%E4%B8%80%E8%AF%B4%E5%B8%B8%E8%A7%81%E7%9A%84-sql-%E4%BC%98%E5%8C%96" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%E8%AF%B4%E4%B8%80%E8%AF%B4%E5%B8%B8%E8%A7%81%E7%9A%84-sql-%E4%BC%98%E5%8C%96" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<blockquote>
+<ul>
+<li>
+<p>RBO优化</p>
+<ul>
+<li>谓词下推    靠近数据源的位置提前过滤掉一些无关的数据</li>
+<li>列裁剪        扫描数据源时，只读取所需的字段</li>
+<li>常量替换    将不变的表达式提前计算出结果，用该结果把表达式替换掉</li>
+</ul>
+</li>
+<li>
+<p>CBO优化</p>
+<ul>
+<li>特别适用于处理包含JOIN操作的复杂查询，它能计算所有可能执行计划的代价，并挑选出代价最小的执行计划。。</li>
+</ul>
+</li>
+<li>
+<p>JOIN优化</p>
+<ul>
+<li>Map Join	顾名思义，就是在 Map 阶段进行表之间的连接。
+<ul>
+<li>应用场景：小表 JOIN 大表或者小表 JOIN 小表。</li>
+<li>实现原理：Map Join 会把小表全部读入内存中，在 Map 阶段直接拿另外一个表的数据和内存中的表数据做匹配，由
+于在 Map 阶段进行了 JOIN 操作，底层不需要经过 Shuffle，这样就不会由于数据倾斜导致某个 Reduce 上落数据太多而失败，但是需要占用内存空间存放小表数据。 Hive 中默认开启了 Map Join</li>
+</ul>
+</li>
+<li>Reduce Join
+<ul>
+<li>应用场景：大表 JOIN 大表。</li>
+<li>实现原理：将两张表的数据在 Shuffle 阶段利用 Shuffle 的分组将数据按照关联字段进行合并。</li>
+</ul>
+</li>
+<li>Bucket Join     大表JOIN大表     大表数据分桶，桶与桶之间进行JOIN，减少了比较次数，避免全表扫描。</li>
+<li>Bucket Map Join</li>
+<li>Sort Merge Bucket Join（SMB Join）</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+
+
+<h3 class="relative group">根据现阶段所学知识总结一下产生数据倾斜的原因 
+    <div id="%E6%A0%B9%E6%8D%AE%E7%8E%B0%E9%98%B6%E6%AE%B5%E6%89%80%E5%AD%A6%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93%E4%B8%80%E4%B8%8B%E4%BA%A7%E7%94%9F%E6%95%B0%E6%8D%AE%E5%80%BE%E6%96%9C%E7%9A%84%E5%8E%9F%E5%9B%A0" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%E6%A0%B9%E6%8D%AE%E7%8E%B0%E9%98%B6%E6%AE%B5%E6%89%80%E5%AD%A6%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93%E4%B8%80%E4%B8%8B%E4%BA%A7%E7%94%9F%E6%95%B0%E6%8D%AE%E5%80%BE%E6%96%9C%E7%9A%84%E5%8E%9F%E5%9B%A0" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<blockquote>
+<p>本质来说有两种原因：</p>
+<ul>
+<li>Task读取大文件，读取压缩的不可分割的大文件。</li>
+<li>任务需要处理大量相同键的数据。
+<ul>
+<li>单表聚合操作，部分 Key 数据量较大，且大 Key 分布在很多不同的切片。</li>
+<li>两表进行 JOIN，都含有大量相同的倾斜数据键。</li>
+<li>数据含有大量无意义的数据，例如空值(NULL)、空字符串等。</li>
+<li>含有倾斜数据在进行聚合计算时无法聚合中间结果，大量数据都需要经过 Shuffle 阶段的处理，引起数据倾斜。</li>
+<li>数据在计算时做多维数据集合，导致维度膨胀引起的数据倾斜。</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+
+
+<h3 class="relative group">说一说 Hive 你知道的优化（问的几率不大，时间充足可以看看） 
+    <div id="%E8%AF%B4%E4%B8%80%E8%AF%B4-hive-%E4%BD%A0%E7%9F%A5%E9%81%93%E7%9A%84%E4%BC%98%E5%8C%96%E9%97%AE%E7%9A%84%E5%87%A0%E7%8E%87%E4%B8%8D%E5%A4%A7%E6%97%B6%E9%97%B4%E5%85%85%E8%B6%B3%E5%8F%AF%E4%BB%A5%E7%9C%8B%E7%9C%8B" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%E8%AF%B4%E4%B8%80%E8%AF%B4-hive-%E4%BD%A0%E7%9F%A5%E9%81%93%E7%9A%84%E4%BC%98%E5%8C%96%E9%97%AE%E7%9A%84%E5%87%A0%E7%8E%87%E4%B8%8D%E5%A4%A7%E6%97%B6%E9%97%B4%E5%85%85%E8%B6%B3%E5%8F%AF%E4%BB%A5%E7%9C%8B%E7%9C%8B" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<blockquote>
+<ul>
+<li>SQL优化</li>
+<li>资源优化
+<ul>
+<li>向量化查询</li>
+<li>存储优化</li>
+<li>YARN 优化</li>
+<li>并行执行</li>
+<li>JVM 重用</li>
+</ul>
+</li>
+<li>聚合优化
+<ul>
+<li>GROUP BY 优化</li>
+<li>ORDER BY 优化</li>
+<li>COUNT(DISTINCT) 优化</li>
+</ul>
+</li>
+<li>Job 优化
+<ul>
+<li>Map 优化</li>
+<li>Reduce 优化</li>
+<li>Shuffle 优化</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+
+
+<h2 class="relative group">HBase 
+    <div id="hbase" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#hbase" aria-label="锚点">#</a>
+    </span>        
+    
+</h2>
+
+
+<h3 class="relative group">RowKey 如何设计，设计不好会产生什么后果 
+    <div id="rowkey-%E5%A6%82%E4%BD%95%E8%AE%BE%E8%AE%A1%E8%AE%BE%E8%AE%A1%E4%B8%8D%E5%A5%BD%E4%BC%9A%E4%BA%A7%E7%94%9F%E4%BB%80%E4%B9%88%E5%90%8E%E6%9E%9C" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#rowkey-%E5%A6%82%E4%BD%95%E8%AE%BE%E8%AE%A1%E8%AE%BE%E8%AE%A1%E4%B8%8D%E5%A5%BD%E4%BC%9A%E4%BA%A7%E7%94%9F%E4%BB%80%E4%B9%88%E5%90%8E%E6%9E%9C" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<blockquote>
+<p>HBase 的 RowKey 设计应当遵循以下原则：以确保数据的均衡分布和高效访问。</p>
+<ul>
+<li>唯一原则
+<ul>
+<li>因为HBase中的数据是以键值对的形式存储的，相同的RowKey会覆盖旧的数据。</li>
+<li>RowKey 是按字典序排序存储的，设计 RowKey 时，要充分利用这个排序的特点，将经常一起查询的数据放到相近的RowKey上。</li>
+<li>单主键</li>
+<li>组合主键</li>
+</ul>
+</li>
+<li>长度原则
+<ul>
+<li>不要超过 16 个字节
+<ul>
+<li>RowKey 是一个二进制码流，最大长度是 64KB，建议越短越好。不要超过 16 个字节。数据的持久化文件 HFile 中是按照 KeyValue 存储的，如果数据量特别大，RowKey过长的话，HFile文件就会占用很大的存储空间，HFile 的存储效率降低。MemStore 将缓存数据到内存时，如果 RowKey 字段过长，内存不够，无法缓存更多的数据，会降低检索效率。</li>
+</ul>
+</li>
+<li>对齐 RowKey 长度
+<ul>
+<li>根据不同的场景，在有些情况下，还需要对齐 RowKey 的长度：因为 RowKey 是按字典序排列的，比如 ID 取 12 位，9 位 ID 前就需要补齐 3 个 0，否则就会出现 123456789 比 654321 排在前面的问题。对齐长度后，000000654321 就会排在 000123456789 之前，符合预期。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>散列原则
+<ul>
+<li>反转</li>
+<li>加盐（添加随机前缀）</li>
+<li>Hash</li>
+</ul>
+</li>
+</ul>
+<p>可能产生的后果：</p>
+<ul>
+<li><strong>数据倾斜与热点问题</strong>：
+<ul>
+<li>如果RowKey设计不当，导致大量数据集中在少数几个RegionServer上，就会出现数据倾斜和热点问题。</li>
+<li>会使得这些RegionServer的负载过高，影响查询性能，甚至可能导致节点崩溃。</li>
+</ul>
+</li>
+<li><strong>查询效率低</strong>：
+<ul>
+<li>可能会使得相关的查询操作需要扫描大量的数据行才能找到目标数据。</li>
+<li>增加了查询的延迟，还可能对集群的整体性能造成影响。</li>
+</ul>
+</li>
+<li><strong>存储效率低</strong>：
+<ul>
+<li>过长的RowKey会占用更多的存储空间，降低存储效率。</li>
+<li>过长的RowKey还可能导致内存的利用率下降。</li>
+</ul>
+</li>
+<li><strong>管理复杂性增加</strong>：
+<ul>
+<li>设计不合理的RowKey会使得数据的分布变得难以预测和控制，增加了数据管理和维护的复杂性。</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+
+
+<h3 class="relative group">列族如何设计，为什么不建议 HBase 设计过多列族 
+    <div id="%E5%88%97%E6%97%8F%E5%A6%82%E4%BD%95%E8%AE%BE%E8%AE%A1%E4%B8%BA%E4%BB%80%E4%B9%88%E4%B8%8D%E5%BB%BA%E8%AE%AE-hbase-%E8%AE%BE%E8%AE%A1%E8%BF%87%E5%A4%9A%E5%88%97%E6%97%8F" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%E5%88%97%E6%97%8F%E5%A6%82%E4%BD%95%E8%AE%BE%E8%AE%A1%E4%B8%BA%E4%BB%80%E4%B9%88%E4%B8%8D%E5%BB%BA%E8%AE%AE-hbase-%E8%AE%BE%E8%AE%A1%E8%BF%87%E5%A4%9A%E5%88%97%E6%97%8F" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<blockquote>
+<p>追求的原则是：在合理的范围内，尽可能的减少列族</p>
+<p>怎么设计呢？</p>
+<ul>
+<li>如果某些列经常被一起查询，那么可以把这些列放在同一个列族中。查询效率高，减少了访问不同的磁盘文件。</li>
+<li>减少列族的数量，官方推荐&lt;=3个</li>
+<li>列族名的长度要尽量小，节省空间，加快效率，最好是一个字符，比如 d 表示 data 或default，v 表示 value。</li>
+</ul>
+<p>为什么不建议 HBase 设计过多列族？</p>
+<ul>
+<li><strong>内存和IO消耗</strong>：每个列族对应Region中的一个Store，每个Store又包含一个MemStore。当MemStore达到一定阈值时，会将其中的数据flush到磁盘上的StoreFile中。如果列族数量过多，会导致每个Region中的MemStore数量增多，进而增加了需要flush的数据量。这不仅会影响flush的IO性能，还会消耗更多的集群资源，甚至可能引发memstore的flush阻塞现象。</li>
+<li><strong>数据分布和查询效率</strong>：如果每个列族的数据量分布不均匀，比如某些列族的数据量远大于其他列族，那么在Region分裂时，可能会导致数据量小的列族在每个Region中的数据量过少。这会导致查询这些小数据量列族时，需要横跨多个Region，从而降低查询效率。</li>
+</ul>
+</blockquote>
+
+
+<h3 class="relative group">HBase 读取数据的流程 
+    <div id="hbase-%E8%AF%BB%E5%8F%96%E6%95%B0%E6%8D%AE%E7%9A%84%E6%B5%81%E7%A8%8B" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#hbase-%E8%AF%BB%E5%8F%96%E6%95%B0%E6%8D%AE%E7%9A%84%E6%B5%81%E7%A8%8B" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<blockquote>
+<ul>
+<li>
+<p>Client 先访问 zookeeper，获取 hbase:meta 表位于哪个 HRegionServer。</p>
+</li>
+<li>
+<p>访问对应的 HRegionServer，<strong>获取 hbase:meta 表</strong>，根据读请求的 namespace:table/rowkey，<strong>查询出目标数据</strong>位于哪个 HRegionServer 中的哪个 HRegion 中。（并将该 table 的 HRegion 信息以及 meta 表的位置信息<strong>缓存在客户端的 meta cache</strong>，方便下次访问）。</p>
+</li>
+<li>
+<p>向HRegionServer发送读数据请求与目标 HRegionServer 建立连接；</p>
+</li>
+<li>
+<p>分别在 BlockCache（读缓存）-&gt;MemStore （写缓存）-&gt;Store File（HFile）中层层往下查询目标数据。</p>
+</li>
+<li>
+<p>将查询到的数据，先缓存到BlockCache。</p>
+</li>
+<li>
+<p>然后再将数据返回给客户端。</p>
+</li>
+</ul>
+</blockquote>
+
+
+<h3 class="relative group">HBase 写入数据的流程 
+    <div id="hbase-%E5%86%99%E5%85%A5%E6%95%B0%E6%8D%AE%E7%9A%84%E6%B5%81%E7%A8%8B" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#hbase-%E5%86%99%E5%85%A5%E6%95%B0%E6%8D%AE%E7%9A%84%E6%B5%81%E7%A8%8B" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<p>
+  <figure>
+    <img class="my-0 rounded-md" loading="lazy" src="https://cdn.jsdelivr.net/gh/dh2870968633/PicGo/img/202408131924196.png" alt="image-20240730172750001" />
+    
+  </figure>
+</p>
+<blockquote>
+<ul>
+<li>
+<p>Client 访问 ZooKeeper，获取 hbase:meta 所在 HRegionServer 的节点信息；</p>
+</li>
+<li>
+<p>Client 访问 hbase:meta 所在的 HRegionServer，获取 hbase:meta 记录的<strong>元数据</strong>后先加载到内存中，然后再从内存中查询出 RowKey 所在的 HRegion （HRegion 所在的 HRegionServer）；（写入数据的RowKey，根据RowKey查询（按字典排序）出其应该被分在哪个HRegion）。</p>
+</li>
+<li>
+<p>Client 对 RowKey 所在的 HRegion 对应的 HRegionServer 发起写入数据请求；</p>
+</li>
+<li>
+<p>建立连接后，首先将 DML 要做的<strong>操作写入</strong>到日志 <strong>HLog</strong>；</p>
+</li>
+<li>
+<p>然后将数据的修改更新到 MemStore 中，本次操作结束：一个 HRegion 由多个 Store 组成，一个 Store 对应一个列族，Store 包括位于内存中的 Memstore 和位于磁盘的 StoreFile，<strong>写操作先写入 MemStore</strong>；</p>
+</li>
+<li>
+<p>当 MemStore 数据达到阈值后（默认 128M），创建一个新的 MemStore；</p>
+</li>
+<li>
+<p>旧的 MemStore 将<strong>刷写为</strong>一个独立的 <strong>StoreFile</strong>（HRegionServer 会启动 FlushCache 进程写入 StoreFile）并存放到<strong>HDFS</strong>，最后<strong>删除 HLog 中的历史数据</strong>。</p>
+</li>
+<li>
+<p>当 StoreFile 文件的数量增长到一定阈值后，系统会进行合并（次/小 Minor Compaction、主/大 Major Compaction）；</p>
+</li>
+<li>
+<p>在合并过程中会进行版本合并和删除工作，形成更大的 StoreFile；</p>
+</li>
+<li>
+<p>当一个 HRegion 所有 StoreFile 的大小和数量超过一定阈值（10G）后，会把当前的 HRegion 分割为两个，并由 HMaster 分配到相应的 HRegionServer 服务器，实现负载均衡。</p>
+</li>
+</ul>
+</blockquote>
+
+
+<h3 class="relative group">Hive 和 HBase 的区别？？？？？ 
+    <div id="hive-%E5%92%8C-hbase-%E7%9A%84%E5%8C%BA%E5%88%AB" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#hive-%E5%92%8C-hbase-%E7%9A%84%E5%8C%BA%E5%88%AB" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<blockquote>
+<ul>
+<li>Hive：
+<ul>
+<li>Hive并不是数据库，是一个基于 Hadoop 的数据仓库工具</li>
+<li>Hive本身不存储数据，真正的数据存储在HDFS中，它完全依赖HDFS和MapReduce，Hive通过元数据会把这些数据映射成一张数据库表（逻辑表）。支持SQL查询，本质是将 HQL 转化成 MapReduce 程序。</li>
+<li>Hive使用与对结构化数据进行查询分析</li>
+<li>主要是支持批处理数据。不擅长处理实时数据更新。</li>
+</ul>
+</li>
+<li>HBase：
+<ul>
+<li>HBase是一种基于HDFS的分布式、面向列的非关系型数据库。键值对的方式存储数据。表是物理表。</li>
+<li>HBase的数据模型是面向列的，表由行键（Row Key）、时间戳（Timestamp）（数据version）、列族（Column Family）和列（Column）组成。</li>
+<li>系统命名空间hbase中有元数据表(meta)（存了整个HBase中的所有其他的表的【数据与region，以及region与RegionServer的映射】）&ndash;通过该机制能快速定位到数据。提高读写效率。</li>
+<li>HBase 的主要作用就是面向 PB 级别数据的实时入库和快速随机访问</li>
+<li>支持实时处理数据。（秒级查询&ndash;实时）高吞吐量，低延迟。</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+
+
+<h3 class="relative group">为什么要使用 Phoenix 
+    <div id="%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E4%BD%BF%E7%94%A8-phoenix" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E4%BD%BF%E7%94%A8-phoenix" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<blockquote>
+<ul>
+<li>HBase作为一种原始的键值存储数据库，它的数据模型是非常简单的，它提供的主要操作是通过行键（Row Key）进行数据的读写。对于简单的查询和数据的增删改查操作，HBase已经足够强大。但是当我们需要进行类似传统SQL数据库中的复杂查询、聚合、排序等操作时，HBase就显得力不从心了。这是因为HBase并没有像传统SQL数据库一样提供索引以及查询优化的功能。</li>
+<li>Phoenix为HBase提供了执行SQL查询的接口，它基于SQL标准，并且提供了许多SQL数据库中常见的特性，如二级索引、事务等，我们可以通过简单的SQL语句直接查询HBase中的数据，而无需编写复杂的HBase的Java API代码，和用HBase Shell命令来操作HBase数据库，提高了开发效率。</li>
+<li>Phoenix将SQL查询转换为HBase的Scan扫描操作来实现高效的查询。在HBase上构建了一套索引机制，使得查询更加高效。</li>
+<li>Apache Phoenix还支持将查询结果直接写入到HBase中。</li>
+</ul>
+</blockquote>
+
+
+<h3 class="relative group">HBase 的热点区域会产生什么问题 
+    <div id="hbase-%E7%9A%84%E7%83%AD%E7%82%B9%E5%8C%BA%E5%9F%9F%E4%BC%9A%E4%BA%A7%E7%94%9F%E4%BB%80%E4%B9%88%E9%97%AE%E9%A2%98" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#hbase-%E7%9A%84%E7%83%AD%E7%82%B9%E5%8C%BA%E5%9F%9F%E4%BC%9A%E4%BA%A7%E7%94%9F%E4%BB%80%E4%B9%88%E9%97%AE%E9%A2%98" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<blockquote>
+<ul>
+<li><strong>性能下降</strong>
+<ul>
+<li>当热点区域出现时，意味着大量的读写请求集中在少数几个Region Server上。这些Region Server会承受远<strong>高</strong>于其他节点的<strong>负载压力</strong>，导致处理速度变慢，响应时间变长。</li>
+<li>在高负载持续作用下，过载的Region Server可能会出现性能瓶颈，甚至因资源耗尽而崩溃，导致部分或全部<strong>服务不可用</strong>。这不仅会影响用户体验，还可能对业务造成严重影响。</li>
+<li>由于热点区域的数据访问过于集中，查询操作可能需要等待很长时间才能获得响应，<strong>查询效率就会降低</strong>。</li>
+</ul>
+</li>
+<li><strong>资源利用不均衡</strong>
+<ul>
+<li>在HBase集群中，如果大部分数据都集中在少数几个Region Server上，而其他节点则处于空闲或低负载状态，那么就会造成硬件<strong>资源的浪费</strong>。这不仅增加了运营成本，还降低了集群的整体效率。</li>
+<li>HBase的Region Server本应具有负载均衡的能力，通过合理的数据分布来平衡各节点的负载。然而，热点区域的出现打破了这种平衡，使得<strong>负载均衡机制失效</strong>。</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+
+
+<h3 class="relative group">说一说 HBase 的数据刷写与合并 
+    <div id="%E8%AF%B4%E4%B8%80%E8%AF%B4-hbase-%E7%9A%84%E6%95%B0%E6%8D%AE%E5%88%B7%E5%86%99%E4%B8%8E%E5%90%88%E5%B9%B6" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%E8%AF%B4%E4%B8%80%E8%AF%B4-hbase-%E7%9A%84%E6%95%B0%E6%8D%AE%E5%88%B7%E5%86%99%E4%B8%8E%E5%90%88%E5%B9%B6" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<blockquote>
+<ul>
+<li>刷写
+<ul>
+<li>刷写是HBase将数据从内存中的MemStore写入到磁盘上的HFile文件的过程</li>
+<li><strong>刷写触发时机：</strong>
+<ul>
+<li><strong>内存阈值：</strong> <strong>HRegion级别的刷写</strong>。Memstore达到128M触发刷写，把数据写出到HFile。情况：Memstore达到128M，但是还有数据一直往MemeStore里面写&mdash;当MemStore达到128M时，先上锁，再拍快照，然后往外刷，如果出问题，就重新刷，这时刷快照里面的，直到不出问题，就释放锁。当数据写入的非常快时，MemStore还没刷写完，锁还没释放，就会再生成MemStore&ndash;最多四个（128M*4），达到四个时，HBase就会阻塞所有此时写入MemStore的请求，直到有一个MemeStore刷写完成，释放锁后，总的MemStore&lt;4个，才能继续写入MemStore。</li>
+<li><strong>内存总和：</strong> <strong>HRegionServer 级别的刷写。<strong>整个 HRegionServer 的 <strong>各个HRegion中的各个Store中的MemStore 占用内存总和</strong>大于</strong>相关阈值</strong>时会触发刷写。此时当前 HRegionServer 的所有写操作将会被阻塞，这个阻塞可能会持续到分钟级别。</li>
+<li><strong>日志阈值：<strong>HBase 使用了 <strong>WAL（Write-Ahead Logging） 机制</strong>（日志先行），当数据到达 HRegion 时是先写入日志的，然后再被写入到 MemStore。如果</strong>日志的数量越来越大，这就意味着 MemStore 中未持久化到磁盘的数据越来越多</strong>（<strong>因为MemStore中的数据持久化到磁盘后，就会把对应的日志文件删除</strong>）。当 HRegionServer 挂掉的时候，<strong>恢复时间将会变得很长</strong>，所以有必要在日志到达一定的数量时进行一次刷写操作。</li>
+<li>**定期刷写：**当定时器到达 hbase.regionserver.optionalcacheflushinterval （默认值 3600000 毫秒，即 1 小时）时，<strong>HBase 会自动触发刷写</strong>。一般建议调大，比如 10 小时，因为很多场景下 1 小时 Flush 一次会产生很多小文件，一方面导致Flush 比较频繁，另一方面导致小文件很多，影响随机读性能。</li>
+<li>**更新频率：**如果 HBase 的某个 HRegion 更新的很频繁，而且既没有达到自动刷写阀值，也没有达到内存的使用限制，但是内存中的更新数量已经足够多，比如超过 hbase.regionserver.flush.per.changes 参数配置，默认为 30000000 次，也会触发刷写。</li>
+<li>**手动刷写：**Shell客户端手动使用 flush 命令。</li>
+</ul>
+</li>
+<li><strong>刷写策略：</strong>
+<ul>
+<li>HBASE 1.1 之前：MemStore 刷写是 HRegion 级别的。就是说，如果要刷写某个 MemStore ，MemStore 所在的 HRegion中其他的 MemStore 也是会被一起刷写的（简单的理解：Flush 一个列族时其它列族也会一起 Flush）。</li>
+<li>HBASE 2.x 之后：保留了HBASE 1.1 之前的刷写策略，还有其他的两个刷写策略，根据是否达到阈值计算公式的阈值，来进行刷写，如果这两个刷写策略，都不满足条件的话，就会退化成HBASE 1.1 之前的刷写策略。</li>
+</ul>
+</li>
+<li><strong>刷写流程：</strong>
+<ul>
+<li>prepareFlush 阶段：先对 MemStore 做 Snapshot快照，为了防止刷写过程中更新的数据同时在 Snapshot 和 MemStore 中而造成后续处理的困难，所以在刷写期间需要持有 updateLock。持有了 updateLock 之后，将阻塞客户端的写操作。</li>
+<li>flushCache 阶段：将snapshot写入到临时文件中。将临时文件移动到对应的列族目录下，并做一些清理工作，如删除snapshot。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>合并
+<ul>
+<li>合并是HBase将多个HFile文件合并成一个或多个更大的HFile文件的过程。这个过程可以减少HFile文件的数量，提高读性能，并清理过期或无效的数据。</li>
+<li>HBase根据规模将合并分为了两类：
+<ul>
+<li>Minor Compaction（次要/小）
+<ul>
+<li>选取一些小的、相邻的 StoreFile 将他们合并成一个更大的 StoreFile，在这个过程中不做任何删除数据、多版本数据的清理工作，但是会对 minVersion=0 并且设置 TTL 的过期版本数据进行清理。一次 Minor Compaction 的结果是让小的StoreFile 变的更少并且产生更大的 StoreFile。</li>
+</ul>
+</li>
+<li>Major Compaction（主要/大）
+<ul>
+<li>将所有的 StoreFile 合并成一个 StoreFile 清理三类无意义数据：被删除的数据、TTL 过期数据、版本号超过设定版本号的数据。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+
+
+<h2 class="relative group">Scala 
+    <div id="scala" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#scala" aria-label="锚点">#</a>
+    </span>        
+    
+</h2>
+
+
+<h3 class="relative group">Scala 中，函数是一等公民具体体现在哪里 
+    <div id="scala-%E4%B8%AD%E5%87%BD%E6%95%B0%E6%98%AF%E4%B8%80%E7%AD%89%E5%85%AC%E6%B0%91%E5%85%B7%E4%BD%93%E4%BD%93%E7%8E%B0%E5%9C%A8%E5%93%AA%E9%87%8C" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#scala-%E4%B8%AD%E5%87%BD%E6%95%B0%E6%98%AF%E4%B8%80%E7%AD%89%E5%85%AC%E6%B0%91%E5%85%B7%E4%BD%93%E4%BD%93%E7%8E%B0%E5%9C%A8%E5%93%AA%E9%87%8C" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<blockquote>
+<p><strong>函数可以存储在变量中；函数可以作为参数；函数可以作为返回值。</strong></p>
+</blockquote>
+
+
+<h3 class="relative group">说说 Scala 函数的至简原则 
+    <div id="%E8%AF%B4%E8%AF%B4-scala-%E5%87%BD%E6%95%B0%E7%9A%84%E8%87%B3%E7%AE%80%E5%8E%9F%E5%88%99" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%E8%AF%B4%E8%AF%B4-scala-%E5%87%BD%E6%95%B0%E7%9A%84%E8%87%B3%E7%AE%80%E5%8E%9F%E5%88%99" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<blockquote>
+<ul>
+<li>方法和函数不建议写 return 关键字，Scala 会使用函数体的最后一行代码作为返回值；</li>
+<li>方法的返回值类型如果能够推断出来，那么可以省略，如果有 return 则不能省略返回值类型，必须指定；</li>
+<li>因为函数是对象，所以函数有类型，但函数类型可以省略，Scala 编译期可以自动推断类型；</li>
+<li>如果方法明确声明了返回值为 Unit，那么即使方法体中有 return 关键字也不起作用；</li>
+<li>如果方法的返回值类型为 Unit，可以省略等号 = ；</li>
+<li>如果函数的参数类型能够推断出来，那么可以省略；</li>
+<li>如果方法体或函数体只有一行代码，可以省略花括号 {} ；</li>
+<li>如果方法无参，但是定义时声明了 () ，调用时小括号 () 可省可不省；</li>
+<li>如果方法无参，但是定义时没有声明 () ，调用时必须省略小括号 () ；</li>
+<li>如果不关心名称，只关心逻辑处理，那么函数名可以省略。也就是所谓的匿名函数；</li>
+<li>如果匿名函数只有一个参数，小括号 () 和参数类型都可以省略，没有参数或参数超过一个的情况下不能省略 () ；</li>
+<li>如果参数只出现一次，且方法体或函数体没有嵌套使用参数，则参数可以用下划线 _ 来替代。</li>
+</ul>
+</blockquote>
+
+
+<h2 class="relative group">Spark 
+    <div id="spark" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#spark" aria-label="锚点">#</a>
+    </span>        
+    
+</h2>
+
+
+<h3 class="relative group">说 10 个常用的 Spark 转换算子 
+    <div id="%E8%AF%B4-10-%E4%B8%AA%E5%B8%B8%E7%94%A8%E7%9A%84-spark-%E8%BD%AC%E6%8D%A2%E7%AE%97%E5%AD%90" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%E8%AF%B4-10-%E4%B8%AA%E5%B8%B8%E7%94%A8%E7%9A%84-spark-%E8%BD%AC%E6%8D%A2%E7%AE%97%E5%AD%90" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<blockquote>
+<ul>
+<li>
+<p>单Value</p>
+<ul>
+<li>map  待处理数据逐条映射转换</li>
+<li>mapPartitions &amp; mapPartitionsWithIndex      易OOM  分区为单位进行数据转换             Index -能指定对哪个分区的数据~</li>
+<li>flatMap   扁平化映射&ndash; map+flatten    先数组 再展平为一个个的元素 集合</li>
+<li>glom    同一个分区的所有单个数据转换成数组~</li>
+<li>groupBy（shuffle）  分组   数据打乱重新组合=shuffle</li>
+<li>filter  过滤</li>
+<li>sample  抽样      withReplacement    fraction    seed</li>
+<li>distinct（shuffle） 去重</li>
+<li>coalesce（shuffle）   缩小扩大分区数   第二个参数是否shuffle</li>
+<li>repartition（shuffle）  重新分配分区数  底层调用coalesce  默认是shuffle的</li>
+<li>sortBy（shuffle） 排序  默升</li>
+</ul>
+</li>
+<li>
+<p>双 Value</p>
+<ul>
+<li>union    两个 RDD 并集    不去重</li>
+<li>intersection            交集</li>
+<li>subtract</li>
+<li>cartesian   笛卡尔积</li>
+<li>zip  拉链      分区数一致，分区类元素数一致</li>
+</ul>
+</li>
+<li>
+<p>Key-Value</p>
+<ul>
+<li>partitionBy（shuffle）</li>
+<li>sortByKey（shuffle）</li>
+<li>reduceByKey（shuffle）        分区内和分区间的计算逻辑必须一致</li>
+<li>groupByKey（shuffle）</li>
+<li>aggregateByKey（shuffle）   分区内和分区间的计算逻辑不一致</li>
+<li>mapValues    只对 V 进行操作</li>
+<li>foldByKey（shuffle）              分区内和分区间计算逻辑相同时</li>
+<li>combineByKey（shuffle）</li>
+<li>join</li>
+<li>cogroup    两个RDD 先key分组&ndash;再Value连接</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+
+
+<h3 class="relative group">说几个高效算子，并说明为什么高效 
+    <div id="%E8%AF%B4%E5%87%A0%E4%B8%AA%E9%AB%98%E6%95%88%E7%AE%97%E5%AD%90%E5%B9%B6%E8%AF%B4%E6%98%8E%E4%B8%BA%E4%BB%80%E4%B9%88%E9%AB%98%E6%95%88" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%E8%AF%B4%E5%87%A0%E4%B8%AA%E9%AB%98%E6%95%88%E7%AE%97%E5%AD%90%E5%B9%B6%E8%AF%B4%E6%98%8E%E4%B8%BA%E4%BB%80%E4%B9%88%E9%AB%98%E6%95%88" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<blockquote>
+<ul>
+<li><code>mapPartitions</code>：<strong>对比与map，一次处理一个分区的数据，而不是单个元素，意味着，每个分区函数只会调用一次，减少了函数调用的开销，类似于批处理，提高性能。</strong> 但是处理完的数据是不会被释放掉的，存在对象的引用，在内存较小，数据量较大的场合下，容易出现OOM。</li>
+<li><code>ForeachPartiton</code>：<strong>在Foreach中，每个元素都要执行一次指定的函数，而ForeachPartiton则是对一个分区执行一次指定的函数（该函数接收的参数是该分区的迭代器（Iterator）），减少了系统调用的次数，提高了效率。将RDD的数据批量写入数据库或者文件系统时，每个分区的数据只需要建立一次数据库连接，减少了数据库连接的开销。提高了性能</strong>。</li>
+<li><code>reduceByKey和 aggregateByKey</code>：<strong>这两个算子在shuffle操作之前对每个分区内的相同key进行预聚合，减少了网络传输的数据量，降低了磁盘IO，提高性能。可以缓解数据倾斜问题。</strong></li>
+<li><code>coalesce和repartition</code>：<strong>合理的调整分区数量，使每个Task处理的数据量更加均衡。当后续的一些操作不需要高并行度时，可以减少分区数，来降低内存和CPU的开销。</strong></li>
+<li><code>persist和cache</code>：<strong>将RDD的数据持久化到内存或磁盘中，便于后续操作中数据的重用（不需要每次都从头开始计算）。避免了重复计算相同数据集的开销，persist算子允许用户指定存储级别，如纯内存、内存加磁盘等，来适应不同的需求。</strong></li>
+</ul>
+</blockquote>
+
+
+<h3 class="relative group">如果让你编码，如何实现 distinct 算子的功能 
+    <div id="%E5%A6%82%E6%9E%9C%E8%AE%A9%E4%BD%A0%E7%BC%96%E7%A0%81%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0-distinct-%E7%AE%97%E5%AD%90%E7%9A%84%E5%8A%9F%E8%83%BD" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%E5%A6%82%E6%9E%9C%E8%AE%A9%E4%BD%A0%E7%BC%96%E7%A0%81%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0-distinct-%E7%AE%97%E5%AD%90%E7%9A%84%E5%8A%9F%E8%83%BD" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<blockquote>
+<ul>
+<li>
+<p><strong>使用哈希表去重</strong>：由于哈希表不允许重复的键，‌因此，‌当尝试插入具有相同键的新元素时，‌哈希表会自动覆盖旧的值，‌从而实现去重的效果。‌</p>
+</li>
+<li>
+<p><strong>排序后去重</strong>：遍历排序后的列表，并跳过重复的元素。</p>
+<p>如果需要处理大量数据，哈希表的效率更高；如果需要保证数据的有序性，排序算法更加适合。具体使用看不同的场景。</p>
+<p>1.将原始RDD转换成一个元组RDD，元组RDD的第一个元素是原始RDD的元素，第二个元素是null</p>
+<p>2.使用ReduceByKey算子对元组RDD进行分组，并统计每个分组中元素的个数</p>
+<p>3.使用filter算子过滤掉分组中元素个数大于1的元组</p>
+<p>4.将过滤后的元组RDD转换回原始RDD的类型</p>
+</li>
+</ul>
+</blockquote>
+
+
+<h3 class="relative group">说几个 spark-submit 提交应用的参数，并说明其作用 
+    <div id="%E8%AF%B4%E5%87%A0%E4%B8%AA-spark-submit-%E6%8F%90%E4%BA%A4%E5%BA%94%E7%94%A8%E7%9A%84%E5%8F%82%E6%95%B0%E5%B9%B6%E8%AF%B4%E6%98%8E%E5%85%B6%E4%BD%9C%E7%94%A8" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%E8%AF%B4%E5%87%A0%E4%B8%AA-spark-submit-%E6%8F%90%E4%BA%A4%E5%BA%94%E7%94%A8%E7%9A%84%E5%8F%82%E6%95%B0%E5%B9%B6%E8%AF%B4%E6%98%8E%E5%85%B6%E4%BD%9C%E7%94%A8" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<blockquote>
+<ul>
+<li>&ndash;master ：Spark 任务提交的模式，默认为本地模式。
+<ul>
+<li>local ：本地模式，只有一个工作进程，无并行计算能力；</li>
+<li>local[N] ：本地模式，有 N 个工作进程，通常设置 N 为机器的 CPU 核数；</li>
+<li>local[*] ：本地模式，工作进程数量等于机器的 CPU 核数。</li>
+<li>Standalone 、Mesos、K8s、YARN模式</li>
+</ul>
+</li>
+<li>&ndash;deploy-mode ：Driver 程序运行的地方，Client 或者 Cluster，默认是 Client；</li>
+<li>&ndash;class ：要执行的程序的主类；</li>
+<li>&ndash;jars ：逗号分隔的本地 JARS，Driver 和 Executor 依赖的第三方 Jar 包；</li>
+<li>&ndash;name ：应用程序的名称；</li>
+<li>&ndash;driver-memory ：Driver 程序使用内存大小（例如：1000M，5G），默认 1024M；</li>
+<li>&ndash;executor-memory ：每个 Executor 内存大小（如：1000M，2G），默认 1G。</li>
+</ul>
+</blockquote>
+
+
+<h3 class="relative group">Hadoop MR 的 Shuffle 和 Spark Shuffle 的区别？？？？ 
+    <div id="hadoop-mr-%E7%9A%84-shuffle-%E5%92%8C-spark-shuffle-%E7%9A%84%E5%8C%BA%E5%88%AB" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#hadoop-mr-%E7%9A%84-shuffle-%E5%92%8C-spark-shuffle-%E7%9A%84%E5%8C%BA%E5%88%AB" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<blockquote>
+<ul>
+<li>数据处理方式：
+<ul>
+<li>MR中Map和Reduce的中间结果，也就是shuffle需要将数据落地到磁盘，会有大量的磁盘I/O操作，从而影响性能。</li>
+<li>Spark Shuffle ，Spark会尽量将中间结果持久化到内存中，以减少磁盘I/O操作。实在内存不够，才写入磁盘。基于内存，执行效率高。</li>
+</ul>
+</li>
+<li>优化方面：
+<ul>
+<li>MR shuffle有大量的磁盘I/O，优化性能不是很好，优化空间有限。</li>
+<li>Spark提供了多种Shuffle机制，如HashShuffle和SortShuffle，其中SortShuffle在数据量较大时能够提供更好的性能。</li>
+</ul>
+</li>
+<li>网络传输方式：Hadoop Shuffle 采用 HTTP 协议传输数据，而 Spark Shuffle 采用 NIO（非阻塞）传输协议。</li>
+</ul>
+</blockquote>
+
+
+<h3 class="relative group">Spark SQL 的执行流程 
+    <div id="spark-sql-%E7%9A%84%E6%89%A7%E8%A1%8C%E6%B5%81%E7%A8%8B" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#spark-sql-%E7%9A%84%E6%89%A7%E8%A1%8C%E6%B5%81%E7%A8%8B" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<p>
+  <figure>
+    <img class="my-0 rounded-md" loading="lazy" src="https://cdn.jsdelivr.net/gh/dh2870968633/PicGo/img/202408131443757.png" alt="image-20240813144345673" />
+    
+  </figure>
+</p>
+<blockquote>
+<p>Spark SQL的核心是Catalyst优化器：</p>
+<ul>
+<li>**解析：**SQL语句经过SqlParser解析成Unresolved LogicalPlan（未绑定的逻辑执行计划）</li>
+<li>**编译：**Analyzer（分析器）将Unresolved LogicalPlan 编译成 Analyzed Logical Plan（编译后的逻辑计划）</li>
+<li>**优化：**Logical optimizer（逻辑计划调优器）使用一些 Optimization Rules（调优规则：合并、列裁剪、谓词下推等）将 Analyzed Logical Plan 优化成 Optimized Logical Plan（优化后的逻辑计划）</li>
+<li>**物理执行计划：**Physical Planner（物理计划生成器）将Optimized Logical Plan转换成可执行的物理计划 Physical Plan</li>
+<li>**代码执行：**最后通过 Code Generation（代码生成器）把 SQL 生成底层的代码，最终执行。</li>
+</ul>
+</blockquote>
+
+
+<h3 class="relative group">讲讲 Spark 的通用运行流程 
+    <div id="%E8%AE%B2%E8%AE%B2-spark-%E7%9A%84%E9%80%9A%E7%94%A8%E8%BF%90%E8%A1%8C%E6%B5%81%E7%A8%8B" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%E8%AE%B2%E8%AE%B2-spark-%E7%9A%84%E9%80%9A%E7%94%A8%E8%BF%90%E8%A1%8C%E6%B5%81%E7%A8%8B" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<p>
+  <figure>
+    <img class="my-0 rounded-md" loading="lazy" src="https://cdn.jsdelivr.net/gh/dh2870968633/PicGo/img/202408131444803.png" alt="image-20240805203917953" />
+    
+  </figure>
+</p>
+<blockquote>
+<p><strong>Spark 的通用运行流程：</strong></p>
+<ul>
+<li>
+<p>启动集群后，Worker 节点会向 Master 节点心跳汇报资源（CPU Core 和 Memory）情况；</p>
+</li>
+<li>
+<p>Client 提交 Application，根据不同的运行模式在不同的位置创建 Driver 进程；</p>
+</li>
+<li>
+<p>SparkContext 连接到 Master，向 Master 注册应用并申请资源（Executor 的 CPU Core 和 Memory）；</p>
+</li>
+<li>
+<p>Master 根据 SparkContext 的资源申请并根据 Worker 心跳周期内报告的信息决定在哪个 Worker 上分配资源，也就是</p>
+<p>Executor；</p>
+</li>
+<li>
+<p>Worker 节点创建 Executor 进程，Executor 向 Driver 进行反向注册；</p>
+</li>
+<li>
+<p>资源满足后（Executor 注册完毕），SparkContext 解析 Applicaiton 代码，创建 RDD，构建 DAG，并提交给</p>
+<p>DAGScheduler 分解成 Stage（当碰到 Action 算子时，就会催生 Job，每个 Job 中含有 1 个或多个 Stage），然后将</p>
+<p>Stage（或者称为 TaskSet）提交给 TaskScheduler，TaskScheduler 负责将 Task 分配到相应的 Worker，最后提交给</p>
+<p>Executor 执行（发送到 Executor 的线程池中）；</p>
+</li>
+<li>
+<p>每个 Executor 会持有一个线程池，Executor 通过启动多个线程（Task）来对 RDD 的 Partition 进行并行计算，并向</p>
+<p>SparkContext 报告，直至 Task 完成。</p>
+</li>
+<li>
+<p>所有 Task 完成后，SparkContext 向 Master 注销，释放资源。</p>
+</li>
+</ul>
+<p>任务执行失败的情况：</p>
+<ul>
+<li>
+<p>Task 在 Executor 线程池中的运行情况会向 TaskScheduler 反馈，当 Task 执行失败时，会由 TaskScheduler 负责重试，</p>
+<p>将 Task 重新发送给 Executor 去执行，默认重试 3 次。如果重试 3 次依然失败，那么这个 Task 所在的 Stage 就失败了。</p>
+</li>
+<li>
+<p>Stage 失败了会由 DAGScheduler 来负责重试，会重新发送 TaskSet 到 TaskScheduler，Stage 默认重试 4 次。如果重试 4</p>
+<p>次以后依然失败，那么这个 Job 就失败了。Job 失败则 Application 提交失败。</p>
+</li>
+<li>
+<p>TaskScheduler 不仅能重试失败的 Task，还会重试 Straggling（落后，缓慢）的 Task（也就是执行速度比其他 Task 慢太</p>
+<p>多的 Task）。如果有运行缓慢的 Task 那么 TaskScheduler 会启动一个新的 Task 来与这个运行缓慢的 Task 执行相同的</p>
+<p>处理逻辑。两个 Task 哪个先执行完，就以哪个 Task 的执行结果为准。这就是 Spark 的推测执行机制。在 Spark 中推</p>
+<p>测执行默认是关闭的。推测执行可以通过 spark.speculation 属性来配置。</p>
+</li>
+</ul>
+</blockquote>
+
+
+<h3 class="relative group">讲讲 Spark YARN Cluster 模式的运行流程 
+    <div id="%E8%AE%B2%E8%AE%B2-spark-yarn-cluster-%E6%A8%A1%E5%BC%8F%E7%9A%84%E8%BF%90%E8%A1%8C%E6%B5%81%E7%A8%8B" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%E8%AE%B2%E8%AE%B2-spark-yarn-cluster-%E6%A8%A1%E5%BC%8F%E7%9A%84%E8%BF%90%E8%A1%8C%E6%B5%81%E7%A8%8B" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<p>
+  <figure>
+    <img class="my-0 rounded-md" loading="lazy" src="https://cdn.jsdelivr.net/gh/dh2870968633/PicGo/img/202408052315288.png" alt="image-20240805231551225" />
+    
+  </figure>
+</p>
+<blockquote>
+<p>在 YARN-Cluster 模式中，当用户向 YARN 中提交一个应用程序后，YARN 会分两个阶段运行该应用程序：</p>
+<ul>
+<li>第一个阶段是把 Spark 的 Driver 作为一个 ApplicationMaster 在 YARN 集群中先启动；</li>
+<li>第二个阶段是由 ApplicationMaster 创建应用程序，然后为它向ResourceManager 申请资源，并启动 Executor 来运行Task，同时监控它的整个运行过程，直到运行完成。</li>
+</ul>
+<p>具体流程如下：</p>
+<ul>
+<li>在 YARN Cluster 模式下，Driver 运行在 ApplicationMaster 中。程序启动后会和 ResourceManager 通讯申请启动ApplicationMaster；</li>
+<li>ResourceManager 收到请求后，通过 ResourceScheduler 选择一台NodeManager 分配一个 Container，在 Container 中开启 ApplicationMaster 进程；同时在 ApplicationMaster 中初始化 Driver；</li>
+<li>ApplicationMaster 向 ResourceManager 注册，这样用户可以直接通过ResourceManage 查看应用程序的运行状态，然后它将采用轮询的方式通过 RPC 协议为各个任务申请资源，并监控它们的运行状态直到运行结束；</li>
+<li>一旦 ApplicationMaster 申请到资源（也就是 Container）后，便与对应的 NodeManager 通信，在 NodeManager 的Container 中启动 CoarseGrainedExecutorBackend，CoarseGrainedExecutorBackend 启动后会向 Driver 中的 SparkContext反向注册并申请 Task。这一点和 Standalone 模式一样，只不过 SparkContext 在 Spark Application 中初始化时，使用CoarseGrainedSchedulerBackend 配合 YarnClusterScheduler 进行任务的调度，其中 YarnClusterScheduler 只是对TaskSchedulerImpl 的一个简单包装，增加了对 Executor 的等待逻辑等；</li>
+<li>ApplicationMaster 中的 SparkContext 分配 Task 给CoarseGrainedExecutorBackend 执行，CoarseGrainedExecutorBackend运行 Task 并向 ApplicationMaster 汇报运行的状态和进度，方便ApplicationMaster 随时掌握各个任务的运行状态，从而可以在任务失败时重新启动任务；</li>
+<li>应用程序运行完成后，ApplicationMaster 向 ResourceManager 申请注销并关闭自己。</li>
+<li>该模式下只能通过 YARN 查看日志。</li>
+</ul>
+</blockquote>
+
+
+<h3 class="relative group">RDD，DataFrame，DataSet 的区别？？？？？ 
+    <div id="rdddataframedataset-%E7%9A%84%E5%8C%BA%E5%88%AB" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#rdddataframedataset-%E7%9A%84%E5%8C%BA%E5%88%AB" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<blockquote>
+<p>RDD (Spark1.0) —&gt; Dataframe(Spark1.3) —&gt; Datase(Spark1.6)</p>
+<p>RDD里面的数据就只知道是一行干巴巴的数据，Spark框架并不知道这些数据的类型和含义。弱类型。</p>
+<p>DataFrame是以RDD为基础的分布式数据集。DataFrame 为数据提供了 Schema 视图，类似于传统数据库的二维表格，知道数据的类型和数据的含义，就是二维表的列、字段。支持Spark SQL查询和UDF函数。  弱类型。DataFrame = Dataset[Row]行类型</p>
+<p>DataSet是DataFrame的扩展，相当于里面的数据，对应java实体类一样，知道这行数据是哪个类的哪些属性。强类型。DataSet 支持编译时类型检查和优化，支持Spark SQL查询和UDF函数。</p>
+</blockquote>
+
+
+<h3 class="relative group">Spark 的控制算子有哪些，有什么区别 
+    <div id="spark-%E7%9A%84%E6%8E%A7%E5%88%B6%E7%AE%97%E5%AD%90%E6%9C%89%E5%93%AA%E4%BA%9B%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#spark-%E7%9A%84%E6%8E%A7%E5%88%B6%E7%AE%97%E5%AD%90%E6%9C%89%E5%93%AA%E4%BA%9B%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<blockquote>
+<p>RDD是不会保存数据的，控制算子能把RDD数据进行持久化（缓存），便于数据重用。</p>
+<ul>
+<li><strong>cache：</strong>
+<ul>
+<li>底层调用persist，且persist默认存储级别是存内存，把数据缓存在JVM的堆内存中。</li>
+<li>会在血缘关系中添加新的依赖。一旦，出现问题，可以从头读取数据。</li>
+</ul>
+</li>
+<li><strong>persist：</strong>
+<ul>
+<li>通过persist把存储级别设置为磁盘存储，数据保存到磁盘文件是临时文件，作业执行完会被删除。</li>
+<li>涉及到磁盘IO，性能较低，但是数据安全。</li>
+</ul>
+</li>
+<li><strong>checkpoint：</strong>
+<ul>
+<li>指定检查点保存路径（一般都是分布式存储系统，HDFS），数据长久的保存在磁盘文件中。可以跨作业执行。</li>
+<li>涉及到磁盘IO，性能较低，但是数据安全。</li>
+<li>会再创建一个作业，重新计算这个RDD的数据，再把把数据持久化到Checkpoint目录中。相当于走了两遍计算，这样效率更低了。</li>
+<li>为了能够提高效率：一般情况下，需要和cache联合使用。checkpoint创建的的作业就不需要从头走一遍计算了，直接从cache的缓存中取数据然后持久化到磁盘文件</li>
+<li>执行过程中，会切断血缘关系，重新建立新的血缘关系&mdash;等同于改变了数据源。</li>
+</ul>
+</li>
+</ul>
+<p>这些持久化操作必须在遇到行动算子时才会执行，</p>
+</blockquote>
+
+
+<h3 class="relative group">YARN 的 Client 提交和 Cluster 提交的区别 
+    <div id="yarn-%E7%9A%84-client-%E6%8F%90%E4%BA%A4%E5%92%8C-cluster-%E6%8F%90%E4%BA%A4%E7%9A%84%E5%8C%BA%E5%88%AB" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#yarn-%E7%9A%84-client-%E6%8F%90%E4%BA%A4%E5%92%8C-cluster-%E6%8F%90%E4%BA%A4%E7%9A%84%E5%8C%BA%E5%88%AB" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<blockquote>
+<ul>
+<li><strong>Driver的运行位置：</strong>
+<ul>
+<li>Client模式下Driver运行在客户端，也就是用户提交作业的服务器上运行Driver程序。</li>
+<li>Cluster提交模式，Driver会在YARN集群中的一个NodeManager上运行。</li>
+</ul>
+</li>
+<li><strong>容错性：</strong>
+<ul>
+<li>Client端提交作业，如果Client端出问题，可能导致作业执行失败。</li>
+<li>Cluster 提交，即使Client端关闭或失败，作业也能继续执行。</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+
+
+<h3 class="relative group">Spark 为什么比 MapReduce 快 
+    <div id="spark-%E4%B8%BA%E4%BB%80%E4%B9%88%E6%AF%94-mapreduce-%E5%BF%AB" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#spark-%E4%B8%BA%E4%BB%80%E4%B9%88%E6%AF%94-mapreduce-%E5%BF%AB" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<blockquote>
+<ul>
+<li>
+<p>内存：Spark基于内存，中间结果直接存放到内存中，MR基于磁盘，磁盘I/O开销大，速度慢。</p>
+</li>
+<li>
+<p>资源申请粒度：Spark粗粒度申请资源（Application 执行之前，一次性申请所有的资源），MR细粒度申请资源（每一个Task执行前去申请对应的资源）。</p>
+</li>
+</ul>
+</blockquote>
+
+
+<h3 class="relative group">RDD 中 reduceBykey 与 groupByKey 的区别 
+    <div id="rdd-%E4%B8%AD-reducebykey-%E4%B8%8E-groupbykey-%E7%9A%84%E5%8C%BA%E5%88%AB" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#rdd-%E4%B8%AD-reducebykey-%E4%B8%8E-groupbykey-%E7%9A%84%E5%8C%BA%E5%88%AB" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<blockquote>
+<ul>
+<li>**功能：**reduceBykey 先根据Key分组然后对其对应的Value进行聚合。groupByKey只根据Key进行分组，不能聚合。</li>
+<li>**性能：**reduceByKey 在 Shuffle 前对分区内相同 Key 的数据进行预聚合（combine），减少了网络传输的数据量、落盘的数据量，而 groupByKey 只是进行分组，不存在数据量减少的问题，reduceByKey 性能比较高。</li>
+</ul>
+</blockquote>
+
+
+<h3 class="relative group">Spark 数据本地化级别与区别 
+    <div id="spark-%E6%95%B0%E6%8D%AE%E6%9C%AC%E5%9C%B0%E5%8C%96%E7%BA%A7%E5%88%AB%E4%B8%8E%E5%8C%BA%E5%88%AB" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#spark-%E6%95%B0%E6%8D%AE%E6%9C%AC%E5%9C%B0%E5%8C%96%E7%BA%A7%E5%88%AB%E4%B8%8E%E5%8C%BA%E5%88%AB" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<blockquote>
+<p>Spark 数据本地化级别是 Spark 在执行作业时，根据数据和任务（Task）的相对位置来优化任务调度的一种方式。</p>
+<ul>
+<li>进程本地化：
+<ul>
+<li>指代码和数据在同一个进程中，也就是同一个 Executor 中；</li>
+<li>性能最好，因为避免了网络传输开销。</li>
+<li>这里的“同进程”更多地是关注于任务执行时代码和数据之间的接近性，以减少数据访问的延迟和开销。不同进程间的话要跨进程传输数据。</li>
+</ul>
+</li>
+<li>节点本地化：
+<ul>
+<li>数据和 Task 在同一个节点上，数据和 Task 在同一个节点不同的 Executor 中，数据需要跨进程传输；</li>
+</ul>
+</li>
+<li>无偏好：
+<ul>
+<li>对于 Task 来说，数据从哪里获取都一样，没有好坏之分。比如 SparkSQL 直接读取 MySQL；</li>
+</ul>
+</li>
+<li>机架本地化：
+<ul>
+<li>数据和 Task 在一个机架的两个节点上，数据需要通过网络在节点之间进行传输；</li>
+</ul>
+</li>
+<li>任意：
+<ul>
+<li>数据和 Task 可能在集群中的任何地方，而且不在一个机架中，性能最差。</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+
+
+<h3 class="relative group">Spark 单表 SQL 分组聚合查询数据倾斜如何解决  ？？？ 
+    <div id="spark-%E5%8D%95%E8%A1%A8-sql-%E5%88%86%E7%BB%84%E8%81%9A%E5%90%88%E6%9F%A5%E8%AF%A2%E6%95%B0%E6%8D%AE%E5%80%BE%E6%96%9C%E5%A6%82%E4%BD%95%E8%A7%A3%E5%86%B3--" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#spark-%E5%8D%95%E8%A1%A8-sql-%E5%88%86%E7%BB%84%E8%81%9A%E5%90%88%E6%9F%A5%E8%AF%A2%E6%95%B0%E6%8D%AE%E5%80%BE%E6%96%9C%E5%A6%82%E4%BD%95%E8%A7%A3%E5%86%B3--" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<blockquote>
+<ul>
+<li>增加Shuffle Partitions数量
+<ul>
+<li>在Spark中，可以通过增加Shuffle Partitions的数量来减小数据倾斜。Shuffle Partitions是Spark在执行Shuffle操作时使用的分区数，增加这个数量可以使得数据更加均匀地分布在不同的分区中，从而减小单个分区的数据量，提高并行度。</li>
+</ul>
+</li>
+<li>解决逻辑：两阶段聚合（加盐局部聚合 + 去盐全局聚合）+ Map-Side 聚合（将 groupByKey 算子转换为 reduceByKey
+算子，reduceByKey 可以在 Map 端预聚合，类似于 MapReduce 中的 Combiner）。
+　　首先，通过 map 算子给每个数据的 Key 添加随机数前缀，对 Key 进行打散，将原先一样的 Key 变成不一样的 Key，然
+后进行第一次聚合，这样就可以让原本被一个 Task 处理的数据分散到多个 Task 上去做局部聚合；随后，去除掉每个 Key
+的前缀，再次进行聚合</li>
+</ul>
+</blockquote>
+
+
+<h3 class="relative group">Spark JOIN SQL 查询数据倾斜如何解决 ？？？ 
+    <div id="spark-join-sql-%E6%9F%A5%E8%AF%A2%E6%95%B0%E6%8D%AE%E5%80%BE%E6%96%9C%E5%A6%82%E4%BD%95%E8%A7%A3%E5%86%B3-" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#spark-join-sql-%E6%9F%A5%E8%AF%A2%E6%95%B0%E6%8D%AE%E5%80%BE%E6%96%9C%E5%A6%82%E4%BD%95%E8%A7%A3%E5%86%B3-" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<blockquote>
+<p>小表join大表，广播join，将小表的数据分发到每个节点上，供大表使用
+大表join小表，大表加严将key打散，小表key扩容，join完，union all</p>
+<p>广播JOIN：适用于小表 JOIN 大表。小表足够小，可被加载到 Driver 端并通过 Broadcast 广播到各个 Executor 中。</p>
+<p>在小表 JOIN 大表时如果产生数据倾斜，那么广播 JOIN 可以直接规避掉 Shuffle 阶段（默认开启）。</p>
+</blockquote>
+
+
+<h3 class="relative group">查看 SQL 执行计划的关键字是什么，有什么用 
+    <div id="%E6%9F%A5%E7%9C%8B-sql-%E6%89%A7%E8%A1%8C%E8%AE%A1%E5%88%92%E7%9A%84%E5%85%B3%E9%94%AE%E5%AD%97%E6%98%AF%E4%BB%80%E4%B9%88%E6%9C%89%E4%BB%80%E4%B9%88%E7%94%A8" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%E6%9F%A5%E7%9C%8B-sql-%E6%89%A7%E8%A1%8C%E8%AE%A1%E5%88%92%E7%9A%84%E5%85%B3%E9%94%AE%E5%AD%97%E6%98%AF%E4%BB%80%E4%B9%88%E6%9C%89%E4%BB%80%E4%B9%88%E7%94%A8" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<blockquote>
+<p>explain</p>
+<p>从 3.0 开始，explain 提供了一个新的参数 mode，通过该参数可以指定执行计划的展示格式：</p>
+<ul>
+<li>explain(mode=&ldquo;simple&rdquo;) ：只展示物理执行计划；</li>
+<li>explain(mode=&ldquo;extended&rdquo;) ：展示物理执行计划和逻辑执行计划；</li>
+<li>explain(mode=&ldquo;codegen&rdquo;) ：展示 Code Generation 生成的可执行 Java 代码；</li>
+<li>explain(mode=&ldquo;cost&rdquo;) ：展示优化后的逻辑执行计划以及相关的统计；</li>
+<li>explain(mode=&ldquo;formatted&rdquo;) ：以分隔的方式输出，输出更易读的物理执行计划，并展示每个节点的详细信息。</li>
+</ul>
+<p><strong>通过explain能看到查询是如何执行的、查询的各个详细的步骤，包括查询的顺序、连接方法、使用的索引等。以便进行针对性的优化。</strong></p>
+</blockquote>
+
+
+<h3 class="relative group">说一说 Spark 你知道的优化（问的几率不大，时间充足可以看看） 
+    <div id="%E8%AF%B4%E4%B8%80%E8%AF%B4-spark-%E4%BD%A0%E7%9F%A5%E9%81%93%E7%9A%84%E4%BC%98%E5%8C%96%E9%97%AE%E7%9A%84%E5%87%A0%E7%8E%87%E4%B8%8D%E5%A4%A7%E6%97%B6%E9%97%B4%E5%85%85%E8%B6%B3%E5%8F%AF%E4%BB%A5%E7%9C%8B%E7%9C%8B" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%E8%AF%B4%E4%B8%80%E8%AF%B4-spark-%E4%BD%A0%E7%9F%A5%E9%81%93%E7%9A%84%E4%BC%98%E5%8C%96%E9%97%AE%E7%9A%84%E5%87%A0%E7%8E%87%E4%B8%8D%E5%A4%A7%E6%97%B6%E9%97%B4%E5%85%85%E8%B6%B3%E5%8F%AF%E4%BB%A5%E7%9C%8B%E7%9C%8B" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<blockquote>
+<ul>
+<li>CPU优化：</li>
+<li>内存优化：</li>
+<li>SQL优化：
+<ul>
+<li>RBO优化</li>
+<li>CBO优化</li>
+<li>JOIN优化</li>
+</ul>
+</li>
+<li>数据倾斜优化</li>
+<li>Job优化</li>
+<li>Shuffle 优化</li>
+<li>代码优化</li>
+</ul>
+</blockquote>
+
+
+<h2 class="relative group">SQL 
+    <div id="sql" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#sql" aria-label="锚点">#</a>
+    </span>        
+    
+</h2>
+
+
+<h3 class="relative group">abc.txt 按空格分割 WordCount SQL 实现思路 
+    <div id="abctxt-%E6%8C%89%E7%A9%BA%E6%A0%BC%E5%88%86%E5%89%B2-wordcount-sql-%E5%AE%9E%E7%8E%B0%E6%80%9D%E8%B7%AF" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#abctxt-%E6%8C%89%E7%A9%BA%E6%A0%BC%E5%88%86%E5%89%B2-wordcount-sql-%E5%AE%9E%E7%8E%B0%E6%80%9D%E8%B7%AF" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-mysql" data-lang="mysql"><span class="line"><span class="cl"><span class="mi">1</span><span class="w"> </span><span class="err">创建</span><span class="w"> </span><span class="n">DataFrame</span><span class="p">:</span><span class="w"> </span><span class="err">准备包含文本数据的</span><span class="w"> </span><span class="n">DataFrame</span><span class="err">，假设有一个列名为</span><span class="w"> </span><span class="kt">text</span><span class="err">，其中包含要分析的文本数据。</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="mi">2</span><span class="w"> </span><span class="err">按空格分割单词</span><span class="p">:</span><span class="w"> </span><span class="err">使用</span><span class="w"> </span><span class="n">split</span><span class="w"> </span><span class="err">函数按空格将文本分割为单词数组。</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="mi">3</span><span class="w"> </span><span class="err">展开数组</span><span class="p">:</span><span class="w"> </span><span class="err">使用</span><span class="w"> </span><span class="n">explode</span><span class="w"> </span><span class="err">函数将数组中的单词展开为新的行。</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="mi">4</span><span class="w"> </span><span class="err">分组和计数</span><span class="p">:</span><span class="w"> </span><span class="err">使用</span><span class="w"> </span><span class="n">groupBy</span><span class="w"> </span><span class="err">和</span><span class="w"> </span><span class="n">count</span><span class="w"> </span><span class="err">函数对单词进行分组并计数。</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="mi">5</span><span class="w"> </span><span class="err">排序结果</span><span class="w"> </span><span class="p">(</span><span class="err">可选</span><span class="p">):</span><span class="w"> </span><span class="err">使用</span><span class="w"> </span><span class="n">orderBy</span><span class="w"> </span><span class="err">对计数结果进行排序，以便查看最常出现的单词</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">#子查询
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">SELECT</span><span class="w"> </span><span class="n">word</span><span class="p">,</span><span class="nf">count</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="n">cnt</span><span class="w"> 
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">FROM</span><span class="p">(</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">SELECT</span><span class="w"> </span><span class="nf">EXPLODE</span><span class="p">(</span><span class="nf">split</span><span class="p">(</span><span class="nf">REGEXP_REPLACE</span><span class="p">(</span><span class="n">line</span><span class="p">,</span><span class="s2">&#34;\[^\\w&#39;-]+&#34;</span><span class="p">,</span><span class="s2">&#34; &#34;</span><span class="p">),</span><span class="s2">&#34;\\s+&#34;</span><span class="p">))</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">word</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">t_wordcount</span><span class="p">)</span><span class="w"> </span><span class="n">t</span><span class="w"> 
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">word</span><span class="w"> 
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">cnt</span><span class="w"> </span><span class="k">desc</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">#侧视图
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">SELECT</span><span class="w"> </span><span class="n">word</span><span class="p">,</span><span class="nf">count</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="n">cnt</span><span class="w"> 
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">FROM</span><span class="w"> </span><span class="n">t_wordcount</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">LATERAL</span><span class="w"> </span><span class="n">VIEW</span><span class="w"> </span><span class="nf">EXPLODE</span><span class="p">(</span><span class="nf">split</span><span class="p">(</span><span class="nf">REGEXP_REPLACE</span><span class="p">(</span><span class="n">line</span><span class="p">,</span><span class="s2">&#34;\[^\\w&#39;-]+&#34;</span><span class="p">,</span><span class="s2">&#34; &#34;</span><span class="p">),</span><span class="s2">&#34;\\s+&#34;</span><span class="p">))</span><span class="w"> </span><span class="n">lv</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">word</span><span class="w"> 
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">word</span><span class="w"> 
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">cnt</span><span class="w"> </span><span class="k">desc</span><span class="p">;</span><span class="w">
+</span></span></span></code></pre></div>
+
+<h3 class="relative group">求部门前三薪资 SQL 实现思路 
+    <div id="%E6%B1%82%E9%83%A8%E9%97%A8%E5%89%8D%E4%B8%89%E8%96%AA%E8%B5%84-sql-%E5%AE%9E%E7%8E%B0%E6%80%9D%E8%B7%AF" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%E6%B1%82%E9%83%A8%E9%97%A8%E5%89%8D%E4%B8%89%E8%96%AA%E8%B5%84-sql-%E5%AE%9E%E7%8E%B0%E6%80%9D%E8%B7%AF" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-mysql" data-lang="mysql"><span class="line"><span class="cl"><span class="c1">-- 不开窗
+</span></span></span><span class="line"><span class="cl"><span class="c1">-- 一个部门里面，如果其它人的工资只有0个、1个、2个人的比我高（也就是工资比我高的人少于3个），那么我就是前三名的
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">select</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">emp</span><span class="w"> </span><span class="n">e1</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="p">(</span><span class="k">select</span><span class="w"> </span><span class="nf">count</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">emp</span><span class="w"> </span><span class="n">e2</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">e1</span><span class="p">.</span><span class="n">deptno</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">e2</span><span class="p">.</span><span class="n">deptno</span><span class="w"> </span><span class="k">and</span><span class="w"> </span><span class="n">e2</span><span class="p">.</span><span class="n">sal</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">e1</span><span class="p">.</span><span class="n">sal</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="o">&lt;</span><span class="mi">3</span><span class="w"> </span><span class="k">order</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="n">deptno</span><span class="p">,</span><span class="n">sal</span><span class="w"> </span><span class="k">desc</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">-- 开窗
+</span></span></span><span class="line"><span class="cl"><span class="c1">-- 查询各个部门的员工工资  按sal降序排  设置序号 
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">select</span><span class="w"> </span><span class="o">*</span><span class="p">,</span><span class="nf">row_number</span><span class="p">()</span><span class="w"> </span><span class="nf">over</span><span class="p">(</span><span class="n">partition</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="n">deptno</span><span class="w"> </span><span class="k">order</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="n">sal</span><span class="w"> </span><span class="k">desc</span><span class="p">)</span><span class="w"> </span><span class="n">r</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">emp</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">-- 取前三个
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">select</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="p">(</span><span class="k">select</span><span class="w"> </span><span class="o">*</span><span class="p">,</span><span class="nf">row_number</span><span class="p">()</span><span class="w"> </span><span class="nf">over</span><span class="p">(</span><span class="n">partition</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="n">deptno</span><span class="w"> </span><span class="k">order</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="n">sal</span><span class="w"> </span><span class="k">desc</span><span class="p">)</span><span class="w"> </span><span class="n">r</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">emp</span><span class="p">)</span><span class="w"> </span><span class="n">t</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">t</span><span class="p">.</span><span class="n">r</span><span class="o">&lt;=</span><span class="mi">3</span><span class="w">
+</span></span></span></code></pre></div>
+
+<h3 class="relative group">连续 7 天登录 SQL 实现过程 
+    <div id="%E8%BF%9E%E7%BB%AD-7-%E5%A4%A9%E7%99%BB%E5%BD%95-sql-%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%E8%BF%9E%E7%BB%AD-7-%E5%A4%A9%E7%99%BB%E5%BD%95-sql-%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-mysql" data-lang="mysql"><span class="line"><span class="cl"><span class="c1">-- 开窗
+</span></span></span><span class="line"><span class="cl"><span class="c1">-- 窗口分组  时间排序  去除同一天不同时间段的日期   后面加个序号
+</span></span></span><span class="line"><span class="cl"><span class="c1">-- 把登陆日期减去右边的排序，如果是连续的话，减去排序后的日期是一样的，按user_id和减去排序后的日期分组，统计数量，数量&gt;=7 就是连续登录7天的
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">select</span><span class="w"> </span><span class="n">user_id</span><span class="p">,</span><span class="nf">count</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="n">cnt</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="p">(</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">select</span><span class="w"> </span><span class="o">*</span><span class="p">,</span><span class="nf">row_number</span><span class="p">()</span><span class="w"> </span><span class="nf">over</span><span class="p">(</span><span class="n">partition</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="n">user_id</span><span class="w"> </span><span class="k">order</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="n">sd</span><span class="p">)</span><span class="w"> </span><span class="n">r</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="p">(</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">select</span><span class="w"> </span><span class="k">distinct</span><span class="w"> </span><span class="n">user_id</span><span class="p">,</span><span class="nf">date_format</span><span class="p">(</span><span class="n">sign_date</span><span class="p">,</span><span class="s1">&#39;%Y%m%d&#39;</span><span class="p">)</span><span class="w"> </span><span class="n">sd</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">user_sign</span><span class="w"> </span><span class="k">order</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="n">user_id</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">)</span><span class="w"> </span><span class="n">t</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">)</span><span class="w"> </span><span class="n">tt</span><span class="w"> </span><span class="k">group</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="n">user_id</span><span class="p">,</span><span class="nf">DATE_SUB</span><span class="p">(</span><span class="n">sd</span><span class="p">,</span><span class="w"> </span><span class="k">INTERVAL</span><span class="w"> </span><span class="n">r</span><span class="w"> </span><span class="n">DAY</span><span class="p">)</span><span class="w"> </span><span class="k">having</span><span class="w"> </span><span class="n">cnt</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">7</span><span class="w"> 
+</span></span></span></code></pre></div>
+
+<h3 class="relative group">统计每个员工前三个月的薪水，每月统计一次 
+    <div id="%E7%BB%9F%E8%AE%A1%E6%AF%8F%E4%B8%AA%E5%91%98%E5%B7%A5%E5%89%8D%E4%B8%89%E4%B8%AA%E6%9C%88%E7%9A%84%E8%96%AA%E6%B0%B4%E6%AF%8F%E6%9C%88%E7%BB%9F%E8%AE%A1%E4%B8%80%E6%AC%A1" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%E7%BB%9F%E8%AE%A1%E6%AF%8F%E4%B8%AA%E5%91%98%E5%B7%A5%E5%89%8D%E4%B8%89%E4%B8%AA%E6%9C%88%E7%9A%84%E8%96%AA%E6%B0%B4%E6%AF%8F%E6%9C%88%E7%BB%9F%E8%AE%A1%E4%B8%80%E6%AC%A1" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-mysql" data-lang="mysql"><span class="line"><span class="cl"><span class="c1">-- 滑动窗口range between 
+</span></span></span><span class="line"><span class="cl"><span class="c1">-- 6. （困难）力扣 579题，查询员工的累计薪水（统计每个员工前三个月的薪水，每月统计一次）。
+</span></span></span><span class="line"><span class="cl"><span class="c1">-- 按user_id分组 month排序 sum(salary)聚合函数 + 滑动窗口  当前行开始加上前面两行的salary
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">select</span><span class="w"> </span><span class="n">user_id</span><span class="p">,</span><span class="n">month</span><span class="p">,</span><span class="n">salary</span><span class="p">,</span><span class="w"> </span><span class="nf">sum</span><span class="p">(</span><span class="n">salary</span><span class="p">)</span><span class="w"> </span><span class="nf">over</span><span class="p">(</span><span class="n">partition</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="n">user_id</span><span class="w"> </span><span class="k">order</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="n">month</span><span class="w"> </span><span class="n">RANGE</span><span class="w"> </span><span class="k">BETWEEN</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="n">PRECEDING</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="n">CURRENT</span><span class="w"> </span><span class="n">ROW</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">leetcode_579</span><span class="w">
+</span></span></span></code></pre></div>
+
+<h3 class="relative group">好友推荐 SQL 实现思路 
+    <div id="%E5%A5%BD%E5%8F%8B%E6%8E%A8%E8%8D%90-sql-%E5%AE%9E%E7%8E%B0%E6%80%9D%E8%B7%AF" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%E5%A5%BD%E5%8F%8B%E6%8E%A8%E8%8D%90-sql-%E5%AE%9E%E7%8E%B0%E6%80%9D%E8%B7%AF" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<pre tabindex="0"><code class="language-hive" data-lang="hive">WITH df AS(
+-- 创建临时表 df，包含用户及其朋友，初始亲密度设为 0
+SELECT login_user,friend,0 intimacy FROM t_friend
+-- 使用 LATERAL VIEW EXPLODE 将 friends 列展开为多行
+LATERAL VIEW EXPLODE(friends)lv AS friend
+-- 只选择 login_user 大于 friend 的记录，以避免重复的朋友关系
+WHERE login_user&gt;friend
+),
+temp AS(
+-- 创建另一个临时表 temp，包含所有用户及其朋友
+SELECT login_user,friend FROM t_friend
+-- 同样使用 LATERAL VIEW EXPLODE 展开 friends 列
+LATERAL VIEW EXPLODE(friends)lv AS friend
+),
+idf AS(
+-- 创建临时表 idf，计算每对朋友间的亲密度，初始设为 1
+SELECT t1.friend AS login_user,t2.friend, 1 intimacy
+-- 自连接 temp 表，以获得同一用户的所有朋友配对
+FROM temp t1 join temp t2 ON t1.login_user =t2.login_user
+-- 只选择 t1.friend 大于 t2.friend 的记录，避免重复配对
+WHERE t1.friend&gt;t2.friend
+),
+recommend AS(
+-- 合并 df 和 idf 表中的数据
+SELECT login_user,friend,intimacy FROM df 
+UNION ALL
+SELECT login_user,friend,intimacy FROM idf 
+)
+-- 从合并后的表中选择结果
+SELECT login_user,friend,sum(intimacy) si FROM recommend
+-- 按 login_user 和 friend 分组，计算每对的亲密度总和
+GROUP BY login_user,friend 
+-- 筛选出亲密度总和等于记录数量的结果
+HAVING sum(intimacy)=count(intimacy)
+-- 按 login_user 和亲密度总和降序排序
+ORDER BY login_user,si DESC;
+</code></pre>
+        </div>
+        
+        
+
+        
+        
+
+          
+      </div>
+     
+      
+      
+        
+        
+          
+          
+        
+      <script>
+        var oid = "views_docs\\interview1\\第一阶段面试题.md"
+        var oid_likes = "likes_docs\\interview1\\第一阶段面试题.md"
+      </script>
+      
+      
+      
+      <script type="text/javascript" src="/js/page.min.0860cf4e04fa2d72cc33ddba263083464d48f67de06114529043cb4623319efed4f484fd7f1730df5abea0e2da6f3538855634081d02f2d6e920b956f063e823.js" integrity="sha512-CGDPTgT6LXLMM926JjCDRk1I9n3gYRRSkEPLRiMxnv7U9IT9fxcw31q&#43;oOLabzU4hVY0CB0C8tbpILlW8GPoIw=="></script>
+  
+    </section>
+  <footer class="pt-8 max-w-prose print:hidden">
+
+    
+  
+    
+    
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600" />
+      <div class="flex justify-between pt-3">
+        <span>
+          
+            <a class="flex group mr-3" href="/docs/hbase/">
+              <span
+                class="mr-3 text-neutral-700 group-hover:text-primary-600 ltr:inline rtl:hidden dark:text-neutral dark:group-hover:text-primary-400"
+                >&larr;</span
+              >
+              <span
+                class="ml-3 text-neutral-700 group-hover:text-primary-600 ltr:hidden rtl:inline dark:text-neutral dark:group-hover:text-primary-400"
+                >&rarr;</span
+              >
+              <span class="flex flex-col">
+                <span
+                  class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
+                  >HBase</span
+                >
+                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
+                  
+                    <time datetime="2024-07-01 08:00:00 &#43;0800 CST">2024-07-01</time>
+                  
+                </span>
+              </span>
+            </a>
+          
+        </span>
+        <span>
+          
+        </span>
+      </div>
+    </div>
+  
+
+
+    
+  </footer>
+</article>
+
+      <div id="top-scroller" class="pointer-events-none absolute top-[110vh] bottom-0 w-12 ltr:right-0 rtl:left-0">
+  <a href="#the-top"
+    class="pointer-events-auto sticky top-[calc(100vh-5.5rem)] flex h-12 w-12 mb-16 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+    aria-label="返回顶部" title="返回顶部">
+    &uarr;
+  </a>
+</div>
+    </main><footer id="site-footer" class="py-10 print:hidden">
+  
+  
+    
+  
+  <div class="flex items-center justify-between">
+
+    
+    
+    <p class="text-sm text-neutral-500 dark:text-neutral-400">
+      &copy;
+      2024
+      河爷
+    </p>
+    
+
+    
+    
+    <p class="text-xs text-neutral-500 dark:text-neutral-400">
+      
+      
+      由 <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+        href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a> &amp; <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+        href="https://blowfish.page/" target="_blank" rel="noopener noreferrer">Blowfish</a> 强力驱动
+    </p>
+    
+
+  </div>
+  <script>
+    
+    mediumZoom(document.querySelectorAll("img:not(.nozoom)"), {
+      margin: 24,
+      background: 'rgba(0,0,0,0.5)',
+      scrollOffset: 0,
+    })
+    
+  </script>
+  
+  
+  <script type="text/javascript" src="/js/process.min.ee03488f19c93c2efb199e2e3014ea5f3cb2ce7d45154adb3399a158cac27ca52831db249ede5bb602700ef87eb02434139de0858af1818ab0fb4182472204a4.js" integrity="sha512-7gNIjxnJPC77GZ4uMBTqXzyyzn1FFUrbM5mhWMrCfKUoMdsknt5btgJwDvh&#43;sCQ0E53ghYrxgYqw&#43;0GCRyIEpA=="></script>
+  
+  
+</footer>
+<div
+  id="search-wrapper"
+  class="invisible fixed inset-0 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh]"
+  data-url="https://your_domain.com/"
+  style="z-index:500"
+>
+  <div
+    id="search-modal"
+    class="flex flex-col w-full max-w-3xl min-h-0 mx-auto border rounded-md shadow-lg top-20 border-neutral-200 bg-neutral dark:border-neutral-700 dark:bg-neutral-800"
+  >
+    <header class="relative z-10 flex items-center justify-between flex-none px-2">
+      <form class="flex items-center flex-auto min-w-0">
+        <div class="flex items-center justify-center w-8 h-8 text-neutral-400">
+          
+
+  <span class="relative block icon">
+    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+
+  </span>
+
+
+        </div>
+        <input
+          type="search"
+          id="search-query"
+          class="flex flex-auto h-12 mx-1 bg-transparent appearance-none focus:outline-dotted focus:outline-2 focus:outline-transparent"
+          placeholder="搜索"
+          tabindex="0"
+        />
+      </form>
+      <button
+        id="close-search-button"
+        class="flex items-center justify-center w-8 h-8 text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+        title="关闭 (Esc)"
+      >
+        
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+
+  </span>
+
+
+      </button>
+    </header>
+    <section class="flex-auto px-2 overflow-auto">
+      <ul id="search-results">
+        
+      </ul>
+    </section>
+  </div>
+</div>
+
+  </div>
+</body>
+
+</html>

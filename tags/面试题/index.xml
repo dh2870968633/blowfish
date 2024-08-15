@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>面试题 on 河爷</title>
+    <link>https://your_domain.com/tags/%E9%9D%A2%E8%AF%95%E9%A2%98/</link>
+    <description>Recent content in 面试题 on 河爷</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>© 2024 河爷</copyright>
+    <lastBuildDate>Mon, 01 Jul 2024 08:00:00 +0800</lastBuildDate><atom:link href="https://your_domain.com/tags/%E9%9D%A2%E8%AF%95%E9%A2%98/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>BigData interview1</title>
+      <link>https://your_domain.com/docs/interview1/shell/</link>
+      <pubDate>Mon, 01 Jul 2024 08:00:00 +0800</pubDate>
+      
+      <guid>https://your_domain.com/docs/interview1/shell/</guid>
+      <description>第一阶段面试题 # Linux # 说 10 个常用的 Linux 命令 # 重启网络：systemctl restart network</description>
+      
+    </item>
+    
+  </channel>
+</rss>
