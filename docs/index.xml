@@ -10,12 +10,12 @@
     <lastBuildDate>Mon, 01 Jul 2024 08:00:00 +0800</lastBuildDate><atom:link href="https://your_domain.com/docs/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>BigData interview1</title>
-      <link>https://your_domain.com/docs/interview1/shell/</link>
+      <link>https://your_domain.com/docs/shell/</link>
       <pubDate>Mon, 01 Jul 2024 08:00:00 +0800</pubDate>
       
-      <guid>https://your_domain.com/docs/interview1/shell/</guid>
+      <guid>https://your_domain.com/docs/shell/</guid>
       <description>第一阶段面试题 # Linux # 说 10 个常用的 Linux 命令 # 重启网络：systemctl restart network</description>
-      
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://your_domain.com/docs/shell/featured.png" />
     </item>
     
     <item>
